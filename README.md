@@ -23,12 +23,16 @@ npm i svelte-heros-v2@latest
 
 ## REPL
 
+[Outline demo](https://svelte.dev/repl/1948d7b5157f44709cff380d9783342c?version=3.49.0)
 
+[Solid demo](https://svelte.dev/repl/e26c4ea516a0493cb64797879b1fe46d?version=3.49.0)
 
 ## Usage
 
-```js
-<script>import {AcademicCap} from "svelte-heros-v2";</script>
+```html
+<script>
+	import { AcademicCap } from 'svelte-heros-v2';
+</script>
 ```
 
 ## Props
@@ -63,8 +67,7 @@ Use the `size` prop to change the size of icons.
 Use the `color` prop to change colors with HEX color code.
 
 ```html
-<AcademicCap color="#ff0000" /> 
-<AcademicCap color="#00ffd8" />
+<AcademicCap color="#ff0000" /> <AcademicCap color="#00ffd8" />
 ```
 
 ## CSS framework support
@@ -112,7 +115,7 @@ You can pass other attibutes as well.
 
 ```html
 <script>
-  import { AcademicCap } from 'svelte-heros-v2';
+	import { AcademicCap } from 'svelte-heros-v2';
 </script>
 
 <svelte:component this="{AcademicCap}" />
