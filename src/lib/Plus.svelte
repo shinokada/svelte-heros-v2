@@ -1,11 +1,13 @@
 <script lang="ts">
+	// https://github.com/shinokada/svelte-heros-v2
+	// heroicons v2.0.4
 	export let size = '24';
 	export let color = 'currentColor';
 	export let variation: 'solid' | 'outline' = 'outline';
 	let viewBox: string;
 	let svgpath: string;
-	let svgoutline = `<path d="M12 3V21M21 12L3 12" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> `;
-	let svgsolid = `<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.25C12.4142 2.25 12.75 2.58579 12.75 3V11.25H21C21.4142 11.25 21.75 11.5858 21.75 12C21.75 12.4142 21.4142 12.75 21 12.75H12.75V21C12.75 21.4142 12.4142 21.75 12 21.75C11.5858 21.75 11.25 21.4142 11.25 21V12.75H3C2.58579 12.75 2.25 12.4142 2.25 12C2.25 11.5858 2.58579 11.25 3 11.25H11.25V3C11.25 2.58579 11.5858 2.25 12 2.25Z" fill="${color}"/> `;
+	let svgoutline = `<path d="M12 4.5V19.5M19.5 12L4.5 12" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> `;
+	let svgsolid = `<path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.75C12.4142 3.75 12.75 4.08579 12.75 4.5V11.25H19.5C19.9142 11.25 20.25 11.5858 20.25 12C20.25 12.4142 19.9142 12.75 19.5 12.75H12.75V19.5C12.75 19.9142 12.4142 20.25 12 20.25C11.5858 20.25 11.25 19.9142 11.25 19.5V12.75H4.5C4.08579 12.75 3.75 12.4142 3.75 12C3.75 11.5858 4.08579 11.25 4.5 11.25H11.25V4.5C11.25 4.08579 11.5858 3.75 12 3.75Z" fill="${color}"/> `;
 	$: switch (variation) {
 		case 'outline':
 			svgpath = svgoutline;

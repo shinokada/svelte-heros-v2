@@ -1,11 +1,13 @@
 <script lang="ts">
+	// https://github.com/shinokada/svelte-heros-v2
+	// heroicons v2.0.4
 	export let size = '24';
 	export let color = 'currentColor';
 	export let variation: 'solid' | 'outline' = 'outline';
 	let viewBox: string;
 	let svgpath: string;
-	let svgoutline = `<path d="M3 12H21" stroke="${color}" stroke-width="1.5" stroke-linecap="round"/> `;
-	let svgsolid = `<path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 12C2.25 11.5858 2.58579 11.25 3 11.25H21C21.4142 11.25 21.75 11.5858 21.75 12C21.75 12.4142 21.4142 12.75 21 12.75H3C2.58579 12.75 2.25 12.4142 2.25 12Z" fill="${color}"/> `;
+	let svgoutline = `<path d="M19.5 12L4.5 12" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> `;
+	let svgsolid = `<path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 12C3.75 11.5858 4.08579 11.25 4.5 11.25L19.5 11.25C19.9142 11.25 20.25 11.5858 20.25 12C20.25 12.4142 19.9142 12.75 19.5 12.75L4.5 12.75C4.08579 12.75 3.75 12.4142 3.75 12Z" fill="${color}"/> `;
 	$: switch (variation) {
 		case 'outline':
 			svgpath = svgoutline;

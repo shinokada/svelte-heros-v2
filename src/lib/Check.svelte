@@ -1,11 +1,13 @@
 <script lang="ts">
+	// https://github.com/shinokada/svelte-heros-v2
+	// heroicons v2.0.4
 	export let size = '24';
 	export let color = 'currentColor';
 	export let variation: 'solid' | 'outline' = 'outline';
 	let viewBox: string;
 	let svgpath: string;
-	let svgoutline = `<path d="M3 13.4996L9.78521 20.2848C12.3871 14.1454 16.2303 8.65975 21 4.14258" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> `;
-	let svgsolid = `<path fill-rule="evenodd" clip-rule="evenodd" d="M21.5446 3.62686C21.8294 3.92761 21.8165 4.40231 21.5157 4.68713C16.8199 9.13431 13.0367 14.5346 10.4758 20.5774C10.3784 20.8071 10.1733 20.9733 9.92853 21.021C9.68372 21.0686 9.43124 20.9915 9.25488 20.8151L2.46967 14.0299C2.17678 13.737 2.17678 13.2621 2.46967 12.9693C2.76256 12.6764 3.23744 12.6764 3.53033 12.9693L9.53846 18.9774C12.1662 13.1513 15.9049 7.9349 20.4843 3.59803C20.785 3.31321 21.2597 3.32612 21.5446 3.62686Z" fill="${color}"/> `;
+	let svgoutline = `<path d="M4.5 12.75L10.5 18.75L19.5 5.25" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> `;
+	let svgsolid = `<path fill-rule="evenodd" clip-rule="evenodd" d="M19.916 4.62604C20.2607 4.85581 20.3538 5.32146 20.124 5.6661L11.124 19.1661C10.9994 19.3531 10.7975 19.4743 10.5739 19.4964C10.3503 19.5186 10.1286 19.4393 9.96967 19.2804L3.96967 13.2804C3.67678 12.9875 3.67678 12.5126 3.96967 12.2197C4.26256 11.9269 4.73744 11.9269 5.03033 12.2197L10.3834 17.5729L18.876 4.83405C19.1057 4.48941 19.5714 4.39628 19.916 4.62604Z" fill="${color}"/> `;
 	$: switch (variation) {
 		case 'outline':
 			svgpath = svgoutline;
