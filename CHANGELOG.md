@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.0
+
+### Minor Changes
+
+- [`89e40f2`](https://github.com/shinokada/svelte-heros-v2/commit/89e40f221829164079a7a0c890e305ac7bfef3f8) Thanks [@shinokada](https://github.com/shinokada)! - - add additional event handlers
+  - README update
+  - release and version-packages scripts update
+
 ## 0.3.0
 
 ### Minor Changes
