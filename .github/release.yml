@@ -1,33 +1,57 @@
-name: Release
-
+name: CI
 on:
   push:
-    branches:
-      - master
-
+    branches-ignore:
+      - $default-branch
 jobs:
-  release:
-    name: Release
+  ci:
+    name: CI
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v2
+      - name: Checkout repo
+        uses: actions/checkout@master
         with:
+          # This makes Actions fetch all Git history so that Changesets
+          # can generate changelogs with the correct commits.
           fetch-depth: 0
-      - run: npm i -g pnpm
-      - name: Setup Node.js 16.x
-        uses: actions/setup-node@v2
+
+      # If you use a version of Node other than 12, change it here.
+      - name: Set up Node.js 16.x
+        uses: actions/setup-node@master
         with:
           node-version: 16.x
-      - name: Install Dependencies
+
+      # If you use npm instead of yarn, change this to `npm install`.
+      - name: Install dependencies
         run: pnpm install
-      - name: Create Release Pull Request or Publish to npm
-        id: changesets
-        uses: changesets/action@master
-        with:
-          # This expects you to have a script called release which does a build for your packages and calls changeset publish
-          version: pnpm changeset:version
-          publish: pnpm release
+
+      # Change this to customize your build command.
+      - name: Build
+        run: pnpm build
+
+      # Change this to customize your test command.
+      # - name: Test
+      #   run: pnpm test
+
+      - name: Create .npmrc
+        run: |
+          cat << EOF > "$HOME/.npmrc"
+            //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          EOF
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Release snapshot
+        run: |
+          npx changeset version --snapshot
+          npx changeset publish --tag canary
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Post published version to GitHub checks
+        run: |
+          name=$(jq -r .name package.json)
+          version=$(jq -r .version package.json)
+          npx action-status --context=$name --state=success --description=$version --url="https://unpkg.com/$name@$version/"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
