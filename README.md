@@ -155,3 +155,4 @@ Use `import * as Icon from 'svelte-heros-v2'`.
 ## Other icons
 
 - [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
+- [Svelte-Heros v1](https://github.com/shinokada/svelte-heros)
