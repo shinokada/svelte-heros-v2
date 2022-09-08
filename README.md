@@ -1,6 +1,6 @@
 # Svelte-Heros-V2 with Heroicon v2.0.10
 
-If you are looking for the version 1, go to [Svelte-Heros](https://github.com/shinokada/svelte-heros).
+**If you are looking for the version 1, go to [Svelte-Heros](https://github.com/shinokada/svelte-heros)**
 
 Hero Icons v2 for Svelte. You can select outline and solid icons using the variation props. Svlete-Heros support major CSS framework. You can add additional CSS using the `class` props.
 
@@ -22,7 +22,13 @@ Hero Icons v2 for Svelte. You can select outline and solid icons using the varia
 ## Installation
 
 ```sh
-npm i svelte-heros-v2@latest
+npm i -D svelte-heros-v2
+```
+
+To update
+
+```sh
+npm i -D svelte-heros-v2@latest
 ```
 
 ## REPL
@@ -37,6 +43,8 @@ npm i svelte-heros-v2@latest
 <script>
 	import { AcademicCap } from 'svelte-heros-v2';
 </script>
+
+<AcademicCap />
 ```
 
 ## Props
@@ -76,7 +84,7 @@ Use the `color` prop to change colors with HEX color code.
 
 ## CSS framework support
 
-Use the `class` prop to change colors and add additional css.
+Use the `class` prop to change colors and additional CSS.
 
 For example, Tailwind CSS:
 
@@ -122,7 +130,7 @@ You can pass other attibutes as well.
 	import { AcademicCap } from 'svelte-heros-v2';
 </script>
 
-<svelte:component this="{AcademicCap}" />
+<svelte:component this="{AcademicCap}" size="40" />
 ```
 
 ## Import all
@@ -150,6 +158,18 @@ Use `import * as Icon from 'svelte-heros-v2'`.
 </script>
 
 <Map size="50" on:click={() => (isSolid = !isSolid)} variation={isSolid ? 'solid' : 'outline'} />
+```
+
+## Events
+
+All icons have the following events:
+
+```md
+on:click
+on:mouseenter
+on:mouseleave
+on:mouseover
+on:mouseout
 ```
 
 ## Other icons

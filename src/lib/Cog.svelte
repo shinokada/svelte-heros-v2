@@ -35,6 +35,10 @@
 	{viewBox}
 	stroke-width="2"
 	on:click
+	on:mouseenter
+	on:mouseleave
+	on:mouseover
+	on:mouseout
 >
 	{@html svgpath}
 </svg>
