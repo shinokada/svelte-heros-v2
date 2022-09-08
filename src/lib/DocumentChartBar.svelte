@@ -1,14 +1,14 @@
 <script lang="ts">
-	// https://github.com/shinokada/svelte-heros-v2
-	// heroicons v2.0.4
-	export let size = '24';
-	export let color = 'currentColor';
-	export let variation: 'solid' | 'outline' = 'outline';
-	let viewBox: string;
-	let svgpath: string;
-	let svgoutline = `<path d="M19.5 14.25V11.625C19.5 9.76104 17.989 8.25 16.125 8.25H14.625C14.0037 8.25 13.5 7.74632 13.5 7.125V5.625C13.5 3.76104 11.989 2.25 10.125 2.25H8.25M9 16.5V17.25M12 14.25V17.25M15 12V17.25M10.5 2.25H5.625C5.00368 2.25 4.5 2.75368 4.5 3.375V20.625C4.5 21.2463 5.00368 21.75 5.625 21.75H18.375C18.9963 21.75 19.5 21.2463 19.5 20.625V11.25C19.5 6.27944 15.4706 2.25 10.5 2.25Z" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> `;
-	let svgsolid = `<path fill-rule="evenodd" clip-rule="evenodd" d="M5.625 1.5H9C11.0711 1.5 12.75 3.17893 12.75 5.25V7.125C12.75 8.16053 13.5895 9 14.625 9H16.5C18.5711 9 20.25 10.6789 20.25 12.75V20.625C20.25 21.6605 19.4105 22.5 18.375 22.5H5.625C4.58947 22.5 3.75 21.6605 3.75 20.625V3.375C3.75 2.33947 4.58947 1.5 5.625 1.5ZM9.75 17.25C9.75 16.8358 9.41421 16.5 9 16.5C8.58579 16.5 8.25 16.8358 8.25 17.25V18C8.25 18.4142 8.58579 18.75 9 18.75C9.41421 18.75 9.75 18.4142 9.75 18V17.25ZM12 14.25C12.4142 14.25 12.75 14.5858 12.75 15V18C12.75 18.4142 12.4142 18.75 12 18.75C11.5858 18.75 11.25 18.4142 11.25 18V15C11.25 14.5858 11.5858 14.25 12 14.25ZM15.75 12.75C15.75 12.3358 15.4142 12 15 12C14.5858 12 14.25 12.3358 14.25 12.75V18C14.25 18.4142 14.5858 18.75 15 18.75C15.4142 18.75 15.75 18.4142 15.75 18V12.75Z" fill="${color}"/> <path d="M14.25 5.25C14.25 3.93695 13.768 2.73648 12.9712 1.8159C16.3701 2.70377 19.0462 5.37988 19.9341 8.77881C19.0135 7.98204 17.8131 7.5 16.5 7.5H14.625C14.4179 7.5 14.25 7.33211 14.25 7.125V5.25Z" fill="${color}"/> `;
-	$: switch (variation) {
+  // https://github.com/shinokada/svelte-heros-v2
+  // heroicons v2.0.4
+  export let size = "24";
+  export let color="currentColor";
+  export let variation: "solid" | "outline" = "outline";
+  let viewBox: string;
+  let svgpath: string;
+  let svgoutline = `<path d="M19.5 14.25V11.625C19.5 9.76104 17.989 8.25 16.125 8.25H14.625C14.0037 8.25 13.5 7.74632 13.5 7.125V5.625C13.5 3.76104 11.989 2.25 10.125 2.25H8.25M9 16.5V17.25M12 14.25V17.25M15 12V17.25M10.5 2.25H5.625C5.00368 2.25 4.5 2.75368 4.5 3.375V20.625C4.5 21.2463 5.00368 21.75 5.625 21.75H18.375C18.9963 21.75 19.5 21.2463 19.5 20.625V11.25C19.5 6.27944 15.4706 2.25 10.5 2.25Z" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> `;
+  let svgsolid = `<path fill-rule="evenodd" clip-rule="evenodd" d="M5.625 1.5H9C11.0711 1.5 12.75 3.17893 12.75 5.25V7.125C12.75 8.16053 13.5895 9 14.625 9H16.5C18.5711 9 20.25 10.6789 20.25 12.75V20.625C20.25 21.6605 19.4105 22.5 18.375 22.5H5.625C4.58947 22.5 3.75 21.6605 3.75 20.625V3.375C3.75 2.33947 4.58947 1.5 5.625 1.5ZM9.75 17.25C9.75 16.8358 9.41421 16.5 9 16.5C8.58579 16.5 8.25 16.8358 8.25 17.25V18C8.25 18.4142 8.58579 18.75 9 18.75C9.41421 18.75 9.75 18.4142 9.75 18V17.25ZM12 14.25C12.4142 14.25 12.75 14.5858 12.75 15V18C12.75 18.4142 12.4142 18.75 12 18.75C11.5858 18.75 11.25 18.4142 11.25 18V15C11.25 14.5858 11.5858 14.25 12 14.25ZM15.75 12.75C15.75 12.3358 15.4142 12 15 12C14.5858 12 14.25 12.3358 14.25 12.75V18C14.25 18.4142 14.5858 18.75 15 18.75C15.4142 18.75 15.75 18.4142 15.75 18V12.75Z" fill="${color}"/> <path d="M14.25 5.25C14.25 3.93695 13.768 2.73648 12.9712 1.8159C16.3701 2.70377 19.0462 5.37988 19.9341 8.77881C19.0135 7.98204 17.8131 7.5 16.5 7.5H14.625C14.4179 7.5 14.25 7.33211 14.25 7.125V5.25Z" fill="${color}"/> `;
+  $: switch (variation) {
 		case 'outline':
 			svgpath = svgoutline;
 			viewBox = '0 0 24 24';
@@ -21,20 +21,19 @@
 			svgpath = svgoutline;
 			viewBox = '0 0 24 24';
 	}
-	export let ariaLabel = 'document chart bar';
-</script>
+export let ariaLabel="document chart bar" </script>
 
 <svg
-	xmlns="http://www.w3.org/2000/svg"
-	width={size}
-	height={size}
-	class={$$props.class}
-	{...$$restProps}
-	aria-label={ariaLabel}
-	fill="none"
-	{viewBox}
-	stroke-width="2"
-	on:click
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  class={$$props.class}
+  {...$$restProps}
+  aria-label={ariaLabel}
+  fill="none" 
+ {viewBox}
+  stroke-width="2" 
+  on:click
 >
-	{@html svgpath}
+  {@html svgpath}
 </svg>
