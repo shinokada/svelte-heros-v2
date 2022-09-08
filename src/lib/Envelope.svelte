@@ -39,6 +39,8 @@
 	on:mouseleave
 	on:mouseover
 	on:mouseout
+	on:blur
+	on:focus
 >
 	{@html svgpath}
 </svg>
