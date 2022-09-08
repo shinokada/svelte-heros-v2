@@ -1,6 +1,6 @@
 {
 	"$schema": "https://unpkg.com/@changesets/config@2.1.1/schema.json",
-	"changelog":  ["@changesets/changelog-github", {"repo": "shinokada/svelte-heros-v2"}],
+	"changelog": ["@changesets/changelog-github", { "repo": "shinokada/svelte-heros-v2" }],
 	"commit": false,
 	"fixed": [],
 	"linked": [],
