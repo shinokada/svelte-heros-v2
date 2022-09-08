@@ -4,16 +4,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.1.6](https://github.com/shinokada/svelte-heros-v2/compare/v0.1.5...v0.1.6) (2022-09-08)
 
-
 ### Features
 
-* heroicons v2.0.10 ([d619fd8](https://github.com/shinokada/svelte-heros-v2/commit/d619fd8edfb59a0dab77b69488159f15b221d32b))
-* heroicons v2.0.10 ([980b0bb](https://github.com/shinokada/svelte-heros-v2/commit/980b0bbcaf17868af5865345b89773812ff47fcd))
-
+- heroicons v2.0.10 ([d619fd8](https://github.com/shinokada/svelte-heros-v2/commit/d619fd8edfb59a0dab77b69488159f15b221d32b))
+- heroicons v2.0.10 ([980b0bb](https://github.com/shinokada/svelte-heros-v2/commit/980b0bbcaf17868af5865345b89773812ff47fcd))
 
 ### Bug Fixes
 
-* format ([9e324be](https://github.com/shinokada/svelte-heros-v2/commit/9e324bea69d1afc862f3cbb110ad150b8e93f6c3))
+- format ([9e324be](https://github.com/shinokada/svelte-heros-v2/commit/9e324bea69d1afc862f3cbb110ad150b8e93f6c3))
 
 ### [0.1.5](https://github.com/shinokada/svelte-heros-v2/compare/v0.1.4...v0.1.5) (2022-08-25)
 
