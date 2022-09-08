@@ -21,8 +21,8 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write --plugin-search-dir=. .",
 		"prepare": "husky install",
-		"release": "npm run build && changeset publish",
-		"version-packages": "changeset version && npm run format"
+		"release": "npm run build && npx changeset publish",
+		"version-packages": "npx changeset version"
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.4.6",
