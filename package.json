@@ -22,7 +22,7 @@
 		"format": "prettier --write --plugin-search-dir=. .",
 		"prepare": "husky install",
 		"release": "npm run build && changeset publish",
-		"version-packages": "changeset version && npm run prettier"
+		"version-packages": "changeset version && npm run format"
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.4.6",
