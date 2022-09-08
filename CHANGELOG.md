@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0
+
+### Minor Changes
+
+- [`8e27021`](https://github.com/shinokada/svelte-heros-v2/commit/8e270212f820f700ff06b5c3029f3a19d23275e5) Thanks [@shinokada](https://github.com/shinokada)! - docs: update heroicons verion to 2.0.10
+
+- [`fc9e2c9`](https://github.com/shinokada/svelte-heros-v2/commit/fc9e2c955f9e5856dfb0b8c5839c606909f94a71) Thanks [@shinokada](https://github.com/shinokada)! - feat: heroicons v2.0.10
+
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ### [0.1.6](https://github.com/shinokada/svelte-heros-v2/compare/v0.1.5...v0.1.6) (2022-09-08)
