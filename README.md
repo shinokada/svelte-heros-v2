@@ -1,4 +1,4 @@
-# Svelte-Heros-V2
+# Svelte-Heros-V2 with Heroicon v2.0.10
 
 If you are looking for the version 1, go to [Svelte-Heros](https://github.com/shinokada/svelte-heros).
 
