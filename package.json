@@ -16,13 +16,13 @@
 		"package": "svelte-package",
 		"preview": "vite preview",
 		"test": "playwright test",
-		"release": "pnpm build && changeset publish",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write --plugin-search-dir=. .",
 		"prepare": "husky install",
-		"changeset:version": "changeset && pnpm i --lockfile-only"
+		"release": "npm run build && changeset publish",
+		"version-packages": "changeset version && npm run prettier"
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.4.6",

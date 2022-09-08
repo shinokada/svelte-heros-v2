@@ -27,10 +27,18 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - name: install
-        run: npm i
-      - name: build
-        run: npm run build
-      - name: publish
-        run: npm publish --access public
+        run: npm install
+
+      - name: Create Release Pull Request or Publish to npm
+        # https://github.com/changesets/action
+        uses: changesets/action@v1
+        with:
+          # this expects you to have a script called release which does a build for your packages and calls changeset publish
+          # my release & version-packages:
+          # "release": "npm run build && changeset publish",
+          # "version-packages": "changeset version && npm run prettier"
+          publish: npm run release
+          version: npm run version-packages
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
