@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.2
+
+### Patch Changes
+
+- [`606f144`](https://github.com/shinokada/svelte-heros-v2/commit/606f144633bb23b997b972a215cc5b9b6581a3cc) Thanks [@shinokada](https://github.com/shinokada)! - update relase.yml
+
 ## 0.4.1
 
 ### Patch Changes
