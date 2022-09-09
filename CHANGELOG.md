@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.1
+
+### Patch Changes
+
+- [`1c2dd6f`](https://github.com/shinokada/svelte-heros-v2/commit/1c2dd6f5d39f94d981d81846c91312d365f75d96) Thanks [@shinokada](https://github.com/shinokada)! - feat: add Creating .npmrc to .github/workflows/release.yml since publishing to npm not working
+
+- [`1b18b1b`](https://github.com/shinokada/svelte-heros-v2/commit/1b18b1bf46414065f6ee00b62da2ebd9ad6a9faf) Thanks [@shinokada](https://github.com/shinokada)! - add on:blur and on:focus event handlers
+
 ## 0.4.0
 
 ### Minor Changes
