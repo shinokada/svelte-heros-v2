@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.3
+
+### Patch Changes
+
+- [`e30c27c`](https://github.com/shinokada/svelte-heros-v2/commit/e30c27c8fc08c67614a085346e9eace75206c795) Thanks [@shinokada](https://github.com/shinokada)! - update release.yml, package.json, and .npmrc
+
+- [`fee3365`](https://github.com/shinokada/svelte-heros-v2/commit/fee336590af37e8ce6dca50979f4baf49c5b0620) Thanks [@shinokada](https://github.com/shinokada)! - update .npmrc, package.json and release.yml
+
+- [`05a181b`](https://github.com/shinokada/svelte-heros-v2/commit/05a181b49d1dee63e6d58c9b7cb75a628f56f983) Thanks [@shinokada](https://github.com/shinokada)! - put back registry-url
+
 ## 0.4.2
 
 ### Patch Changes
