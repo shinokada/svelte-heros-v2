@@ -61,6 +61,6 @@
 		"url": "https://github.com/shinokada/svelte-heros-v2"
 	},
 	"publishConfig": {
-   "registry": "https://npm.pkg.github.com/shinokada"
- }
+		"registry": "https://npm.pkg.github.com/shinokada"
+	}
 }
