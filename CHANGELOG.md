@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.4
+
+### Patch Changes
+
+- [`6fd114b`](https://github.com/shinokada/svelte-heros-v2/commit/6fd114bdfa739b09d1598a4370f169e7216440ad) Thanks [@shinokada](https://github.com/shinokada)! - update .npmrc and package.json
+
 ## 0.4.3
 
 ### Patch Changes
