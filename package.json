@@ -1,6 +1,6 @@
 {
 	"name": "svelte-heros-v2",
-	"version": "0.4.4",
+	"version": "0.2.2",
 	"description": "Hero icon v2 components for Svelte",
 	"author": {
 		"name": "Shinichi Okada",
@@ -20,13 +20,9 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write --plugin-search-dir=. .",
-		"prepare": "husky install",
-		"release": "npm run package && npx changeset publish",
-		"version-packages": "npx changeset version"
+		"prepare": "husky install"
 	},
 	"devDependencies": {
-		"@changesets/changelog-github": "^0.4.6",
-		"@changesets/cli": "^2.24.4",
 		"@playwright/test": "^1.25.1",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-node": "1.0.0-next.88",
