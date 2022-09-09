@@ -42,9 +42,9 @@ jobs:
         uses: changesets/action@v1
         with:
           # this expects you to have a script called release which does a build for your packages and calls changeset publish
-          # my release & version-packages:
-          # "release": "npm run build && changeset publish",
-          # "version-packages": "changeset version && npm run prettier"
+          # release & version-packages:
+          # "release": "npm run build && npx changeset publish",
+          # "version-packages": "npx changeset version"
           publish: npm run release
           version: npm run version-packages
         env:
