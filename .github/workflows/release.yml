@@ -41,10 +41,10 @@ jobs:
         id: changesets
         # https://github.com/changesets/action
         uses: changesets/action@v1
-        with:
-          # this expects you to have a script called release which does a build for your packages and calls changeset publish
-          # "version-packages": "npx changeset version"
-          version: npm run version-packages
+        # with:
+        # this expects you to have a script called release which does a build for your packages and calls changeset publish
+        # "version-packages": "npx changeset version"
+        # version: npm run version-packages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -54,3 +54,5 @@ jobs:
         # publish: npm run release
         # "release": "npm run package && npx changeset publish",
         run: npm run release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
