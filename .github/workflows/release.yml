@@ -39,14 +39,14 @@ jobs:
 
       - name: Create Release Pull Request or Publish to npm
         # https://github.com/changesets/action
-        uses: changesets/action@v1
+        uses: changesets/action@master
         with:
           # this expects you to have a script called release which does a build for your packages and calls changeset publish
           # release & version-packages:
-          # "release": "npm run build && npx changeset publish",
+          # "release": "npm run package && npx changeset publish",
           # "version-packages": "npx changeset version"
-          publish: npm run release
           version: npm run version-packages
+          publish: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
