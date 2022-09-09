@@ -43,7 +43,7 @@ jobs:
         with:
           # this expects you to have a script called release which does a build for your packages and calls changeset publish
           # release & version-packages:
-          # "release": "npm run package && npx changeset publish",
+          # "release": "npm run package && cd package && npx changeset publish",
           # "version-packages": "npx changeset version"
           version: npm run version-packages
           publish: npm run release

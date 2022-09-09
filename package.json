@@ -21,7 +21,7 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write --plugin-search-dir=. .",
 		"prepare": "husky install",
-		"release": "npm run package && npx changeset publish",
+		"release": "npm run package && cd package && npx changeset publish",
 		"version-packages": "npx changeset version"
 	},
 	"devDependencies": {
