@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.2.0](https://github.com/shinokada/svelte-heros-v2/compare/v0.1.6...v0.2.0) (2022-09-09)
+
+
+### Features
+
+* add Creating .npmrc to github/workflows/release.yml since npm publish does not work ([1b18b1b](https://github.com/shinokada/svelte-heros-v2/commit/1b18b1bf46414065f6ee00b62da2ebd9ad6a9faf))
+* add heroicon v1 link to README ([d4e23c3](https://github.com/shinokada/svelte-heros-v2/commit/d4e23c3326aaad197d0b7ddf618f2d2d6fea8144))
+* add heroicons version to 2.0.10 ([266f30a](https://github.com/shinokada/svelte-heros-v2/commit/266f30a0242a0c1435d5d0a0cf9caa696eea0c8e))
+* add new event handlers ([dd82116](https://github.com/shinokada/svelte-heros-v2/commit/dd82116de0906589f051293e8f9b533f295221c5))
+* add on:blur and on:focus event handlers ([89e40f2](https://github.com/shinokada/svelte-heros-v2/commit/89e40f221829164079a7a0c890e305ac7bfef3f8))
+* update release and version-packages scripts in package.json ([340a469](https://github.com/shinokada/svelte-heros-v2/commit/340a46973dc94c8dac9a4d0278e57b6786e93e38))
+
+
+### Bug Fixes
+
+* use release-please workflow ([d50688f](https://github.com/shinokada/svelte-heros-v2/commit/d50688f67a1809f08e5693e2a29f948cbb38b50a))
+
 ## 0.4.4
 
 ### Patch Changes
