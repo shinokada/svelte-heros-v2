@@ -4,20 +4,18 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.2.3](https://github.com/shinokada/svelte-heros-v2/compare/v0.2.1...v0.2.3) (2022-09-12)
 
-
 ### Features
 
-* add Creating .npmrc to github/workflows/release.yml since npm publish does not work ([1b18b1b](https://github.com/shinokada/svelte-heros-v2/commit/1b18b1bf46414065f6ee00b62da2ebd9ad6a9faf))
-* add events ([ac560f1](https://github.com/shinokada/svelte-heros-v2/commit/ac560f1f27384a57f2049a27cf1f9486813a645e))
-* add heroicon v1 link to README ([d4e23c3](https://github.com/shinokada/svelte-heros-v2/commit/d4e23c3326aaad197d0b7ddf618f2d2d6fea8144))
-* add new event handlers ([dd82116](https://github.com/shinokada/svelte-heros-v2/commit/dd82116de0906589f051293e8f9b533f295221c5))
-* add on:blur and on:focus event handlers ([89e40f2](https://github.com/shinokada/svelte-heros-v2/commit/89e40f221829164079a7a0c890e305ac7bfef3f8))
-* update release and version-packages scripts in package.json ([340a469](https://github.com/shinokada/svelte-heros-v2/commit/340a46973dc94c8dac9a4d0278e57b6786e93e38))
-
+- add Creating .npmrc to github/workflows/release.yml since npm publish does not work ([1b18b1b](https://github.com/shinokada/svelte-heros-v2/commit/1b18b1bf46414065f6ee00b62da2ebd9ad6a9faf))
+- add events ([ac560f1](https://github.com/shinokada/svelte-heros-v2/commit/ac560f1f27384a57f2049a27cf1f9486813a645e))
+- add heroicon v1 link to README ([d4e23c3](https://github.com/shinokada/svelte-heros-v2/commit/d4e23c3326aaad197d0b7ddf618f2d2d6fea8144))
+- add new event handlers ([dd82116](https://github.com/shinokada/svelte-heros-v2/commit/dd82116de0906589f051293e8f9b533f295221c5))
+- add on:blur and on:focus event handlers ([89e40f2](https://github.com/shinokada/svelte-heros-v2/commit/89e40f221829164079a7a0c890e305ac7bfef3f8))
+- update release and version-packages scripts in package.json ([340a469](https://github.com/shinokada/svelte-heros-v2/commit/340a46973dc94c8dac9a4d0278e57b6786e93e38))
 
 ### Bug Fixes
 
-* use release-please workflow ([d50688f](https://github.com/shinokada/svelte-heros-v2/commit/d50688f67a1809f08e5693e2a29f948cbb38b50a))
+- use release-please workflow ([d50688f](https://github.com/shinokada/svelte-heros-v2/commit/d50688f67a1809f08e5693e2a29f948cbb38b50a))
 
 ### [0.2.2](https://github.com/shinokada/svelte-heros-v2/compare/v0.1.6...v0.2.2) (2022-09-09)
 
