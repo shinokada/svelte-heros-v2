@@ -170,6 +170,8 @@ on:mouseenter
 on:mouseleave
 on:mouseover
 on:mouseout
+on:blur
+on:focus
 ```
 
 ## Other icons
