@@ -1,5 +1,14 @@
 # Changelog
 
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.3.1](https://github.com/shinokada/svelte-heros-v2/compare/v0.2.1...v0.3.1) (2022-09-12)
+
+
+### Features
+
+* add heroicon v1 link to README ([d4e23c3](https://github.com/shinokada/svelte-heros-v2/commit/d4e23c3326aaad197d0b7ddf618f2d2d6fea8144))
+
 ## 0.3.0
 
 ### Minor Changes
