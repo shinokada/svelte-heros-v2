@@ -5,6 +5,13 @@
 Hero Icons v2 for Svelte. You can select outline and solid icons using the variation props. Svlete-Heros support major CSS framework. You can add additional CSS using the `class` props.
 
 <p align="center">
+<a href="https://www.npmjs.com/package/svelte-heros-v2" rel="nofollow"><img src="https://img.shields.io/npm/v/svelte-heros-v2" alt="npm"></a>
+<a href="https://twitter.com/shinokada" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada"></a>
+<a href="http://www.apache.org/licenses/" rel="nofollow"><img src="https://img.shields.io/github/license/shinokada/svelte-heros-v2" alt="License"></a>
+<a href="https://www.npmjs.com/package/svelte-heros-v2" rel="nofollow"><img src="https://img.shields.io/npm/dw/svelte-heros-v2.svg" alt="npm"></a>
+</p>
+
+<p align="center">
 <img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-heros-v2/main/static/images/heros-outline1.webp" />
 <img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-heros-v2/main/static/images/heros-outline2.webp" />
 <img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-heros-v2/main/static/images/heros-solid1.webp" />
