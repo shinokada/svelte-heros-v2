@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.3](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.2...v0.3.3) (2022-12-13)
+
+
+### Bug Fixes
+
+* update sveltekit ([681d3c3](https://github.com/shinokada/svelte-heros-v2/commit/681d3c3fdf543b898f4677df9ace890873cf1d91))
+
 ### [0.3.2](https://github.com/shinokada/svelte-heros-v2/compare/v0.2.5...v0.3.2) (2022-12-13)
 
 ### Bug Fixes
