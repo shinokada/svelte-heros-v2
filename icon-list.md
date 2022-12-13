@@ -74,6 +74,7 @@
 - BookmarkSlash.svelte
 - BookmarkSquare.svelte
 - Briefcase.svelte
+- BugAnt.svelte
 - BuildingLibrary.svelte
 - BuildingOffice.svelte
 - BuildingOffice2.svelte
@@ -153,6 +154,7 @@
 - ExclamationCircle.svelte
 - ExclamationTriangle.svelte
 - Eye.svelte
+- EyeDropper.svelte
 - EyeSlash.svelte
 - FaceFrown.svelte
 - FaceSmile.svelte
@@ -213,6 +215,7 @@
 - PaperAirplane.svelte
 - PaperClip.svelte
 - Pause.svelte
+- PauseCircle.svelte
 - Pencil.svelte
 - PencilSquare.svelte
 - Phone.svelte
@@ -221,10 +224,12 @@
 - PhoneXMark.svelte
 - Photo.svelte
 - Play.svelte
+- PlayCircle.svelte
 - PlayPause.svelte
 - Plus.svelte
 - PlusCircle.svelte
 - PlusSmall.svelte
+- Power.svelte
 - PresentationChartBar.svelte
 - PresentationChartLine.svelte
 - Printer.svelte
@@ -237,6 +242,7 @@
 - ReceiptRefund.svelte
 - RectangleGroup.svelte
 - RectangleStack.svelte
+- RocketLaunch.svelte
 - Rss.svelte
 - Scale.svelte
 - Scissors.svelte
@@ -253,17 +259,21 @@
 - SpeakerWave.svelte
 - SpeakerXMark.svelte
 - Square2Stack.svelte
+- Square3Stack3d.svelte
 - Squares2x2.svelte
 - SquaresPlus.svelte
 - Star.svelte
 - Stop.svelte
+- StopCircle.svelte
 - Sun.svelte
 - Swatch.svelte
 - TableCells.svelte
 - Tag.svelte
 - Ticket.svelte
 - Trash.svelte
+- Trophy.svelte
 - Truck.svelte
+- Tv.svelte
 - User.svelte
 - UserCircle.svelte
 - UserGroup.svelte
@@ -274,8 +284,10 @@
 - VideoCamera.svelte
 - VideoCameraSlash.svelte
 - ViewColumns.svelte
+- ViewfinderCircle.svelte
 - Wallet.svelte
 - Wifi.svelte
+- Window.svelte
 - Wrench.svelte
 - WrenchScrewdriver.svelte
 - XCircle.svelte
