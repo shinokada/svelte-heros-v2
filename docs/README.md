@@ -1,5 +1,10 @@
 # Svelte-Heros-V2 with Heroicon v2.0.13
 
+<p align="center">
+<a href="https://shinokada.github.io/svelte-heros-v2/" rel="nofollow">Svelte Heros v2</a>
+</p>
+
+
 **If you are looking for the version 1, go to [Svelte-Heros](https://github.com/shinokada/svelte-heros)**
 
 Hero Icons v2 for Svelte. You can select outline and solid icons using the variation props. Svlete-Heros support major CSS framework. You can add additional CSS using the `class` props.
