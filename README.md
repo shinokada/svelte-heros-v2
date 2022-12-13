@@ -13,11 +13,11 @@ Hero Icons v2 for Svelte. You can select outline and solid icons using the varia
 
 ## Original source
 
-[tailwindlabs/heroicons v2.0.10](https://github.com/tailwindlabs/heroicons)
+[tailwindlabs/heroicons v2.0.13](https://github.com/tailwindlabs/heroicons)
 
 ## List of icons
 
-[Icon names](https://github.com/shinokada/svelte-heros-v2/blob/main/icon-list.md)
+[292 icon names](https://github.com/shinokada/svelte-heros-v2/blob/main/icon-list.md)
 
 ## Installation
 
@@ -41,7 +41,7 @@ npm i -D svelte-heros-v2@latest
 
 ```html
 <script>
-	import { AcademicCap } from 'svelte-heros-v2';
+  import { AcademicCap } from 'svelte-heros-v2';
 </script>
 
 <AcademicCap />
@@ -127,7 +127,7 @@ You can pass other attibutes as well.
 
 ```html
 <script>
-	import { AcademicCap } from 'svelte-heros-v2';
+  import { AcademicCap } from 'svelte-heros-v2';
 </script>
 
 <svelte:component this="{AcademicCap}" size="40" />
@@ -139,7 +139,7 @@ Use `import * as Icon from 'svelte-heros-v2'`.
 
 ```html
 <script>
-	import * as Icon from 'svelte-heros-v2';
+  import * as Icon from 'svelte-heros-v2';
 </script>
 
 <Icon.ShoppingBag size="30" class="text-red-500" />
@@ -153,8 +153,8 @@ Use `import * as Icon from 'svelte-heros-v2'`.
 
 ```html
 <script>
-	import { Map } from 'svelte-heros-v2';
-	let isSolid = false;
+  import { Map } from 'svelte-heros-v2';
+  let isSolid = false;
 </script>
 
 <Map size="50" on:click={() => (isSolid = !isSolid)} variation={isSolid ? 'solid' : 'outline'} />
