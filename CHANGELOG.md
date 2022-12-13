@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.5](https://github.com/shinokada/svelte-heros-v2/compare/v0.2.4...v0.2.5) (2022-12-13)
+
+
+### Features
+
+* add docsify ([8490dba](https://github.com/shinokada/svelte-heros-v2/commit/8490dbab482add167c7e506c76410e48ea22f367))
+* update Heroicons v2.0.13 ([3d5c294](https://github.com/shinokada/svelte-heros-v2/commit/3d5c294039536b7ce559dc0e005603e8738d0840))
+
+
+### Bug Fixes
+
+* add basePath ([c827e03](https://github.com/shinokada/svelte-heros-v2/commit/c827e032551d8cfe589c4bef0d85fe1b0d113210))
+* add docs/.nojekyll file ([91b4f46](https://github.com/shinokada/svelte-heros-v2/commit/91b4f46845de025c870b32ea0a6ad7c5c8a094cb))
+* add docs/README ([81bbb0e](https://github.com/shinokada/svelte-heros-v2/commit/81bbb0ecab48eaa84605fd4ac5132b275faea929))
+* add homepage to docs/index.html ([e3b8379](https://github.com/shinokada/svelte-heros-v2/commit/e3b83799e9a240542cd5166c604b57bd9b006fbc))
+
 ### [0.2.4](https://github.com/shinokada/svelte-heros-v2/compare/v0.2.3...v0.2.4) (2022-09-12)
 
 ### Bug Fixes
