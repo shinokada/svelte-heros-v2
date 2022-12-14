@@ -22,14 +22,6 @@ Hero Icons v2 for Svelte. You can select outline and solid icons using the varia
 <img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-heros-v2/main/static/images/heros-solid2.webp" />
 </p>
 
-## Original source
-
-[tailwindlabs/heroicons v2.0.13](https://github.com/tailwindlabs/heroicons)
-
-## List of icons
-
-[292 icon names](https://github.com/shinokada/svelte-heros-v2/blob/main/icon-list.md)
-
 ## Installation
 
 ```sh
@@ -57,6 +49,10 @@ npm i -D svelte-heros-v2@latest
 
 <AcademicCap />
 ```
+
+## List of icons
+
+[292 icon names](https://github.com/shinokada/svelte-heros-v2/blob/main/icon-list.md)
 
 ## Props
 
@@ -184,6 +180,10 @@ on:mouseout
 on:blur
 on:focus
 ```
+
+## Original source
+
+[tailwindlabs/heroicons v2.0.13](https://github.com/tailwindlabs/heroicons)
 
 ## Other icons
 
