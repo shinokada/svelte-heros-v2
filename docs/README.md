@@ -40,6 +40,10 @@ npm i -D svelte-heros-v2@latest
 
 [Solid demo](https://svelte.dev/repl/e26c4ea516a0493cb64797879b1fe46d?version=3.49.0)
 
+## List of icons
+
+[292 icon names](https://github.com/shinokada/svelte-heros-v2/blob/main/icon-list.md)
+
 ## Usage
 
 ```html
@@ -49,10 +53,6 @@ npm i -D svelte-heros-v2@latest
 
 <AcademicCap />
 ```
-
-## List of icons
-
-[292 icon names](https://github.com/shinokada/svelte-heros-v2/blob/main/icon-list.md)
 
 ## Props
 
