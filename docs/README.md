@@ -1,4 +1,4 @@
-# Svelte-Heros-V2
+<h1 align="center">Svelte-Heros-V2</h1>
 
 <p align="center">
 <a href="https://shinokada.github.io/svelte-heros-v2/" rel="nofollow">Svelte Heros v2</a>
@@ -42,7 +42,7 @@ npm i -D svelte-heros-v2@latest
 
 ## List of icons
 
-[292 icon names](https://github.com/shinokada/svelte-heros-v2/blob/main/icon-list.md)
+[292 icon names](https://github.com/shinokada/svelte-heros-v2/blob/main/docs/icon-list.md)
 
 ## Usage
 
