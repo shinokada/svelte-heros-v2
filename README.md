@@ -36,13 +36,13 @@ npm i -D svelte-heros-v2@latest
 
 ## REPL
 
-[Outline demo](https://svelte.dev/repl/1948d7b5157f44709cff380d9783342c?version=3.49.0)
+[Outline demo](https://svelte.dev/repl/1948d7b5157f44709cff380d9783342c)
 
-[Solid demo](https://svelte.dev/repl/e26c4ea516a0493cb64797879b1fe46d?version=3.49.0)
+[Solid demo](https://svelte.dev/repl/e26c4ea516a0493cb64797879b1fe46d)
 
 ## List of icons
 
-[292 icon names](https://github.com/shinokada/svelte-heros-v2/blob/main/docs/icon-list.md)
+[292 icon names](https://github.com/shinokada/svelte-heros-v2/blob/main/icon-list.md)
 
 ## Usage
 

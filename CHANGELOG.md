@@ -4,13 +4,12 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.3.8](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.7...v0.3.8) (2022-12-15)
 
-
 ### Bug Fixes
 
-* add crossOriginLinks ([d12460d](https://github.com/shinokada/svelte-heros-v2/commit/d12460dcd64d1d6c0333acf05fe3e88debb877e8))
-* removed root/README ([00b1b43](https://github.com/shinokada/svelte-heros-v2/commit/00b1b434199ed3cc5d12398fd45eafddb586bb20))
-* structure ([7d678a6](https://github.com/shinokada/svelte-heros-v2/commit/7d678a65e7852bbbb3b04f0b449101648b13c0dc))
-* structure ([99bc44d](https://github.com/shinokada/svelte-heros-v2/commit/99bc44d0a1956fe6f01f4cb446e525af935dd880))
+- add crossOriginLinks ([d12460d](https://github.com/shinokada/svelte-heros-v2/commit/d12460dcd64d1d6c0333acf05fe3e88debb877e8))
+- removed root/README ([00b1b43](https://github.com/shinokada/svelte-heros-v2/commit/00b1b434199ed3cc5d12398fd45eafddb586bb20))
+- structure ([7d678a6](https://github.com/shinokada/svelte-heros-v2/commit/7d678a65e7852bbbb3b04f0b449101648b13c0dc))
+- structure ([99bc44d](https://github.com/shinokada/svelte-heros-v2/commit/99bc44d0a1956fe6f01f4cb446e525af935dd880))
 
 ### [0.3.7](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.6...v0.3.7) (2022-12-13)
 
