@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.9](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.8...v0.3.9) (2022-12-16)
+
+
+### Bug Fixes
+
+* move files from docs to root since npmjs does not show README. Update sveltekit ([2601a91](https://github.com/shinokada/svelte-heros-v2/commit/2601a91e3ad6f54f72124e510560149f90280d85))
+
 ### [0.3.8](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.7...v0.3.8) (2022-12-15)
 
 ### Bug Fixes
