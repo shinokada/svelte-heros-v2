@@ -42,6 +42,7 @@
     "vitest": "^0.25.3"
   },
   "type": "module",
+  "main": "index.js",
   "keywords": [
     "svelte",
     "sveltekit",
