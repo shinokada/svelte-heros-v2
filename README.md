@@ -1,7 +1,7 @@
 <h1 align="center">Svelte-Heros-V2</h1>
 
 <p align="center">
-<a href="https://shinokada.github.io/svelte-heros-v2/" rel="nofollow">Svelte Heros v2</a>
+<a href="https://svelte-heros-v2.codewithshin.com/" rel="nofollow">Svelte Heros v2</a>
 </p>
 
 <p align="center">
