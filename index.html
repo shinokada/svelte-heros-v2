@@ -1,66 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Svelte Heros v2</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="description"
+      content="Hero Icons v2 for Svelte. You can select outline and solid icons using the variation props. Svlete-Heros support major CSS framework. You can add additional CSS using the class props."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
+    <link rel="stylesheet" href="static/css/vue.css" />
+    <link rel="canonical" href="https://shinokada.github.io/svelte-heros-v2/" />
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="static/apple-touch-icon.png">
+    <link rel="android-chrome-192x192" type="image/png" sizes="192x192" href="static/android-chrome-192x192.png">
+    <link rel="android-chrome-512x512" type="image/png" sizes="512x512" href="static/android-chrome-512x512.png">
+    <link rel="favicon-16x16" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+    <link rel="favicon-32x32" type="image/png" sizes="16x16" href="static/favicon-32x32.png">
+    <style>
+      .markdown-section {
+        max-width: 700px;
+      }
+    </style>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@shinokada" />
+    <meta name="twitter:title" content="Svelte Heros v2" />
+    <meta
+      name="twitter:description"
+      content="Hero Icons v2 for Svelte. You can select outline and solid icons using the variation props. Svlete-Heros support major CSS framework. You can add additional CSS using the class props."
+    />
+    <meta name="twitter:image" content="https://open-graph-vercel.vercel.app/api/svelte-heros-v2" />
+    <meta name="twitter:image:alt" content="Svelte Heros v2" />
+    <meta property="fb:app_id" content="453670756870545" />
+    <meta property="og:url" content="https://svelte-heros-v2.codewithshin.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Svelte Heros v2" />
+    <meta
+      property="og:description"
+      content="Hero Icons v2 for Svelte. You can select outline and solid icons using the variation props. Svlete-Heros support major CSS framework. You can add additional CSS using the class props."
+    />
+    <meta property="og:image" content="https://open-graph-vercel.vercel.app/api/svelte-heros-v2" />
+    <meta property="og:image:alt" content="Svelte Heros v2" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="pwa-capable" content="yes">
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Svelte Heros v2</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description"
-    content="Hero Icons v2 for Svelte. You can select outline and solid icons using the variation props. Svlete-Heros support major CSS framework. You can add additional CSS using the class props." />
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
-  <style>
-    .markdown-section {
-      max-width: 700px;
-    }
-  </style>
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:creator" content="@shinokada" />
-  <meta name="twitter:title" content="Svelte Heros v2" />
-  <meta name="twitter:description"
-    content="Hero Icons v2 for Svelte. You can select outline and solid icons using the variation props. Svlete-Heros support major CSS framework. You can add additional CSS using the class props." />
-  <meta name="twitter:image" content="https://open-graph-vercel.vercel.app/api/svelte-heros-v2" />
-  <meta name="twitter:image:alt" content="Svelte Heros v2" />
-  <meta property="fb:app_id" content="453670756870545" />
-  <meta property="og:url" content="https://svelte-heros-v2.codewithshin.com/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Svelte Heros v2" />
-  <meta property="og:description"
-    content="Hero Icons v2 for Svelte. You can select outline and solid icons using the variation props. Svlete-Heros support major CSS framework. You can add additional CSS using the class props." />
-  <meta property="og:image" content="https://open-graph-vercel.vercel.app/api/svelte-heros-v2" />
-  <meta property="og:image:alt" content="Svelte Heros v2" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-</head>
-
-<body>
-  <nav style="
+  <body>
+    <nav
+      style="
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-      ">
-    <!-- <ul><li href="/link">Link 1</li></ul> -->
-  </nav>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      subMaxLevel: 1,
-      maxLevel: 3,
-      auto2top: true,
-      repo: 'shinokada/svelte-heros-v2',
-      routerMode: 'history',
-      crossOriginLinks: [
-        'https://twitter.com/shinokada',
-        'https://www.npmjs.com/package/svelte-heros-v2',
-        'https://twitter.com/shinokada',
-        'http://www.apache.org/licenses/',
-        'https://www.npmjs.com/package/svelte-heros-v2'
-      ]
+      "
+    >
+      <!-- <ul><li href="/link">Link 1</li></ul> -->
+    </nav>
+    <div id="app"></div>
+    <script>
+      window.$docsify = {
+        subMaxLevel: 1,
+        maxLevel: 3,
+        auto2top: true,
+        repo: 'shinokada/svelte-heros-v2',
+        routerMode: 'history',
+        crossOriginLinks: [
+          'https://twitter.com/shinokada',
+          'https://www.npmjs.com/package/svelte-heros-v2',
+          'https://twitter.com/shinokada',
+          'http://www.apache.org/licenses/',
+          'https://www.npmjs.com/package/svelte-heros-v2'
+        ],
+      search: 'auto',
+      search: [
+        '/README.md',
+      ],
+
+      // complete configuration parameters
+      search: {
+        maxAge: 180000,
+        paths: 'auto',
+        placeholder: 'Type to search',
+        noData: 'No Results!',
+        // Headline depth, 1 - 6
+        depth: 3,
+        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
+      },
     };
+    // PWA
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register(
+        '/service-worker.js', {
+          scope: '/'
+        }
+      )
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://svelte-heros-v2.codewithshin.com/"
+      },
+      "headline": "Hero Icons v2 for Svelte. You can select outline and solid icons using the variation props. Svlete-Heros support major CSS framework. You can add additional CSS using the class props.",
+      "description": "Document page for Svelte Heros V2",
+      "image": "https://open-graph-vercel.vercel.app/api/svelte-heros-v2",
+      "author": {
+        "@type": "Person",
+        "name": "Shinichi Okada",
+        "url": "https://github.com/shinokada"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CODEWITHSHIN",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://raw.githubusercontent.com/shinokada/svelte-awesome-icons/main/static/codewithshin.webp"
+        }
+      },
+      "datePublished": "2023-01-01",
+      "dateModified": "2023-01-25"
+    }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
 
 </html>

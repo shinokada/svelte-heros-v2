@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.3.11](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.10...v0.3.11) (2022-12-25)
 
-
 ### Bug Fixes
 
-* url updates ([e0bce3c](https://github.com/shinokada/svelte-heros-v2/commit/e0bce3c47fe391d488030c3b0cdf34bb12f4d844))
+- url updates ([e0bce3c](https://github.com/shinokada/svelte-heros-v2/commit/e0bce3c47fe391d488030c3b0cdf34bb12f4d844))
 
 ### [0.3.10](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.9...v0.3.10) (2022-12-17)
 
