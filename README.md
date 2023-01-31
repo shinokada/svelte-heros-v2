@@ -17,10 +17,7 @@
 Hero Icons v2 uses Heroicon v2 to create Svelte SVG icons. You can select outline and solid icons using the variation props. Svlete-Heros support major CSS framework. You can add additional CSS using the `class` props.
 
 <p align="center">
-<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-heros-v2/main/static/images/heros-outline1.webp" />
-<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-heros-v2/main/static/images/heros-outline2.webp" />
-<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-heros-v2/main/static/images/heros-solid1.webp" />
-<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-heros-v2/main/static/images/heros-solid2.webp" />
+<img width="650" src="/static/images/heros2.png" />
 </p>
 
 ## Installation
@@ -44,6 +41,10 @@ npm i -D svelte-heros-v2@latest
 ## List of icons
 
 [Icon names](/icon-list.md)
+
+## Icon images
+
+[Icon images](/icon-images.md)
 
 ## Usage
 

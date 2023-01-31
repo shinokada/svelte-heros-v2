@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.3.12](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.11...v0.3.12) (2023-01-30)
 
-
 ### Features
 
-* add pwa ([e024073](https://github.com/shinokada/svelte-heros-v2/commit/e0240736c80d6b6e5b59bd04c85edc5343ddc3fd))
+- add pwa ([e024073](https://github.com/shinokada/svelte-heros-v2/commit/e0240736c80d6b6e5b59bd04c85edc5343ddc3fd))
 
 ### [0.3.11](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.10...v0.3.11) (2022-12-25)
 
