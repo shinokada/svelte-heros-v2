@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.14](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.13...v0.3.14) (2023-02-01)
+
+
+### Bug Fixes
+
+* add optimized image ([e26f754](https://github.com/shinokada/svelte-heros-v2/commit/e26f754d29e5b61257951a293aa2e7424321c8f7))
+
 ### [0.3.13](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.12...v0.3.13) (2023-01-31)
 
 ### Bug Fixes
