@@ -17,7 +17,7 @@
 Hero Icons v2 uses Heroicon v2 to create Svelte SVG icons. You can select outline and solid icons using the variation props. Svlete-Heros support major CSS framework. You can add additional CSS using the `class` props.
 
 <p align="center">
-<img width="650" src="/static/images/heros2.png" />
+<img width="650" src="/static/images/heros2-optimized.png" />
 </p>
 
 ## Installation

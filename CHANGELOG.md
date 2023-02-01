@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.3.13](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.12...v0.3.13) (2023-01-31)
 
-
 ### Bug Fixes
 
-* favicon link and add icon-images page ([1d2927f](https://github.com/shinokada/svelte-heros-v2/commit/1d2927f45e9abe927844fde5260fba8e53be8764))
+- favicon link and add icon-images page ([1d2927f](https://github.com/shinokada/svelte-heros-v2/commit/1d2927f45e9abe927844fde5260fba8e53be8764))
 
 ### [0.3.12](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.11...v0.3.12) (2023-01-30)
 
