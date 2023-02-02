@@ -867,7 +867,7 @@ body {
 
 .markdown-section code {
   border-radius: 2px;
-  color: #e96900;
+  color: #ffb900;
   margin: 0 2px;
   padding: 3px 5px;
   white-space: pre-wrap;
@@ -986,7 +986,7 @@ body {
 
 .token.function,
 .token.keyword {
-  color: #e96900;
+  color: #ffb900;
 }
 
 .token.atrule,
