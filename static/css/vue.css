@@ -1,14 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600');
-
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Mono Regular'), local('RobotoMono-Regular'),
-    url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap) format('woff2');
-  font-display: swap;
-}
-
 :root {
   --theme-color: #636755;
   --white: #ffffff;
