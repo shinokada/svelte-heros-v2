@@ -5,8 +5,7 @@
   font-style: normal;
   font-weight: 400;
   src: local('Roboto Mono Regular'), local('RobotoMono-Regular'),
-    url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap)
-      format('woff2');
+    url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap) format('woff2');
   font-display: swap;
 }
 
