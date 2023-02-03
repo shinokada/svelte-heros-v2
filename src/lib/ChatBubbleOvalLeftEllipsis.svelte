@@ -1,28 +1,27 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
   // heroicons v2.0.10
-  export let size = '24';
-  export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' = 'outline';
+  export let size = "24";
+  export let color="currentColor";
+  export let variation: "solid" | "outline" = "outline";
   let viewBox: string;
   let svgpath: string;
   let svgoutline = `<path d="M8.625 12C8.625 12.2071 8.45711 12.375 8.25 12.375C8.04289 12.375 7.875 12.2071 7.875 12C7.875 11.7929 8.04289 11.625 8.25 11.625C8.45711 11.625 8.625 11.7929 8.625 12ZM8.625 12H8.25M12.375 12C12.375 12.2071 12.2071 12.375 12 12.375C11.7929 12.375 11.625 12.2071 11.625 12C11.625 11.7929 11.7929 11.625 12 11.625C12.2071 11.625 12.375 11.7929 12.375 12ZM12.375 12H12M16.125 12C16.125 12.2071 15.9571 12.375 15.75 12.375C15.5429 12.375 15.375 12.2071 15.375 12C15.375 11.7929 15.5429 11.625 15.75 11.625C15.9571 11.625 16.125 11.7929 16.125 12ZM16.125 12H15.75M21 12C21 16.5563 16.9706 20.25 12 20.25C11.1125 20.25 10.2551 20.1323 9.44517 19.9129C8.47016 20.5979 7.28201 21 6 21C5.80078 21 5.60376 20.9903 5.40967 20.9713C5.25 20.9558 5.0918 20.9339 4.93579 20.906C5.41932 20.3353 5.76277 19.6427 5.91389 18.8808C6.00454 18.4238 5.7807 17.9799 5.44684 17.6549C3.9297 16.1782 3 14.1886 3 12C3 7.44365 7.02944 3.75 12 3.75C16.9706 3.75 21 7.44365 21 12Z" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> `;
   let svgsolid = `<path fill-rule="evenodd" clip-rule="evenodd" d="M4.80365 21.6442C4.9793 21.6757 5.15732 21.7003 5.33691 21.7178C5.55516 21.7391 5.77647 21.75 6 21.75C7.3153 21.75 8.54447 21.3731 9.58317 20.7213C10.3569 20.9034 11.1668 21 12 21C17.322 21 21.75 17.0307 21.75 12C21.75 6.96934 17.322 3 12 3C6.67799 3 2.25 6.96934 2.25 12C2.25 14.4086 3.2746 16.5871 4.92371 18.1923C5.15571 18.4182 5.20107 18.6196 5.17822 18.7349C5.05254 19.3685 4.76687 19.9451 4.36357 20.4211C4.19016 20.6258 4.13927 20.9075 4.23008 21.1599C4.3209 21.4123 4.5396 21.597 4.80365 21.6442ZM8.25 10.875C7.62868 10.875 7.125 11.3787 7.125 12C7.125 12.6213 7.62868 13.125 8.25 13.125C8.87132 13.125 9.375 12.6213 9.375 12C9.375 11.3787 8.87132 10.875 8.25 10.875ZM10.875 12C10.875 11.3787 11.3787 10.875 12 10.875C12.6213 10.875 13.125 11.3787 13.125 12C13.125 12.6213 12.6213 13.125 12 13.125C11.3787 13.125 10.875 12.6213 10.875 12ZM15.75 10.875C15.1287 10.875 14.625 11.3787 14.625 12C14.625 12.6213 15.1287 13.125 15.75 13.125C16.3713 13.125 16.875 12.6213 16.875 12C16.875 11.3787 16.3713 10.875 15.75 10.875Z" fill="${color}"/> `;
   $: switch (variation) {
-    case 'outline':
-      svgpath = svgoutline;
-      viewBox = '0 0 24 24';
-      break;
-    case 'solid':
-      svgpath = svgsolid;
-      viewBox = '0 0 24 24';
-      break;
-    default:
-      svgpath = svgoutline;
-      viewBox = '0 0 24 24';
-  }
-  export let ariaLabel = 'chat bubble oval left ellipsis';
-</script>
+		case 'outline':
+			svgpath = svgoutline;
+			viewBox = '0 0 24 24';
+			break;
+		case 'solid':
+			svgpath = svgsolid;
+			viewBox = '0 0 24 24';
+			break;
+		default:
+			svgpath = svgoutline;
+			viewBox = '0 0 24 24';
+	}
+export let ariaLabel="chat bubble oval left ellipsis" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -31,9 +30,9 @@
   class={$$props.class}
   {...$$restProps}
   aria-label={ariaLabel}
-  fill="none"
-  {viewBox}
-  stroke-width="2"
+  fill="none" 
+ {viewBox}
+  stroke-width="2" 
   on:click
   on:mouseenter
   on:mouseleave

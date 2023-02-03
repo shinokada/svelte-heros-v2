@@ -1,28 +1,27 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
   // heroicons v2.0.10
-  export let size = '24';
-  export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' = 'outline';
+  export let size = "24";
+  export let color="currentColor";
+  export let variation: "solid" | "outline" = "outline";
   let viewBox: string;
   let svgpath: string;
   let svgoutline = `<path d="M9.53086 16.1224C9.08517 15.0243 8.00801 14.25 6.75 14.25C5.09315 14.25 3.75 15.5931 3.75 17.25C3.75 18.4926 2.74262 19.5 1.49998 19.5C1.44928 19.5 1.39898 19.4983 1.34912 19.495C2.12648 20.8428 3.58229 21.75 5.24998 21.75C7.72821 21.75 9.73854 19.7467 9.74993 17.2711C9.74998 17.2641 9.75 17.2571 9.75 17.25C9.75 16.8512 9.67217 16.4705 9.53086 16.1224ZM9.53086 16.1224C10.7252 15.7153 11.8612 15.1705 12.9175 14.5028M7.875 14.4769C8.2823 13.2797 8.8281 12.1411 9.49724 11.0825M12.9175 14.5028C14.798 13.3141 16.4259 11.7362 17.6806 9.85406L21.5566 4.04006C21.6827 3.85093 21.75 3.6287 21.75 3.40139C21.75 2.76549 21.2345 2.25 20.5986 2.25C20.3713 2.25 20.1491 2.31729 19.9599 2.44338L14.1459 6.31937C12.2638 7.57413 10.6859 9.20204 9.49724 11.0825M12.9175 14.5028C12.2396 12.9833 11.0167 11.7604 9.49724 11.0825" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> `;
   let svgsolid = `<path fill-rule="evenodd" clip-rule="evenodd" d="M20.5986 1.5C20.2232 1.5 19.8562 1.61111 19.5439 1.81934L14.4649 5.20533C13.1853 6.05835 12.0203 7.0624 10.993 8.19218C13.1064 9.18391 14.8161 10.8935 15.8078 13.007C16.9376 11.9797 17.9416 10.8146 18.7946 9.53508L22.1806 4.45609C22.3888 4.14375 22.5 3.77677 22.5 3.40139C22.5 2.35128 21.6487 1.5 20.5986 1.5ZM12.2995 15.5249C12.9568 15.1597 13.5898 14.7563 14.1954 14.3175C13.3836 12.258 11.742 10.6164 9.68246 9.80456C9.24361 10.4102 8.84023 11.0432 8.47506 11.7005L8.19653 12.2018C9.93302 12.6985 11.3015 14.0669 11.7981 15.8034L12.2995 15.5249ZM6.74995 13.5C4.67886 13.5 2.99995 15.1789 2.99995 17.25C2.99995 18.0784 2.32839 18.75 1.49995 18.75C1.46599 18.75 1.43219 18.7489 1.3986 18.7466C1.12245 18.7284 0.858681 18.8637 0.712418 19.0986C0.566154 19.3336 0.561166 19.63 0.699441 19.8697C1.60524 21.4402 3.30337 22.5 5.24995 22.5C8.14946 22.5 10.5 20.1495 10.5 17.25C10.5 15.1789 8.82104 13.5 6.74995 13.5Z" fill="${color}"/> `;
   $: switch (variation) {
-    case 'outline':
-      svgpath = svgoutline;
-      viewBox = '0 0 24 24';
-      break;
-    case 'solid':
-      svgpath = svgsolid;
-      viewBox = '0 0 24 24';
-      break;
-    default:
-      svgpath = svgoutline;
-      viewBox = '0 0 24 24';
-  }
-  export let ariaLabel = 'paint brush';
-</script>
+		case 'outline':
+			svgpath = svgoutline;
+			viewBox = '0 0 24 24';
+			break;
+		case 'solid':
+			svgpath = svgsolid;
+			viewBox = '0 0 24 24';
+			break;
+		default:
+			svgpath = svgoutline;
+			viewBox = '0 0 24 24';
+	}
+export let ariaLabel="paint brush" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -31,9 +30,9 @@
   class={$$props.class}
   {...$$restProps}
   aria-label={ariaLabel}
-  fill="none"
-  {viewBox}
-  stroke-width="2"
+  fill="none" 
+ {viewBox}
+  stroke-width="2" 
   on:click
   on:mouseenter
   on:mouseleave
