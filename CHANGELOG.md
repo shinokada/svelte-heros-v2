@@ -4,15 +4,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.3.16](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.15...v0.3.16) (2023-02-03)
 
-
 ### Bug Fixes
 
-* add github link to crossOriginLinks ([e2519b4](https://github.com/shinokada/svelte-heros-v2/commit/e2519b47ee490754e18a1d925555cd690151db8d))
-* color e96900 to ffb900 ([2e4ad5b](https://github.com/shinokada/svelte-heros-v2/commit/2e4ad5b0ccb53261413b2371b6aa79560af5e562))
-* images add width, add .htaccess, and add [@font-face](https://github.com/font-face) to css ([6526906](https://github.com/shinokada/svelte-heros-v2/commit/65269061521d9df3286f5165a47d5800697eab65))
-* move googlefont to link in index ([f19d157](https://github.com/shinokada/svelte-heros-v2/commit/f19d157fab927b91222bc527cea71225d49df963))
-* remove user-scalable=no ([c702009](https://github.com/shinokada/svelte-heros-v2/commit/c7020091adfc944f3490af03dc52161e07a749db))
-* width="100%" ([fa8a7aa](https://github.com/shinokada/svelte-heros-v2/commit/fa8a7aa026695e944bc3ee9cb536893999bd04f2))
+- add github link to crossOriginLinks ([e2519b4](https://github.com/shinokada/svelte-heros-v2/commit/e2519b47ee490754e18a1d925555cd690151db8d))
+- color e96900 to ffb900 ([2e4ad5b](https://github.com/shinokada/svelte-heros-v2/commit/2e4ad5b0ccb53261413b2371b6aa79560af5e562))
+- images add width, add .htaccess, and add [@font-face](https://github.com/font-face) to css ([6526906](https://github.com/shinokada/svelte-heros-v2/commit/65269061521d9df3286f5165a47d5800697eab65))
+- move googlefont to link in index ([f19d157](https://github.com/shinokada/svelte-heros-v2/commit/f19d157fab927b91222bc527cea71225d49df963))
+- remove user-scalable=no ([c702009](https://github.com/shinokada/svelte-heros-v2/commit/c7020091adfc944f3490af03dc52161e07a749db))
+- width="100%" ([fa8a7aa](https://github.com/shinokada/svelte-heros-v2/commit/fa8a7aa026695e944bc3ee9cb536893999bd04f2))
 
 ### [0.3.15](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.14...v0.3.15) (2023-02-01)
 
