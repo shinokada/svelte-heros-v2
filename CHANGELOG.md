@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.17](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.16...v0.3.17) (2023-02-06)
+
+
+### Features
+
+* add strokeWidth prop ([d8ce9da](https://github.com/shinokada/svelte-heros-v2/commit/d8ce9dabac8555ee12fd07ef0eed23bf11a88bde))
+
+
+### Bug Fixes
+
+* update index.html ([a2a9c50](https://github.com/shinokada/svelte-heros-v2/commit/a2a9c50568b16045c92e27944021cd14a8685c95))
+
 ### [0.3.16](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.15...v0.3.16) (2023-02-03)
 
 ### Bug Fixes
