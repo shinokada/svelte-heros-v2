@@ -1,28 +1,28 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
   // heroicons v2.0.10
-  export let size = '24';
-  export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' = 'outline';
+  export let size = "24";
+  export let strokeWidth = "2"
+  export let color="currentColor";
+  export let variation: "solid" | "outline" = "outline";
   let viewBox: string;
   let svgpath: string;
-  let svgoutline = `<path d="M8.25 7.5V6.10822C8.25 4.97324 9.09499 4.01015 10.2261 3.91627C10.5994 3.88529 10.9739 3.85858 11.3495 3.83619M15.75 18H18C19.2426 18 20.25 16.9926 20.25 15.75V6.10822C20.25 4.97324 19.405 4.01015 18.2739 3.91627C17.9006 3.88529 17.5261 3.85858 17.1505 3.83619M15.75 18.75V16.875C15.75 15.011 14.239 13.5 12.375 13.5H10.875C10.2537 13.5 9.75 12.9963 9.75 12.375V10.875C9.75 9.01104 8.23896 7.5 6.375 7.5H5.25M17.1505 3.83619C16.8672 2.91757 16.0116 2.25 15 2.25H13.5C12.4884 2.25 11.6328 2.91757 11.3495 3.83619M17.1505 3.83619C17.2152 4.04602 17.25 4.26894 17.25 4.5V5.25H11.25V4.5C11.25 4.26894 11.2848 4.04602 11.3495 3.83619M6.75 7.5H4.875C4.25368 7.5 3.75 8.00368 3.75 8.625V20.625C3.75 21.2463 4.25368 21.75 4.875 21.75H14.625C15.2463 21.75 15.75 21.2463 15.75 20.625V16.5C15.75 11.5294 11.7206 7.5 6.75 7.5Z" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> `;
+  let svgoutline = `<path d="M8.25 7.5V6.10822C8.25 4.97324 9.09499 4.01015 10.2261 3.91627C10.5994 3.88529 10.9739 3.85858 11.3495 3.83619M15.75 18H18C19.2426 18 20.25 16.9926 20.25 15.75V6.10822C20.25 4.97324 19.405 4.01015 18.2739 3.91627C17.9006 3.88529 17.5261 3.85858 17.1505 3.83619M15.75 18.75V16.875C15.75 15.011 14.239 13.5 12.375 13.5H10.875C10.2537 13.5 9.75 12.9963 9.75 12.375V10.875C9.75 9.01104 8.23896 7.5 6.375 7.5H5.25M17.1505 3.83619C16.8672 2.91757 16.0116 2.25 15 2.25H13.5C12.4884 2.25 11.6328 2.91757 11.3495 3.83619M17.1505 3.83619C17.2152 4.04602 17.25 4.26894 17.25 4.5V5.25H11.25V4.5C11.25 4.26894 11.2848 4.04602 11.3495 3.83619M6.75 7.5H4.875C4.25368 7.5 3.75 8.00368 3.75 8.625V20.625C3.75 21.2463 4.25368 21.75 4.875 21.75H14.625C15.2463 21.75 15.75 21.2463 15.75 20.625V16.5C15.75 11.5294 11.7206 7.5 6.75 7.5Z" stroke="${color}" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round"/> `;
   let svgsolid = `<path fill-rule="evenodd" clip-rule="evenodd" d="M17.6633 3.11765C17.8879 3.13319 18.1122 3.15026 18.336 3.16883C19.8753 3.29659 21 4.60281 21 6.10821V15.75C21 17.4068 19.6569 18.75 18 18.75V16.5C18 10.5781 13.4244 5.72484 7.61572 5.28281C7.93989 4.15127 8.91565 3.27245 10.1641 3.16883C10.3879 3.15026 10.6121 3.13319 10.8368 3.11765C11.3367 2.15647 12.3417 1.5 13.5 1.5H15C16.1584 1.5 17.1634 2.15647 17.6633 3.11765ZM12 4.5C12 3.67157 12.6716 3 13.5 3H15C15.8285 3 16.5 3.67157 16.5 4.5H12Z" fill="${color}"/> <path d="M3 8.625C3 7.58947 3.83947 6.75 4.875 6.75H5.25C7.32107 6.75 9 8.42893 9 10.5V12.375C9 13.4105 9.83947 14.25 10.875 14.25H12.75C14.8211 14.25 16.5 15.9289 16.5 18V20.625C16.5 21.6605 15.6605 22.5 14.625 22.5H4.875C3.83947 22.5 3 21.6605 3 20.625V8.625Z" fill="${color}"/> <path d="M10.5 10.5C10.5 9.18695 10.018 7.98648 9.22119 7.0659C12.6201 7.95377 15.2962 10.6299 16.1841 14.0288C15.2635 13.232 14.0631 12.75 12.75 12.75H10.875C10.6679 12.75 10.5 12.5821 10.5 12.375V10.5Z" fill="${color}"/> `;
   $: switch (variation) {
-    case 'outline':
-      svgpath = svgoutline;
-      viewBox = '0 0 24 24';
-      break;
-    case 'solid':
-      svgpath = svgsolid;
-      viewBox = '0 0 24 24';
-      break;
-    default:
-      svgpath = svgoutline;
-      viewBox = '0 0 24 24';
-  }
-  export let ariaLabel = 'clipboard document';
-</script>
+		case 'outline':
+			svgpath = svgoutline;
+			viewBox = '0 0 24 24';
+			break;
+		case 'solid':
+			svgpath = svgsolid;
+			viewBox = '0 0 24 24';
+			break;
+		default:
+			svgpath = svgoutline;
+			viewBox = '0 0 24 24';
+	}
+export let ariaLabel="clipboard document" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -31,9 +31,9 @@
   class={$$props.class}
   {...$$restProps}
   aria-label={ariaLabel}
-  fill="none"
-  {viewBox}
-  stroke-width="2"
+  fill="none" 
+ {viewBox}
+  stroke-width={strokeWidth}
   on:click
   on:mouseenter
   on:mouseleave
