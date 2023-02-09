@@ -98,7 +98,7 @@ Use the `color` prop to change colors with HEX color code.
 Use the `strokeWidth` prop to change the SVG `stroke-width`.
 
 ```html
-<AcademicCap strokeWidth="4" size="100"/>
+<AcademicCap strokeWidth="4" size="100" />
 ```
 
 ## CSS framework support
