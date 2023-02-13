@@ -1,29 +1,28 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
   // heroicons v2.0.10
-  export let size = '24';
-  export let strokeWidth = '2';
-  export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' = 'outline';
+  export let size = "24";
+  export let strokeWidth = "1.5"
+  export let color="currentColor";
+  export let variation: "solid" | "outline" = "outline";
   let viewBox: string;
   let svgpath: string;
   let svgoutline = `<path d="M10.5 6L20.25 6M10.5 6C10.5 6.82843 9.82843 7.5 9 7.5C8.17157 7.5 7.5 6.82843 7.5 6M10.5 6C10.5 5.17157 9.82843 4.5 9 4.5C8.17157 4.5 7.5 5.17157 7.5 6M3.75 6H7.5M10.5 18H20.25M10.5 18C10.5 18.8284 9.82843 19.5 9 19.5C8.17157 19.5 7.5 18.8284 7.5 18M10.5 18C10.5 17.1716 9.82843 16.5 9 16.5C8.17157 16.5 7.5 17.1716 7.5 18M3.75 18L7.5 18M16.5 12L20.25 12M16.5 12C16.5 12.8284 15.8284 13.5 15 13.5C14.1716 13.5 13.5 12.8284 13.5 12M16.5 12C16.5 11.1716 15.8284 10.5 15 10.5C14.1716 10.5 13.5 11.1716 13.5 12M3.75 12H13.5" stroke="${color}" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round"/> `;
   let svgsolid = `<path d="M18.75 12.75L20.25 12.75C20.6642 12.75 21 12.4142 21 12C21 11.5858 20.6642 11.25 20.25 11.25L18.75 11.25C18.3358 11.25 18 11.5858 18 12C18 12.4142 18.3358 12.75 18.75 12.75Z" fill="${color}"/> <path d="M12 6C12 5.58579 12.3358 5.25 12.75 5.25L20.25 5.25002C20.6642 5.25002 21 5.5858 21 6.00002C21 6.41423 20.6642 6.75002 20.25 6.75002L12.75 6.75C12.3358 6.75 12 6.41421 12 6Z" fill="${color}"/> <path d="M12 18C12 17.5858 12.3358 17.25 12.75 17.25L20.25 17.25C20.6642 17.25 21 17.5858 21 18C21 18.4142 20.6642 18.75 20.25 18.75L12.75 18.75C12.3358 18.75 12 18.4142 12 18Z" fill="${color}"/> <path d="M3.75001 6.75001L5.25001 6.75C5.66422 6.75 6 6.41421 6 5.99999C6 5.58578 5.66421 5.25 5.24999 5.25L3.74999 5.25001C3.33578 5.25002 3 5.58581 3 6.00002C3 6.41423 3.33579 6.75002 3.75001 6.75001Z" fill="${color}"/> <path d="M5.25001 18.75L3.75001 18.75C3.33579 18.75 3 18.4142 3 18C3 17.5858 3.33578 17.25 3.74999 17.25L5.24999 17.25C5.66421 17.25 6 17.5858 6 18C6 18.4142 5.66422 18.75 5.25001 18.75Z" fill="${color}"/> <path d="M3 12C3 11.5858 3.33579 11.25 3.75 11.25H11.25C11.6642 11.25 12 11.5858 12 12C12 12.4142 11.6642 12.75 11.25 12.75H3.75C3.33579 12.75 3 12.4142 3 12Z" fill="${color}"/> <path d="M9 3.75C7.75736 3.75 6.75 4.75736 6.75 6C6.75 7.24264 7.75736 8.25 9 8.25C10.2426 8.25 11.25 7.24264 11.25 6C11.25 4.75736 10.2426 3.75 9 3.75Z" fill="${color}"/> <path d="M12.75 12C12.75 10.7574 13.7574 9.75 15 9.75C16.2426 9.75 17.25 10.7574 17.25 12C17.25 13.2426 16.2426 14.25 15 14.25C13.7574 14.25 12.75 13.2426 12.75 12Z" fill="${color}"/> <path d="M9 15.75C7.75736 15.75 6.75 16.7574 6.75 18C6.75 19.2426 7.75736 20.25 9 20.25C10.2426 20.25 11.25 19.2426 11.25 18C11.25 16.7574 10.2426 15.75 9 15.75Z" fill="${color}"/> `;
   $: switch (variation) {
-    case 'outline':
-      svgpath = svgoutline;
-      viewBox = '0 0 24 24';
-      break;
-    case 'solid':
-      svgpath = svgsolid;
-      viewBox = '0 0 24 24';
-      break;
-    default:
-      svgpath = svgoutline;
-      viewBox = '0 0 24 24';
-  }
-  export let ariaLabel = 'adjustments horizontal';
-</script>
+		case 'outline':
+			svgpath = svgoutline;
+			viewBox = '0 0 24 24';
+			break;
+		case 'solid':
+			svgpath = svgsolid;
+			viewBox = '0 0 24 24';
+			break;
+		default:
+			svgpath = svgoutline;
+			viewBox = '0 0 24 24';
+	}
+export let ariaLabel="adjustments horizontal" </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -32,8 +31,8 @@
   class={$$props.class}
   {...$$restProps}
   aria-label={ariaLabel}
-  fill="none"
-  {viewBox}
+  fill="none" 
+ {viewBox}
   stroke-width={strokeWidth}
   on:click
   on:mouseenter
