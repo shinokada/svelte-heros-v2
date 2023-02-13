@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.19](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.18...v0.3.19) (2023-02-13)
+
+
+### Features
+
+* add microsoft webmaster tools meta tag ([80fbcd2](https://github.com/shinokada/svelte-heros-v2/commit/80fbcd27bae4e1c58826f176b59cd3bf95ad2a95))
+
+
+### Bug Fixes
+
+* strokeWidth to 1.5 ([c27d23b](https://github.com/shinokada/svelte-heros-v2/commit/c27d23bd24ea302d7a792ad7f05e1523801130f2))
+
 ### [0.3.18](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.17...v0.3.18) (2023-02-06)
 
 ### [0.3.17](https://github.com/shinokada/svelte-heros-v2/compare/v0.3.16...v0.3.17) (2023-02-06)
