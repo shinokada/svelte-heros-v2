@@ -64,8 +64,9 @@ npm i -D svelte-heros-v2@latest
 | ---------------------------- | --------- |
 | size                         | 24        |
 | class                        |           |
-| ariaLabel                    | file name |
+| ariaLabel                    | file name  |
 | variation (solid or outline) | outline   |
+| focus                        | false     |
 
 ## Variation
 
@@ -83,6 +84,14 @@ Use the `size` prop to change the size of icons.
 <AcademicCap size="30" />
 <AcademicCap size="40" />
 <AcademicCap size="50" />
+```
+
+## Focus
+
+If you don't want a focusable icon add `tabindex="-1"`:
+
+```html
+<AcademicCap size="50" tabindex="-1" />
 ```
 
 ## CSS HEX Colors

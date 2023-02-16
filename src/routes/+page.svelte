@@ -6,9 +6,9 @@
   };
 </script>
 
-<Icon.AcademicCap size="40" color={random_hex_color_code()} />
-<Icon.AdjustmentsHorizontal size="40" color={random_hex_color_code()} />
-<Icon.AdjustmentsVertical size="40" color={random_hex_color_code()} />
+<Icon.AcademicCap size="40" color={random_hex_color_code()} tabindex="-1"/>
+<Icon.AdjustmentsHorizontal size="40" color={random_hex_color_code()}  tabindex="-1"/>
+<Icon.AdjustmentsVertical size="40" color={random_hex_color_code()}  tabindex="-1"/>
 <Icon.ArchiveBox size="40" color={random_hex_color_code()} />
 <Icon.ArchiveBoxArrowDown size="40" color={random_hex_color_code()} />
 <Icon.ArchiveBoxXMark size="40" color={random_hex_color_code()} />
