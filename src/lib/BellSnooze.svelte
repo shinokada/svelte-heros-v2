@@ -1,28 +1,29 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
   // heroicons v2.0.10
-  export let size = "24";
-  export let strokeWidth = "1.5"
-  export let color="currentColor";
-  export let variation: "solid" | "outline" = "outline";
+  export let size = '24';
+  export let strokeWidth = '1.5';
+  export let color = 'currentColor';
+  export let variation: 'solid' | 'outline' = 'outline';
   let viewBox: string;
   let svgpath: string;
   let svgoutline = `<path d="M14.8569 17.0817C16.7514 16.857 18.5783 16.4116 20.3111 15.7719C18.8743 14.177 17.9998 12.0656 17.9998 9.75V9.04919C17.9999 9.03281 18 9.01641 18 9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9L5.9998 9.75C5.9998 12.0656 5.12527 14.177 3.68848 15.7719C5.4214 16.4116 7.24843 16.857 9.14314 17.0818M14.8569 17.0817C13.92 17.1928 12.9666 17.25 11.9998 17.25C11.0332 17.25 10.0799 17.1929 9.14314 17.0818M14.8569 17.0817C14.9498 17.3711 15 17.6797 15 18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18C9 17.6797 9.05019 17.3712 9.14314 17.0818M10.5 8.25H13.5L10.5 12.75H13.5" stroke="${color}" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round"/> `;
   let svgsolid = `<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.25C8.27216 2.25 5.25012 5.27197 5.25001 8.9998L5.24981 9.75C5.24981 11.8731 4.44879 13.8074 3.13126 15.2699C2.96476 15.4547 2.90073 15.71 2.96033 15.9516C3.01992 16.1931 3.19539 16.3893 3.42875 16.4755C4.97287 17.0455 6.58934 17.4659 8.2604 17.7192C8.25351 17.812 8.25001 17.9056 8.25001 18C8.25001 20.0711 9.92894 21.75 12 21.75C14.0711 21.75 15.75 20.0711 15.75 18C15.75 17.9056 15.7465 17.812 15.7396 17.7192C17.4105 17.4659 19.0269 17.0455 20.5709 16.4755C20.8042 16.3893 20.9797 16.1931 21.0393 15.9516C21.0989 15.71 21.0349 15.4547 20.8684 15.2699C19.5508 13.8074 18.7498 11.8731 18.7498 9.75V9.04919L18.75 9C18.75 5.27208 15.7279 2.25 12 2.25ZM9.75001 18C9.75001 17.9662 9.75075 17.9326 9.75221 17.8993C10.4927 17.966 11.2424 18 11.9998 18C12.7574 18 13.5072 17.9659 14.2478 17.8992C14.2493 17.9326 14.25 17.9662 14.25 18C14.25 19.2426 13.2427 20.25 12 20.25C10.7574 20.25 9.75001 19.2426 9.75001 18ZM10.5 7.5C10.0858 7.5 9.75 7.83579 9.75 8.25C9.75 8.66421 10.0858 9 10.5 9H12.0986L9.87596 12.334C9.72253 12.5641 9.70823 12.86 9.83874 13.1039C9.96926 13.3478 10.2234 13.5 10.5 13.5H13.5C13.9142 13.5 14.25 13.1642 14.25 12.75C14.25 12.3358 13.9142 12 13.5 12H11.9014L14.124 8.66602C14.2775 8.43588 14.2918 8.13997 14.1613 7.89611C14.0307 7.65224 13.7766 7.5 13.5 7.5H10.5Z" fill="${color}"/> `;
   $: switch (variation) {
-		case 'outline':
-			svgpath = svgoutline;
-			viewBox = '0 0 24 24';
-			break;
-		case 'solid':
-			svgpath = svgsolid;
-			viewBox = '0 0 24 24';
-			break;
-		default:
-			svgpath = svgoutline;
-			viewBox = '0 0 24 24';
-	}
-export let ariaLabel="bell snooze" </script>
+    case 'outline':
+      svgpath = svgoutline;
+      viewBox = '0 0 24 24';
+      break;
+    case 'solid':
+      svgpath = svgsolid;
+      viewBox = '0 0 24 24';
+      break;
+    default:
+      svgpath = svgoutline;
+      viewBox = '0 0 24 24';
+  }
+  export let ariaLabel = 'bell snooze';
+</script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -31,8 +32,8 @@ export let ariaLabel="bell snooze" </script>
   class={$$props.class}
   {...$$restProps}
   aria-label={ariaLabel}
-  fill="none" 
- {viewBox}
+  fill="none"
+  {viewBox}
   stroke-width={strokeWidth}
   on:click
   on:mouseenter

@@ -64,7 +64,7 @@ npm i -D svelte-heros-v2@latest
 | ---------------------------- | --------- |
 | size                         | 24        |
 | class                        |           |
-| ariaLabel                    | file name  |
+| ariaLabel                    | file name |
 | variation (solid or outline) | outline   |
 | focus                        | false     |
 
