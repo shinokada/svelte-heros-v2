@@ -1,6 +1,6 @@
 {
   "name": "svelte-heros-v2",
-  "version": "0.3.21",
+  "version": "0.4.0",
   "description": "Hero icon v2 components for Svelte",
   "author": {
     "name": "Shinichi Okada",
@@ -23,13 +23,8 @@
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --plugin-search-dir . --write .",
     "write-package-json": "node ./scripts/package-json-writer.js",
-    "package:publish": "standard-version && git push --follow-tags origin main && npm run package && npm run write-package-json && npm publish"
-  },
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "svelte": "./dist/index.js"
-    }
+    "add-exports": "node ./scripts/add-exports-to-package-json.js",
+    "package:publish": "standard-version && git push --follow-tags origin main && npm run package && npm run add-exports && npm run write-package-json && npm publish"
   },
   "files": [
     "dist"

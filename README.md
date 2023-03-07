@@ -58,6 +58,38 @@ npm i -D svelte-heros-v2@latest
 <AcademicCap />
 ```
 
+## Faster compiling
+
+For faster compilation, you can import the icon directly.
+
+```html
+<script>
+  import AcademicCap from 'svelte-heros-v2/AcademicCap.svelte';
+</script>
+
+<AcademicCap />
+```
+
+If you are TypeScript user, **this require `"typescript": "^5.0.0"`.**
+
+As of March 2023, the `typescript@beta` version is now available:
+
+```sh
+pnpm i -D typescript@beta
+```
+
+To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleResolution` in your tsconfig.json file.
+
+```json
+{
+  //...
+  "compilerOptions": {
+    // ...
+    "moduleResolution": "nodenext"
+  }
+}
+```
+
 ## Props
 
 | Name                         | Default   |
@@ -86,12 +118,12 @@ Use the `size` prop to change the size of icons.
 <AcademicCap size="50" />
 ```
 
-## Focus
+## Unfocusable icon
 
-If you don't want a focusable icon add `tabindex="-1"`:
+If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ```html
-<AcademicCap size="50" tabindex="-1" />
+<AcademicCap tabindex="-1" />
 ```
 
 ## CSS HEX Colors
