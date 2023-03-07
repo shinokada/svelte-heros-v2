@@ -27,8 +27,8 @@ const files = fs.readdirSync('./dist').filter((file) => file.endsWith('.svelte')
 const exports = {
   '.': {
     types: './dist/index.d.ts',
-    svelte: './dist/index.js',
-  },
+    svelte: './dist/index.js'
+  }
 };
 
 // Iterate over each ".svelte" file in the "./dist" directory.
@@ -38,7 +38,7 @@ files.forEach((file) => {
     const name = file.replace('.svelte', '');
     exports[`./${name}.svelte`] = {
       types: `./dist/${name}.svelte.d.ts`,
-      svelte: `./dist/${name}.svelte`,
+      svelte: `./dist/${name}.svelte`
     };
   } else {
     exports[`./${file}`] = `./dist/${file}`;
