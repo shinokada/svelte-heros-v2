@@ -73,7 +73,7 @@ By importing only what you need, you can reduce the amount of code that needs to
 <AcademicCap />
 ```
 
-If you are TypeScript user, install **typescript version 5.0.0 or above**.
+If you are a TypeScript user, install **typescript version 5.0.0 or above**.
 
 As of March 2023, the `typescript@beta` version is available:
 
