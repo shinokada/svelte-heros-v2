@@ -62,7 +62,8 @@ npm i -D svelte-heros-v2@latest
 
 ## Faster compiling
 
-For faster compilation, you can import the icon directly.
+If you only need to use a single icon from this library in your Svelte app, importing it directly. This can help optimize compilation speed. 
+By importing only what you need, you can reduce the amount of code that needs to be processed, which can improve overall performance.
 
 ```html
 <script>
