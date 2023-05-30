@@ -32,3 +32,16 @@ export let ariaLabel="stop" </script>
   <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 7.5C4.5 5.84315 5.84315 4.5 7.5 4.5H16.5C18.1569 4.5 19.5 5.84315 19.5 7.5V16.5C19.5 18.1569 18.1569 19.5 16.5 19.5H7.5C5.84315 19.5 4.5 18.1569 4.5 16.5V7.5Z" fill="{color}"/> 
 {/if}
 </svg>
+
+
+<!--
+  @component
+  [Go to Document](https://svelte-heros-v2.codewithshin.com/)
+
+  ## Props
+  @prop size = "24";
+  @prop strokeWidth = "1.5"
+  @prop color="currentColor";
+  @prop variation: "solid" | "outline" = "outline";
+  @prop viewBox: string = '0 0 24 24';
+-->
