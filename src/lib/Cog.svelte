@@ -67,4 +67,13 @@
   @prop color="currentColor";
   @prop variation: "solid" | "outline" = "outline";
   @prop viewBox: string = '0 0 24 24';
+  @prop ariaLabel = 'icon file name';
+  ## Event
+  - on:click 
+  - on:mouseenter 
+  - on:mouseleave 
+  - on:mouseover 
+  - on:mouseout 
+  - on:blur 
+  - on:focus 
 -->
