@@ -4,7 +4,7 @@
     let n = (Math.random() * 0xfffff * 1000000).toString(16);
     return '#' + n.slice(0, 6);
   };
-  import {AcademicCap} from '$lib'
+  import { AcademicCap } from '$lib';
 </script>
 
 <Icon.AcademicCap size="40" color={random_hex_color_code()} tabindex="-1" />

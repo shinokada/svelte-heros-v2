@@ -4,22 +4,19 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.6.1](https://github.com/shinokada/svelte-heros-v2/compare/v0.5.1...v0.6.1) (2023-05-30)
 
-
 ### Features
 
-* add IDE support for component document ([73ef678](https://github.com/shinokada/svelte-heros-v2/commit/73ef678d249f338ec0b825824614c52acd0d6220))
+- add IDE support for component document ([73ef678](https://github.com/shinokada/svelte-heros-v2/commit/73ef678d249f338ec0b825824614c52acd0d6220))
 
 ### [0.5.1](https://github.com/shinokada/svelte-heros-v2/compare/v0.4.2...v0.5.1) (2023-05-28)
 
-
 ### Features
 
-* without backticks for XSS ([adf6873](https://github.com/shinokada/svelte-heros-v2/commit/adf687366ea1f52b0ded07a8263a9d3763bcfbe5))
-
+- without backticks for XSS ([adf6873](https://github.com/shinokada/svelte-heros-v2/commit/adf687366ea1f52b0ded07a8263a9d3763bcfbe5))
 
 ### Bug Fixes
 
-* custom css ([bbeeb92](https://github.com/shinokada/svelte-heros-v2/commit/bbeeb92547653466b199d729904690c027919b6a))
+- custom css ([bbeeb92](https://github.com/shinokada/svelte-heros-v2/commit/bbeeb92547653466b199d729904690c027919b6a))
 
 ### [0.4.2](https://github.com/shinokada/svelte-heros-v2/compare/v0.4.1...v0.4.2) (2023-03-07)
 

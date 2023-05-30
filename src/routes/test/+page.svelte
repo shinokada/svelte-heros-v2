@@ -1,5 +1,5 @@
 <script>
-  import {AcademicCap, AdjustmentsHorizontal} from '$lib'
+  import { AcademicCap, AdjustmentsHorizontal } from '$lib';
 </script>
 
 <AcademicCap />
