@@ -29,9 +29,6 @@
   "files": [
     "dist"
   ],
-  "peerDependencies": {
-    "svelte": "^3.54.0"
-  },
   "devDependencies": {
     "@playwright/test": "^1.31.0",
     "@sveltejs/adapter-auto": "^2.0.0",
