@@ -4,17 +4,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.6.5](https://github.com/shinokada/svelte-heros-v2/compare/v0.6.4...v0.6.5) (2023-06-01)
 
-
 ### Features
 
-* add || ^4.0.0 to peerDependencies ([43477e8](https://github.com/shinokada/svelte-heros-v2/commit/43477e87993453d08bf18e04f8079e0248ce5fc3))
+- add || ^4.0.0 to peerDependencies ([43477e8](https://github.com/shinokada/svelte-heros-v2/commit/43477e87993453d08bf18e04f8079e0248ce5fc3))
 
 ### [0.6.4](https://github.com/shinokada/svelte-heros-v2/compare/v0.6.3...v0.6.4) (2023-05-30)
 
-
 ### Features
 
-* event update ([9f6e104](https://github.com/shinokada/svelte-heros-v2/commit/9f6e104af0f8b76d86a91e51fbf0014a8a6ce09e))
+- event update ([9f6e104](https://github.com/shinokada/svelte-heros-v2/commit/9f6e104af0f8b76d86a91e51fbf0014a8a6ce09e))
 
 ### [0.6.3](https://github.com/shinokada/svelte-heros-v2/compare/v0.6.2...v0.6.3) (2023-05-30)
 

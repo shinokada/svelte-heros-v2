@@ -94,13 +94,13 @@ To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleRe
 
 ## Props
 
-| Name                         | Default   |
-| ---------------------------- | --------- |
-| size                         | 24        |
-| class                        |           |
-| ariaLabel                    | file name |
-| variation (solid or outline) | outline   |
-| focus                        | false     |
+- size = "24";
+- role = "img";
+- strokeWidth = "1.5"
+- color="currentColor";
+- variation: "solid" | "outline" = "outline";
+- viewBox: string = '0 0 24 24';
+- ariaLabel = 'icon file name';
 
 ## IDE support
 

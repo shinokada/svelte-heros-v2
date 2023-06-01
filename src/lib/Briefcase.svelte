@@ -2,6 +2,7 @@
   // https://github.com/shinokada/svelte-heros-v2
   // heroicons v2.0.10
   export let size = '24';
+  export let role = 'img';
   export let strokeWidth = '1.5';
   export let color = 'currentColor';
   export let variation: 'solid' | 'outline' = 'outline';
@@ -13,8 +14,8 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
-  class={$$props.class}
   {...$$restProps}
+  {role}
   aria-label={ariaLabel}
   fill="none"
   {viewBox}
@@ -64,6 +65,7 @@
 
   ## Props
   @prop size = "24";
+  @prop role = "img";
   @prop strokeWidth = "1.5"
   @prop color="currentColor";
   @prop variation: "solid" | "outline" = "outline";
