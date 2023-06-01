@@ -59,6 +59,9 @@
     "svg icons",
     "icons"
   ],
+  "peerDependencies": {
+    "svelte": "^3.54.0 || ^4.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/shinokada/svelte-heros-v2"
