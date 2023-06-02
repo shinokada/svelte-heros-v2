@@ -1,12 +1,18 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
-  // heroicons v2.0.10
+  // heroicons v2.0.18
   export let size = '24';
+  export let viewBox: string = '0 0 24 24';
   export let role = 'img';
   export let strokeWidth = '1.5';
   export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' = 'outline';
-  export let viewBox: string = '0 0 24 24';
+  export let variation: 'solid' | 'outline' | 'mini' = 'outline';
+
+  if (variation === 'mini') {
+    size = '20';
+    viewBox = '0 0 20 20';
+  }
+
   export let ariaLabel = 'arrow small down';
 </script>
 
@@ -38,6 +44,13 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     />
+  {:else if variation === 'mini'}
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M10 5C10.4142 5 10.75 5.33579 10.75 5.75V12.3879L12.7094 10.2302C12.9965 9.93159 13.4713 9.92228 13.7698 10.2094C14.0684 10.4965 14.0777 10.9713 13.7906 11.2698L10.5406 14.7698C10.3992 14.9169 10.204 15 10 15C9.79599 15 9.60078 14.9169 9.45938 14.7698L6.20938 11.2698C5.92228 10.9713 5.93159 10.4965 6.23017 10.2094C6.52875 9.92228 7.00353 9.93159 7.29063 10.2302L9.25 12.3879V5.75C9.25 5.33579 9.58579 5 10 5Z"
+      fill={color}
+    />
   {:else}
     <path
       fill-rule="evenodd"
@@ -54,11 +67,11 @@
 
   ## Props
   @prop size = "24";
+  @prop viewBox: string = '0 0 24 24';
   @prop role = "img";
   @prop strokeWidth = "1.5"
   @prop color="currentColor";
-  @prop variation: "solid" | "outline" = "outline";
-  @prop viewBox: string = '0 0 24 24';
+  @prop variation: "solid" | "outline" | "mini"= "outline";
   @prop ariaLabel = 'icon file name';
   ## Event
   - on:click

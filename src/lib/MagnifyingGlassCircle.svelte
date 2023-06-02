@@ -1,12 +1,18 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
-  // heroicons v2.0.10
+  // heroicons v2.0.18
   export let size = '24';
+  export let viewBox: string = '0 0 24 24';
   export let role = 'img';
   export let strokeWidth = '1.5';
   export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' = 'outline';
-  export let viewBox: string = '0 0 24 24';
+  export let variation: 'solid' | 'outline' | 'mini' = 'outline';
+
+  if (variation === 'mini') {
+    size = '20';
+    viewBox = '0 0 20 20';
+  }
+
   export let ariaLabel = 'magnifying glass circle';
 </script>
 
@@ -38,6 +44,17 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     />
+  {:else if variation === 'mini'}
+    <path
+      d="M6.5 9C6.5 7.61929 7.61929 6.5 9 6.5C10.3807 6.5 11.5 7.61929 11.5 9C11.5 9.69056 11.221 10.3145 10.7678 10.7678C10.3145 11.221 9.69056 11.5 9 11.5C7.61929 11.5 6.5 10.3807 6.5 9Z"
+      fill={color}
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM9 5C6.79086 5 5 6.79086 5 9C5 11.2091 6.79086 13 9 13C9.8332 13 10.6076 12.7447 11.2481 12.3088L12.7197 13.7803C13.0126 14.0732 13.4874 14.0732 13.7803 13.7803C14.0732 13.4874 14.0732 13.0126 13.7803 12.7197L12.3088 11.2481C12.7447 10.6076 13 9.8332 13 9C13 6.79086 11.2091 5 9 5Z"
+      fill={color}
+    />
   {:else}
     <path
       d="M8.25 10.875C8.25 9.42525 9.42525 8.25 10.875 8.25C12.3247 8.25 13.5 9.42525 13.5 10.875C13.5 11.6001 13.207 12.2553 12.7312 12.7312C12.2553 13.207 11.6001 13.5 10.875 13.5C9.42525 13.5 8.25 12.3247 8.25 10.875Z"
@@ -58,11 +75,11 @@
 
   ## Props
   @prop size = "24";
+  @prop viewBox: string = '0 0 24 24';
   @prop role = "img";
   @prop strokeWidth = "1.5"
   @prop color="currentColor";
-  @prop variation: "solid" | "outline" = "outline";
-  @prop viewBox: string = '0 0 24 24';
+  @prop variation: "solid" | "outline" | "mini"= "outline";
   @prop ariaLabel = 'icon file name';
   ## Event
   - on:click

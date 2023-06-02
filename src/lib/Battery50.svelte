@@ -1,12 +1,18 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
-  // heroicons v2.0.10
+  // heroicons v2.0.18
   export let size = '24';
+  export let viewBox: string = '0 0 24 24';
   export let role = 'img';
   export let strokeWidth = '1.5';
   export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' = 'outline';
-  export let viewBox: string = '0 0 24 24';
+  export let variation: 'solid' | 'outline' | 'mini' = 'outline';
+
+  if (variation === 'mini') {
+    size = '20';
+    viewBox = '0 0 20 20';
+  }
+
   export let ariaLabel = 'battery 50';
 </script>
 
@@ -38,6 +44,17 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     />
+  {:else if variation === 'mini'}
+    <path
+      d="M4.75 8C4.33579 8 4 8.33579 4 8.75V11.25C4 11.6642 4.33579 12 4.75 12H9.5C9.91421 12 10.25 11.6642 10.25 11.25V8.75C10.25 8.33579 9.91421 8 9.5 8H4.75Z"
+      fill={color}
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M3.25 5C2.00736 5 1 6.00736 1 7.25V12.75C1 13.9926 2.00736 15 3.25 15H15.75C16.9926 15 18 13.9926 18 12.75V11.6646C18.5826 11.4587 19 10.9031 19 10.25V9.75C19 9.09689 18.5826 8.54127 18 8.33535V7.25C18 6.00736 16.9926 5 15.75 5H3.25ZM2.5 7.25C2.5 6.83579 2.83579 6.5 3.25 6.5H15.75C16.1642 6.5 16.5 6.83579 16.5 7.25V12.75C16.5 13.1642 16.1642 13.5 15.75 13.5H3.25C2.83579 13.5 2.5 13.1642 2.5 12.75V7.25Z"
+      fill={color}
+    />
   {:else}
     <path
       d="M4.5 9.75C4.08579 9.75 3.75 10.0858 3.75 10.5V15C3.75 15.4142 4.08579 15.75 4.5 15.75H11.25C11.6642 15.75 12 15.4142 12 15V10.5C12 10.0858 11.6642 9.75 11.25 9.75H4.5Z"
@@ -58,11 +75,11 @@
 
   ## Props
   @prop size = "24";
+  @prop viewBox: string = '0 0 24 24';
   @prop role = "img";
   @prop strokeWidth = "1.5"
   @prop color="currentColor";
-  @prop variation: "solid" | "outline" = "outline";
-  @prop viewBox: string = '0 0 24 24';
+  @prop variation: "solid" | "outline" | "mini"= "outline";
   @prop ariaLabel = 'icon file name';
   ## Event
   - on:click

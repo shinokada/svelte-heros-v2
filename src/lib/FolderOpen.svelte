@@ -1,12 +1,18 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
-  // heroicons v2.0.10
+  // heroicons v2.0.18
   export let size = '24';
+  export let viewBox: string = '0 0 24 24';
   export let role = 'img';
   export let strokeWidth = '1.5';
   export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' = 'outline';
-  export let viewBox: string = '0 0 24 24';
+  export let variation: 'solid' | 'outline' | 'mini' = 'outline';
+
+  if (variation === 'mini') {
+    size = '20';
+    viewBox = '0 0 20 20';
+  }
+
   export let ariaLabel = 'folder open';
 </script>
 
@@ -38,6 +44,15 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     />
+  {:else if variation === 'mini'}
+    <path
+      d="M4.75 3C3.7835 3 3 3.7835 3 4.75V7.50159C3.03443 7.50053 3.06902 7.5 3.10378 7.5H16.8959C16.9307 7.5 16.9654 7.50054 17 7.50161V6.75C17 5.7835 16.2165 5 15.25 5H11.4142C11.3479 5 11.2843 4.97366 11.2374 4.92678L9.82322 3.51256C9.49504 3.18437 9.04992 3 8.58579 3H4.75Z"
+      fill={color}
+    />
+    <path
+      d="M3.10373 9C1.92632 9 1.08486 10.1393 1.43112 11.2647L2.81573 15.7647C3.04167 16.4989 3.72009 17 4.48835 17H15.5112C16.2795 17 16.9579 16.4989 17.1838 15.7647L18.5684 11.2647C18.9147 10.1393 18.0732 9 16.8958 9H3.10373Z"
+      fill={color}
+    />
   {:else}
     <path
       d="M19.9057 9C20.2877 9 20.6549 9.05664 21 9.16156V9C21 7.34315 19.6569 6 18 6H14.1213C13.9224 6 13.7316 5.92098 13.591 5.78033L11.4697 3.65901C11.0477 3.23705 10.4754 3 9.87868 3H6C4.34315 3 3 4.34315 3 6V9.16152C3.34508 9.05663 3.71223 9 4.09421 9H19.9057Z"
@@ -56,11 +71,11 @@
 
   ## Props
   @prop size = "24";
+  @prop viewBox: string = '0 0 24 24';
   @prop role = "img";
   @prop strokeWidth = "1.5"
   @prop color="currentColor";
-  @prop variation: "solid" | "outline" = "outline";
-  @prop viewBox: string = '0 0 24 24';
+  @prop variation: "solid" | "outline" | "mini"= "outline";
   @prop ariaLabel = 'icon file name';
   ## Event
   - on:click

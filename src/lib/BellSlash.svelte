@@ -1,12 +1,18 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
-  // heroicons v2.0.10
+  // heroicons v2.0.18
   export let size = '24';
+  export let viewBox: string = '0 0 24 24';
   export let role = 'img';
   export let strokeWidth = '1.5';
   export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' = 'outline';
-  export let viewBox: string = '0 0 24 24';
+  export let variation: 'solid' | 'outline' | 'mini' = 'outline';
+
+  if (variation === 'mini') {
+    size = '20';
+    viewBox = '0 0 20 20';
+  }
+
   export let ariaLabel = 'bell slash';
 </script>
 
@@ -38,6 +44,19 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     />
+  {:else if variation === 'mini'}
+    <path
+      d="M3.99997 8C3.99997 7.73938 4.01658 7.48265 4.04881 7.23079L11.7713 14.9533C11.1847 14.9843 10.5942 15 9.99997 15C9.34517 15 8.69477 14.9809 8.0493 14.9433C8.25097 15.8345 9.04777 16.5 10 16.5C10.8982 16.5 11.6581 15.9079 11.9107 15.0927L13.045 16.227C12.4432 17.2858 11.305 18 10 18C8.17421 18 6.67494 16.602 6.51426 14.818C5.41181 14.7023 4.32537 14.5322 3.25769 14.3105C3.02851 14.2629 2.83469 14.1111 2.73365 13.9C2.6326 13.6888 2.63591 13.4426 2.7426 13.2343C3.54624 11.6651 3.99997 9.88663 3.99997 8Z"
+      fill={color}
+    />
+    <path
+      d="M17.2663 13.9C17.2467 13.9408 17.2237 13.9795 17.1976 14.0156L6.38945 3.20747C7.39404 2.44946 8.64452 2 9.99997 2C13.3137 2 16 4.68629 16 8C16 9.88663 16.4537 11.6651 17.2573 13.2343C17.364 13.4426 17.3673 13.6888 17.2663 13.9Z"
+      fill={color}
+    />
+    <path
+      d="M3.28033 2.21967C2.98744 1.92678 2.51256 1.92678 2.21967 2.21967C1.92678 2.51256 1.92678 2.98744 2.21967 3.28033L16.7197 17.7803C17.0126 18.0732 17.4874 18.0732 17.7803 17.7803C18.0732 17.4874 18.0732 17.0126 17.7803 16.7197L3.28033 2.21967Z"
+      fill={color}
+    />
   {:else}
     <path
       d="M3.53033 2.46967C3.23744 2.17678 2.76256 2.17678 2.46967 2.46967C2.17678 2.76256 2.17678 3.23744 2.46967 3.53033L20.4697 21.5303C20.7626 21.8232 21.2374 21.8232 21.5303 21.5303C21.8232 21.2374 21.8232 20.7626 21.5303 20.4697L3.53033 2.46967Z"
@@ -62,11 +81,11 @@
 
   ## Props
   @prop size = "24";
+  @prop viewBox: string = '0 0 24 24';
   @prop role = "img";
   @prop strokeWidth = "1.5"
   @prop color="currentColor";
-  @prop variation: "solid" | "outline" = "outline";
-  @prop viewBox: string = '0 0 24 24';
+  @prop variation: "solid" | "outline" | "mini"= "outline";
   @prop ariaLabel = 'icon file name';
   ## Event
   - on:click

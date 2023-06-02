@@ -1,12 +1,18 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
-  // heroicons v2.0.10
+  // heroicons v2.0.18
   export let size = '24';
+  export let viewBox: string = '0 0 24 24';
   export let role = 'img';
   export let strokeWidth = '1.5';
   export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' = 'outline';
-  export let viewBox: string = '0 0 24 24';
+  export let variation: 'solid' | 'outline' | 'mini' = 'outline';
+
+  if (variation === 'mini') {
+    size = '20';
+    viewBox = '0 0 20 20';
+  }
+
   export let ariaLabel = 'chevron double right';
 </script>
 
@@ -38,6 +44,19 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     />
+  {:else if variation === 'mini'}
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M10.2094 14.7698C9.92228 14.4713 9.93159 13.9965 10.2302 13.7094L14.1679 10L10.2302 6.29062C9.93159 6.00353 9.92228 5.52875 10.2094 5.23017C10.4965 4.93159 10.9713 4.92228 11.2698 5.20937L15.7698 9.45937C15.9169 9.60078 16 9.79599 16 10C16 10.204 15.9169 10.3992 15.7698 10.5406L11.2698 14.7906C10.9713 15.0777 10.4965 15.0684 10.2094 14.7698Z"
+      fill={color}
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M4.20938 14.7698C3.92228 14.4713 3.93159 13.9965 4.23017 13.7094L8.16792 10L4.23017 6.29062C3.93159 6.00353 3.92228 5.52875 4.20938 5.23017C4.49647 4.93159 4.97125 4.92228 5.26983 5.20937L9.76983 9.45937C9.91689 9.60078 10 9.79599 10 10C10 10.204 9.91689 10.3992 9.76983 10.5406L5.26983 14.7906C4.97125 15.0777 4.49647 15.0684 4.20938 14.7698Z"
+      fill={color}
+    />
   {:else}
     <path
       fill-rule="evenodd"
@@ -54,11 +73,11 @@
 
   ## Props
   @prop size = "24";
+  @prop viewBox: string = '0 0 24 24';
   @prop role = "img";
   @prop strokeWidth = "1.5"
   @prop color="currentColor";
-  @prop variation: "solid" | "outline" = "outline";
-  @prop viewBox: string = '0 0 24 24';
+  @prop variation: "solid" | "outline" | "mini"= "outline";
   @prop ariaLabel = 'icon file name';
   ## Event
   - on:click

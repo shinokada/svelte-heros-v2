@@ -1,12 +1,18 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
-  // heroicons v2.0.10
+  // heroicons v2.0.18
   export let size = '24';
+  export let viewBox: string = '0 0 24 24';
   export let role = 'img';
   export let strokeWidth = '1.5';
   export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' = 'outline';
-  export let viewBox: string = '0 0 24 24';
+  export let variation: 'solid' | 'outline' | 'mini' = 'outline';
+
+  if (variation === 'mini') {
+    size = '20';
+    viewBox = '0 0 20 20';
+  }
+
   export let ariaLabel = 'server stack';
 </script>
 
@@ -38,6 +44,23 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     />
+  {:else if variation === 'mini'}
+    <path
+      d="M4.46363 3.16188C4.79054 2.45358 5.49945 2 6.27955 2H13.7202C14.5003 2 15.2092 2.45358 15.5361 3.16188L16.69 5.66188C16.7567 5.80652 16.8047 5.9534 16.8352 6.1003C16.5675 6.03476 16.2878 6 15.9999 6H3.99989C3.712 6 3.43223 6.03476 3.16455 6.10031C3.19509 5.9534 3.24303 5.80653 3.30979 5.66188L4.46363 3.16188Z"
+      fill={color}
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M2 9.5C2 8.39543 2.89543 7.5 4 7.5H16C17.1046 7.5 18 8.39543 18 9.5C18 10.6046 17.1046 11.5 16 11.5H4C2.89543 11.5 2 10.6046 2 9.5ZM15.2402 9.5C15.2402 9.08579 15.576 8.75 15.9902 8.75H16.0002C16.4144 8.75 16.7502 9.08579 16.7502 9.5V9.51C16.7502 9.92421 16.4144 10.26 16.0002 10.26H15.9902C15.576 10.26 15.2402 9.92421 15.2402 9.51V9.5ZM12.9902 8.75C12.576 8.75 12.2402 9.08579 12.2402 9.5V9.51C12.2402 9.92421 12.576 10.26 12.9902 10.26H13.0002C13.4144 10.26 13.7502 9.92421 13.7502 9.51V9.5C13.7502 9.08579 13.4144 8.75 13.0002 8.75H12.9902Z"
+      fill={color}
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M2 15C2 13.8954 2.89543 13 4 13H16C17.1046 13 18 13.8954 18 15C18 16.1046 17.1046 17 16 17H4C2.89543 17 2 16.1046 2 15ZM15.2402 15C15.2402 14.5858 15.576 14.25 15.9902 14.25H16.0002C16.4144 14.25 16.7502 14.5858 16.7502 15V15.01C16.7502 15.4242 16.4144 15.76 16.0002 15.76H15.9902C15.576 15.76 15.2402 15.4242 15.2402 15.01V15ZM12.9902 14.25C12.576 14.25 12.2402 14.5858 12.2402 15V15.01C12.2402 15.4242 12.576 15.76 12.9902 15.76H13.0002C13.4144 15.76 13.7502 15.4242 13.7502 15.01V15C13.7502 14.5858 13.4144 14.25 13.0002 14.25H12.9902Z"
+      fill={color}
+    />
   {:else}
     <path
       d="M5.50701 4.04763C6.07695 3.38269 6.909 3 7.78478 3H16.2151C17.0908 3 17.9229 3.38269 18.4928 4.04763L20.2147 6.05645C19.9819 6.0193 19.7432 6 19.4999 6H4.49992C4.25668 6 4.01794 6.0193 3.78516 6.05645L5.50701 4.04763Z"
@@ -64,11 +87,11 @@
 
   ## Props
   @prop size = "24";
+  @prop viewBox: string = '0 0 24 24';
   @prop role = "img";
   @prop strokeWidth = "1.5"
   @prop color="currentColor";
-  @prop variation: "solid" | "outline" = "outline";
-  @prop viewBox: string = '0 0 24 24';
+  @prop variation: "solid" | "outline" | "mini"= "outline";
   @prop ariaLabel = 'icon file name';
   ## Event
   - on:click

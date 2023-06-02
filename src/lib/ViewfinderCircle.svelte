@@ -1,12 +1,18 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
-  // heroicons v2.0.10
+  // heroicons v2.0.18
   export let size = '24';
+  export let viewBox: string = '0 0 24 24';
   export let role = 'img';
   export let strokeWidth = '1.5';
   export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' = 'outline';
-  export let viewBox: string = '0 0 24 24';
+  export let variation: 'solid' | 'outline' | 'mini' = 'outline';
+
+  if (variation === 'mini') {
+    size = '20';
+    viewBox = '0 0 20 20';
+  }
+
   export let ariaLabel = 'viewfinder circle';
 </script>
 
@@ -38,6 +44,27 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     />
+  {:else if variation === 'mini'}
+    <path
+      d="M4.25 2C3.00736 2 2 3.00736 2 4.25V6.25C2 6.66421 2.33579 7 2.75 7C3.16421 7 3.5 6.66421 3.5 6.25V4.25C3.5 3.83579 3.83579 3.5 4.25 3.5H6.25C6.66421 3.5 7 3.16421 7 2.75C7 2.33579 6.66421 2 6.25 2H4.25Z"
+      fill={color}
+    />
+    <path
+      d="M13.75 2C13.3358 2 13 2.33579 13 2.75C13 3.16421 13.3358 3.5 13.75 3.5H15.75C16.1642 3.5 16.5 3.83579 16.5 4.25V6.25C16.5 6.66421 16.8358 7 17.25 7C17.6642 7 18 6.66421 18 6.25V4.25C18 3.00736 16.9926 2 15.75 2H13.75Z"
+      fill={color}
+    />
+    <path
+      d="M3.5 13.75C3.5 13.3358 3.16421 13 2.75 13C2.33579 13 2 13.3358 2 13.75V15.75C2 16.9926 3.00736 18 4.25 18H6.25C6.66421 18 7 17.6642 7 17.25C7 16.8358 6.66421 16.5 6.25 16.5H4.25C3.83579 16.5 3.5 16.1642 3.5 15.75V13.75Z"
+      fill={color}
+    />
+    <path
+      d="M18 13.75C18 13.3358 17.6642 13 17.25 13C16.8358 13 16.5 13.3358 16.5 13.75V15.75C16.5 16.1642 16.1642 16.5 15.75 16.5H13.75C13.3358 16.5 13 16.8358 13 17.25C13 17.6642 13.3358 18 13.75 18H15.75C16.9926 18 18 16.9926 18 15.75V13.75Z"
+      fill={color}
+    />
+    <path
+      d="M7 10C7 8.34315 8.34315 7 10 7C11.6569 7 13 8.34315 13 10C13 11.6569 11.6569 13 10 13C8.34315 13 7 11.6569 7 10Z"
+      fill={color}
+    />
   {:else}
     <path
       d="M6 3C4.34315 3 3 4.34315 3 6V7.5C3 7.91421 3.33579 8.25 3.75 8.25C4.16421 8.25 4.5 7.91421 4.5 7.5V6C4.5 5.17157 5.17157 4.5 6 4.5H7.5C7.91421 4.5 8.25 4.16421 8.25 3.75C8.25 3.33579 7.91421 3 7.5 3H6Z"
@@ -68,11 +95,11 @@
 
   ## Props
   @prop size = "24";
+  @prop viewBox: string = '0 0 24 24';
   @prop role = "img";
   @prop strokeWidth = "1.5"
   @prop color="currentColor";
-  @prop variation: "solid" | "outline" = "outline";
-  @prop viewBox: string = '0 0 24 24';
+  @prop variation: "solid" | "outline" | "mini"= "outline";
   @prop ariaLabel = 'icon file name';
   ## Event
   - on:click

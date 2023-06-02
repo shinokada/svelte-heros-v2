@@ -1,6 +1,6 @@
 {
   "name": "svelte-heros-v2",
-  "version": "0.6.6",
+  "version": "0.7.0",
   "description": "Hero icon v2 components for Svelte",
   "author": {
     "name": "Shinichi Okada",

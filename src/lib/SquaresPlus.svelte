@@ -1,12 +1,18 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
-  // heroicons v2.0.10
+  // heroicons v2.0.18
   export let size = '24';
+  export let viewBox: string = '0 0 24 24';
   export let role = 'img';
   export let strokeWidth = '1.5';
   export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' = 'outline';
-  export let viewBox: string = '0 0 24 24';
+  export let variation: 'solid' | 'outline' | 'mini' = 'outline';
+
+  if (variation === 'mini') {
+    size = '20';
+    viewBox = '0 0 20 20';
+  }
+
   export let ariaLabel = 'squares plus';
 </script>
 
@@ -38,6 +44,23 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     />
+  {:else if variation === 'mini'}
+    <path
+      d="M2 4.25C2 3.00736 3.00736 2 4.25 2H6.75C7.99264 2 9 3.00736 9 4.25V6.75C9 7.99264 7.99264 9 6.75 9H4.25C3.00736 9 2 7.99264 2 6.75V4.25Z"
+      fill={color}
+    />
+    <path
+      d="M2 13.25C2 12.0074 3.00736 11 4.25 11H6.75C7.99264 11 9 12.0074 9 13.25V15.75C9 16.9926 7.99264 18 6.75 18H4.25C3.00736 18 2 16.9926 2 15.75V13.25Z"
+      fill={color}
+    />
+    <path
+      d="M11 4.25C11 3.00736 12.0074 2 13.25 2H15.75C16.9926 2 18 3.00736 18 4.25V6.75C18 7.99264 16.9926 9 15.75 9H13.25C12.0074 9 11 7.99264 11 6.75V4.25Z"
+      fill={color}
+    />
+    <path
+      d="M15.25 11.75C15.25 11.3358 14.9142 11 14.5 11C14.0858 11 13.75 11.3358 13.75 11.75V13.75H11.75C11.3358 13.75 11 14.0858 11 14.5C11 14.9142 11.3358 15.25 11.75 15.25H13.75V17.25C13.75 17.6642 14.0858 18 14.5 18C14.9142 18 15.25 17.6642 15.25 17.25V15.25H17.25C17.6642 15.25 18 14.9142 18 14.5C18 14.0858 17.6642 13.75 17.25 13.75H15.25V11.75Z"
+      fill={color}
+    />
   {:else}
     <path
       d="M6 3C4.34315 3 3 4.34315 3 6V8.25C3 9.90685 4.34315 11.25 6 11.25H8.25C9.90685 11.25 11.25 9.90685 11.25 8.25V6C11.25 4.34315 9.90685 3 8.25 3H6Z"
@@ -64,11 +87,11 @@
 
   ## Props
   @prop size = "24";
+  @prop viewBox: string = '0 0 24 24';
   @prop role = "img";
   @prop strokeWidth = "1.5"
   @prop color="currentColor";
-  @prop variation: "solid" | "outline" = "outline";
-  @prop viewBox: string = '0 0 24 24';
+  @prop variation: "solid" | "outline" | "mini"= "outline";
   @prop ariaLabel = 'icon file name';
   ## Event
   - on:click

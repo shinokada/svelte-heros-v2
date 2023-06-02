@@ -1,12 +1,18 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
-  // heroicons v2.0.10
+  // heroicons v2.0.18
   export let size = '24';
+  export let viewBox: string = '0 0 24 24';
   export let role = 'img';
   export let strokeWidth = '1.5';
   export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' = 'outline';
-  export let viewBox: string = '0 0 24 24';
+  export let variation: 'solid' | 'outline' | 'mini' = 'outline';
+
+  if (variation === 'mini') {
+    size = '20';
+    viewBox = '0 0 20 20';
+  }
+
   export let ariaLabel = 'chevron double down';
 </script>
 
@@ -38,6 +44,13 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     />
+  {:else if variation === 'mini'}
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M14.7698 4.20938C15.0684 4.49647 15.0777 4.97125 14.7906 5.26983L10.5406 9.76983C10.3992 9.91689 10.204 10 10 10C9.79599 10 9.60078 9.91689 9.45937 9.76983L5.20937 5.26983C4.92228 4.97125 4.93159 4.49647 5.23017 4.20938C5.52875 3.92228 6.00353 3.93159 6.29062 4.23017L10 8.16792L13.7094 4.23017C13.9965 3.93159 14.4713 3.92228 14.7698 4.20938ZM14.7698 10.2094C15.0684 10.4965 15.0777 10.9713 14.7906 11.2698L10.5406 15.7698C10.3992 15.9169 10.204 16 10 16C9.79599 16 9.60078 15.9169 9.45937 15.7698L5.20937 11.2698C4.92228 10.9713 4.93159 10.4965 5.23017 10.2094C5.52875 9.92228 6.00353 9.93159 6.29062 10.2302L10 14.1679L13.7094 10.2302C13.9965 9.93159 14.4713 9.92228 14.7698 10.2094Z"
+      fill={color}
+    />
   {:else}
     <path
       fill-rule="evenodd"
@@ -54,11 +67,11 @@
 
   ## Props
   @prop size = "24";
+  @prop viewBox: string = '0 0 24 24';
   @prop role = "img";
   @prop strokeWidth = "1.5"
   @prop color="currentColor";
-  @prop variation: "solid" | "outline" = "outline";
-  @prop viewBox: string = '0 0 24 24';
+  @prop variation: "solid" | "outline" | "mini"= "outline";
   @prop ariaLabel = 'icon file name';
   ## Event
   - on:click

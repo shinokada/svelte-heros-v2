@@ -1,12 +1,18 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
-  // heroicons v2.0.10
+  // heroicons v2.0.18
   export let size = '24';
+  export let viewBox: string = '0 0 24 24';
   export let role = 'img';
   export let strokeWidth = '1.5';
   export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' = 'outline';
-  export let viewBox: string = '0 0 24 24';
+  export let variation: 'solid' | 'outline' | 'mini' = 'outline';
+
+  if (variation === 'mini') {
+    size = '20';
+    viewBox = '0 0 20 20';
+  }
+
   export let ariaLabel = 'wallet';
 </script>
 
@@ -38,6 +44,19 @@
       stroke-linecap="round"
       stroke-linejoin="round"
     />
+  {:else if variation === 'mini'}
+    <path
+      d="M1 4.24973C1.62675 3.77896 2.4058 3.5 3.25 3.5H16.75C17.5942 3.5 18.3733 3.77896 19 4.24973C18.9999 3.00721 17.9926 2 16.75 2H3.25C2.00745 2 1.00015 3.00721 1 4.24973Z"
+      fill={color}
+    />
+    <path
+      d="M1 7.24973C1.62675 6.77896 2.4058 6.5 3.25 6.5H16.75C17.5942 6.5 18.3733 6.77896 19 7.24973C18.9999 6.00721 17.9926 5 16.75 5H3.25C2.00745 5 1.00015 6.00721 1 7.24973Z"
+      fill={color}
+    />
+    <path
+      d="M7 8C7.55228 8 8 8.44772 8 9C8 10.1046 8.89543 11 10 11C11.1046 11 12 10.1046 12 9C12 8.44772 12.4477 8 13 8H16.75C17.9926 8 19 9.00736 19 10.25V15.75C19 16.9926 17.9926 18 16.75 18H3.25C2.00736 18 1 16.9926 1 15.75V10.25C1 9.00736 2.00736 8 3.25 8H7Z"
+      fill={color}
+    />
   {:else}
     <path
       d="M2.27307 5.62524C3.06638 4.92494 4.10851 4.5 5.24989 4.5H18.7499C19.8913 4.5 20.9334 4.92494 21.7267 5.62524C21.5423 4.14526 20.2798 3 18.7499 3H5.24989C3.71995 3 2.4575 4.14525 2.27307 5.62524Z"
@@ -60,11 +79,11 @@
 
   ## Props
   @prop size = "24";
+  @prop viewBox: string = '0 0 24 24';
   @prop role = "img";
   @prop strokeWidth = "1.5"
   @prop color="currentColor";
-  @prop variation: "solid" | "outline" = "outline";
-  @prop viewBox: string = '0 0 24 24';
+  @prop variation: "solid" | "outline" | "mini"= "outline";
   @prop ariaLabel = 'icon file name';
   ## Event
   - on:click

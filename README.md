@@ -95,11 +95,11 @@ To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleRe
 ## Props
 
 - size = "24";
+- viewBox: string = '0 0 24 24';
 - role = "img";
 - strokeWidth = "1.5"
 - color="currentColor";
-- variation: "solid" | "outline" = "outline";
-- viewBox: string = '0 0 24 24';
+- variation: "solid" | "outline" | "mini"= "outline";
 - ariaLabel = 'icon file name';
 
 ## IDE support
@@ -110,10 +110,11 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 
 ## Variation
 
-The default variation value is outline. Use the `variation` prop to change it to solid.
+The default variation value is outline. Use the `variation` prop to change it to solid or mini.
 
 ```html
 <AcademicCap variation="solid" />
+<AcademicCap variation="mini" />
 ```
 
 ## Size
@@ -139,7 +140,8 @@ If you want to make an icon unfocusable, add `tabindex="-1"`.
 Use the `color` prop to change colors with HEX color code.
 
 ```html
-<AcademicCap color="#ff0000" /> <AcademicCap color="#00ffd8" />
+<AcademicCap color="#ff0000" /> 
+<AcademicCap color="#00ffd8" />
 ```
 
 ## Stroke width
@@ -180,7 +182,7 @@ All icons have aria-label. For example `AcademicCap` has `aria-label="academic c
 Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<AcademicCap ariaLabel="red academic cap" class="text-red-500"></AcademicCap>
+<AcademicCap ariaLabel="red academic cap" class="text-red-500" />
 ```
 
 ## Passing down other attributes
