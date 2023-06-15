@@ -113,8 +113,7 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 The default variation value is outline. Use the `variation` prop to change it to solid or mini.
 
 ```html
-<AcademicCap variation="solid" />
-<AcademicCap variation="mini" />
+<AcademicCap variation="solid" /> <AcademicCap variation="mini" />
 ```
 
 ## Size
@@ -140,8 +139,7 @@ If you want to make an icon unfocusable, add `tabindex="-1"`.
 Use the `color` prop to change colors with HEX color code.
 
 ```html
-<AcademicCap color="#ff0000" /> 
-<AcademicCap color="#00ffd8" />
+<AcademicCap color="#ff0000" /> <AcademicCap color="#00ffd8" />
 ```
 
 ## Stroke width

@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.7.1](https://github.com/shinokada/svelte-heros-v2/compare/v0.6.6...v0.7.1) (2023-06-02)
 
-
 ### Features
 
-* add mini variation ([7f38c22](https://github.com/shinokada/svelte-heros-v2/commit/7f38c228c02f2bf92f1bea25c9fbd587d06d6171))
+- add mini variation ([7f38c22](https://github.com/shinokada/svelte-heros-v2/commit/7f38c228c02f2bf92f1bea25c9fbd587d06d6171))
 
 ### [0.6.6](https://github.com/shinokada/svelte-heros-v2/compare/v0.6.5...v0.6.6) (2023-06-01)
 
