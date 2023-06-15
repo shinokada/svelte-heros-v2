@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.2](https://github.com/shinokada/svelte-heros-v2/compare/v0.4.2...v0.7.2) (2023-06-15)
+
+
+### Features
+
+* add || ^4.0.0 to peerDependencies ([43477e8](https://github.com/shinokada/svelte-heros-v2/commit/43477e87993453d08bf18e04f8079e0248ce5fc3))
+* add events to component doc ([9b82e21](https://github.com/shinokada/svelte-heros-v2/commit/9b82e21083e8a2f34fa3e60b4762af58ff96ee8f))
+* add IDE support for component document ([73ef678](https://github.com/shinokada/svelte-heros-v2/commit/73ef678d249f338ec0b825824614c52acd0d6220))
+* add mini variation ([7f38c22](https://github.com/shinokada/svelte-heros-v2/commit/7f38c228c02f2bf92f1bea25c9fbd587d06d6171))
+* add prop role="img" ([a83a21d](https://github.com/shinokada/svelte-heros-v2/commit/a83a21de55f1cd083d5d5b0d29320e879b787e29))
+* event update ([9f6e104](https://github.com/shinokada/svelte-heros-v2/commit/9f6e104af0f8b76d86a91e51fbf0014a8a6ce09e))
+* without backticks for XSS ([adf6873](https://github.com/shinokada/svelte-heros-v2/commit/adf687366ea1f52b0ded07a8263a9d3763bcfbe5))
+
+
+### Bug Fixes
+
+* custom css ([bbeeb92](https://github.com/shinokada/svelte-heros-v2/commit/bbeeb92547653466b199d729904690c027919b6a))
+* remove peerDependencies ([96686b7](https://github.com/shinokada/svelte-heros-v2/commit/96686b754ceb5901f09ead786e4b0db974def80b))
+
 ### [0.7.1](https://github.com/shinokada/svelte-heros-v2/compare/v0.6.6...v0.7.1) (2023-06-02)
 
 ### Features
