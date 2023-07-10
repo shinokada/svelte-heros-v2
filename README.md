@@ -44,7 +44,7 @@ npm i -D svelte-heros-v2@latest
 
 ## List of icons
 
-[Icon names](/icon-list.md)
+[Icons and names](https://svelte.dev/repl/68258cc21f7a4c9891bcb950dc3631b8?version=4.0.5)
 
 ## Icon images
 
