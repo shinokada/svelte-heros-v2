@@ -10,7 +10,7 @@
     const shades = ['300', '400', '500'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     const randomShade = shades[Math.floor(Math.random() * shades.length)];
-    return `text-${randomColor}-${randomShade} dark:text-${randomColor}-${randomShade} shrink-0 h-8 w-8`;
+    return `text-${randomColor}-${randomShade} dark:text-${randomColor}-${randomShade} shrink-0`;
   };
   const random_hex_color_code = () => {
     let n = (Math.random() * 0xfffff * 1000000).toString(16);

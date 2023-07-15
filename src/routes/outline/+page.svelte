@@ -10,7 +10,7 @@
     const shades = ['300', '400', '500'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     const randomShade = shades[Math.floor(Math.random() * shades.length)];
-    return `text-${randomColor}-${randomShade} dark:text-${randomColor}-${randomShade} shrink-0 h-8 w-8`;
+    return `text-${randomColor}-${randomShade} dark:text-${randomColor}-${randomShade} shrink-0 `;
   };
   const random_hex_color_code = () => {
     let n = (Math.random() * 0xfffff * 1000000).toString(16);
@@ -36,7 +36,7 @@
       <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
         {#each filteredEntries as [name, component]}
           <div class="flex gap-4 items-center text-lg">
-            <svelte:component this={component} class="shrink-0 h-8 w-8" />
+            <svelte:component this={component} class="shrink-0 " />
             {name}
           </div>
         {/each}
@@ -50,7 +50,7 @@
             <svelte:component
               this={component}
               color={random_hex_color_code()}
-              class="shrink-0 h-8 w-8"
+              class="shrink-0 "
             />
             {name}
           </div>

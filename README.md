@@ -1,18 +1,12 @@
-<h1 align="center">Svelte Heros V2</h1>
+# Svelte Heros V2
 
-<p align="center">
-<a href="https://svelte-heros-v2.codewithshin.com/" rel="nofollow">Svelte-Heros-v2</a>
-</p>
-
-<p align="center">
-<a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="Sponsor" height="22" width="102"></a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps" target="_blank"><img src="https://img.shields.io/badge/PWA-enabled-brightgreen" alt="PWA Shield" height="22" width="97">
-</a>
-<a href="https://www.npmjs.com/package/svelte-heros-v2" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-heros-v2" alt="npm" height="22" width="97"></a>
-<a href="https://twitter.com/shinokada" rel="nofollow" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada" height="22" width="161"></a>
-<a href="http://www.apache.org/licenses/" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-heros-v2" alt="License" height="22" width="132"></a>
-<a href="https://www.npmjs.com/package/svelte-heros-v2" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-heros-v2.svg" alt="npm" height="22" width="152"></a>
-</p>
+<div class="flex gap-2 my-8">
+<a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="Sponsor" height="25" style="height: 25px !important;" width="102"></a>
+<a href="https://www.npmjs.com/package/svelte-heros-v2" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-heros-v2" alt="npm" height="25" style="height: 25px !important;" width="97"></a>
+<a href="https://twitter.com/shinokada" rel="nofollow" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada" height="25" style="height: 25px !important;" width="161"></a>
+<a href="http://www.apache.org/licenses/" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-heros-v2" alt="License" height="25" style="height: 25px !important;" width="132"></a>
+<a href="https://www.npmjs.com/package/svelte-heros-v2" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-heros-v2.svg" alt="npm" height="25" style="height: 25px !important;" width="152"></a>
+</div>
 
 **If you are looking for the version 1, go to [Svelte-Heros](https://github.com/shinokada/svelte-heros)**
 
@@ -20,35 +14,27 @@ Hero Icons v2 uses Heroicon v2 to create Svelte SVG icons. You can select outlin
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
-<p align="center">
-<img width="100%" alt="Svelte Heros V2" src="/static/images/heros2-optimized.png" />
-</p>
+
+## Repo
+
+[GitHub Repo](https://github.com/shinokada/svelte-heros-v2)
+
+## Original source
+
+[tailwindlabs/heroicons](https://github.com/tailwindlabs/heroicons)
+
+## License
+
+[Svelte-Heros-V2 License](https://github.com/shinokada/svelte-heros-v2/blob/main/LICENSE)
+
+[tailwindlabs/heroicons LICENSE](https://github.com/tailwindlabs/heroicons/blob/main/LICENSE)
+
 
 ## Installation
 
 ```sh
-npm i -D svelte-heros-v2
+pnpm i -D svelte-heros-v2
 ```
-
-To update
-
-```sh
-npm i -D svelte-heros-v2@latest
-```
-
-## REPL
-
-[Outline demo](https://svelte.dev/repl/1948d7b5157f44709cff380d9783342c)
-
-[Solid demo](https://svelte.dev/repl/e26c4ea516a0493cb64797879b1fe46d)
-
-## List of icons
-
-[Icons and names](https://svelte.dev/repl/68258cc21f7a4c9891bcb950dc3631b8?version=4.0.5)
-
-## Icon images
-
-[Icon images](/icon-images.md)
 
 ## Usage
 
@@ -73,8 +59,6 @@ If you need only a few icons from this library in your Svelte app, import them d
 ```
 
 If you are a TypeScript user, install **typescript version 5.0.0 or above**.
-
-As of March 2023, the `typescript@beta` version is available:
 
 ```sh
 pnpm i -D typescript@beta
@@ -113,7 +97,8 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 The default variation value is outline. Use the `variation` prop to change it to solid or mini.
 
 ```html
-<AcademicCap variation="solid" /> <AcademicCap variation="mini" />
+<AcademicCap variation="solid" /> 
+<AcademicCap variation="mini" />
 ```
 
 ## Size
@@ -126,12 +111,10 @@ Use the `size` prop to change the size of icons.
 <AcademicCap size="50" />
 ```
 
-## Unfocusable icon
-
-If you want to make an icon unfocusable, add `tabindex="-1"`.
+If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
 
 ```html
-<AcademicCap tabindex="-1" />
+<AcademicCap class="shrink-0 h-20 w-20" />
 ```
 
 ## CSS HEX Colors
@@ -183,6 +166,29 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 <AcademicCap ariaLabel="red academic cap" class="text-red-500" />
 ```
 
+## Unfocusable icon
+
+If you want to make an icon unfocusable, add `tabindex="-1"`.
+
+```html
+<AcademicCap tabindex="-1" />
+```
+
+
+## Events
+
+All icons have the following events:
+
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+
 ## Passing down other attributes
 
 You can pass other attibutes as well.
@@ -199,6 +205,22 @@ You can pass other attibutes as well.
 </script>
 
 <svelte:component this="{AcademicCap}" size="40" />
+```
+
+# Using onMount
+
+```html
+<script>
+  import { Cib500px } from 'svelte-coreui-icons';
+  import { onMount } from 'svelte';
+  const props = {
+    size: '50',
+    color: '#ff0000'
+  };
+  onMount(() => {
+    const icon = new Cib500px({ target: document.body, props });
+  });
+</script>
 ```
 
 ## Import all
@@ -228,31 +250,6 @@ Use `import * as Icon from 'svelte-heros-v2'`.
 <Map size="50" on:click={() => (isSolid = !isSolid)} variation={isSolid ? 'solid' : 'outline'} />
 ```
 
-## Events
-
-All icons have the following events:
-
-- on:click
-- on:keydown
-- on:keyup
-- on:focus
-- on:blur
-- on:mouseenter
-- on:mouseleave
-- on:mouseover
-- on:mouseout
-
-## Original source
-
-[tailwindlabs/heroicons v2.0.13](https://github.com/tailwindlabs/heroicons)
-
 ## Other icons
 
-- [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
-- [Svelte-Heros v1](https://github.com/shinokada/svelte-heros)
-
-## Experience lightning-fast browsing and offline access with Our PWA
-
-This website can be downloaded and installed on your device for offline access as a Progressive Web App.
-
-To install a PWA, look for the "Add to Home Screen" option in the browser's menu or settings. On most mobile devices, this option can be found by visiting the website, then selecting the "Options" or "Menu" button in the browser, and looking for the "Add to Home Screen" option. On some desktop browsers, right-click on the page and select "Install".
+[Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
