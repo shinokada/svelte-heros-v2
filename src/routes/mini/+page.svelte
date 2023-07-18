@@ -26,7 +26,7 @@
   });
   let size="20";
 </script>
-
+<h1>Svelte Heros v2: Mini</h1>
 <TableSearch
   placeholder="Search by icon name"
   hoverable={true}
