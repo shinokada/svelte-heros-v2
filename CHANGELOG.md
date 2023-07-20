@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.4](https://github.com/shinokada/svelte-heros-v2/compare/v0.7.3...v0.7.4) (2023-07-20)
+
+
+### Features
+
+* add a link to icons and names ([5d89771](https://github.com/shinokada/svelte-heros-v2/commit/5d89771cb3fdde9b8de5de5ee56ca4e1bdea9d15))
+* layout update ([f563746](https://github.com/shinokada/svelte-heros-v2/commit/f563746ee52f987aa7b7a7aac5334da8832612d0))
+
+
+### Bug Fixes
+
+* homepage update ([85bd633](https://github.com/shinokada/svelte-heros-v2/commit/85bd633ea6a9739f1cb0595cde4990cfb6801b7c))
+* range bar width update ([3c4f41b](https://github.com/shinokada/svelte-heros-v2/commit/3c4f41b5f8495498c21634641046baabb18df5ee))
+* update flowbite-svelte v0.40.1, add @floating-ui/dom remove flowbite and popper, add tests ([84c05e9](https://github.com/shinokada/svelte-heros-v2/commit/84c05e9f6871efe39b0d4a7a9715de19d8e9d0bc))
+
 ### [0.7.3](https://github.com/shinokada/svelte-heros-v2/compare/v0.7.1...v0.7.3) (2023-06-15)
 
 ### [0.7.2](https://github.com/shinokada/svelte-heros-v2/compare/v0.4.2...v0.7.2) (2023-06-15)
