@@ -8,7 +8,7 @@
     "url": "https://blog.codewithshin.com"
   },
   "bugs": "https://github.com/shinokada/svelte-heros-v2/issues",
-  "homepage": "https://svelte-heros-v2.codewithshin.com",
+  "homepage": "https://svelte-heros-v2.vercel.app",
   "license": "MIT",
   "scripts": {
     "dev": "vite dev",
