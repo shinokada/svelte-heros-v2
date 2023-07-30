@@ -77,5 +77,19 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/shinokada/svelte-heros-v2"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
+    },
+    "./Icon.svelte": {
+      "types": "./dist/Icon.svelte.d.ts",
+      "svelte": "./dist/Icon.svelte"
+    },
+    "./icons.js": {
+      "types": "./dist/icons.d.ts",
+      "svelte": "./dist/icons.js"
+    }
   }
 }
