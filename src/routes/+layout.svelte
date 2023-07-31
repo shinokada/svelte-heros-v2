@@ -72,8 +72,7 @@
   />
   <FooterLinkGroup ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
     <FooterLink href="/">Home</FooterLink>
-    <FooterLink href="/outline">Outline</FooterLink>
-    <FooterLink href="/solid">Solid</FooterLink>
+    <FooterLink href="/icons">Icons</FooterLink>
     <FooterLink href="/mini">Mini</FooterLink>
     <FooterLink href="https://github.com/shinokada/svelte-heros-v2/blob/main/LICENSE">Licensing</FooterLink>
     <FooterLink href="https://github.com/shinokada/svelte-heros-v2/">GitHub</FooterLink>
