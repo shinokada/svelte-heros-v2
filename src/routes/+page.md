@@ -214,7 +214,7 @@ Use `import { IconOutline, icons } from 'svelte-heros-v2';`.
 
 {#each Object.keys(outlineIcons) as name}
 <div class="flex gap-4 items-center text-lg">
-  <IconOutline name={name} bind:width={size} bind:height={size} class="shrink-0"/>
+  <IconOutline name={name} class="shrink-0"/>
   {name}
 </div>
 {/each}
