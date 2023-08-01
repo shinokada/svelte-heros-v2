@@ -2,12 +2,11 @@
   import icons from './icons.js'
 
   export let name;
-  export let width = "24";
-  export let height = "24";
+  export let width = "20";
+  export let height = "20";
   export let color = 'currentColor';
   export let role = 'img';
   export let ariaLabel = name;
-  export let strokeWidth = "1.5";
   
   $: displayIcon = icons[name]
 </script>
@@ -17,11 +16,7 @@ xmlns="http://www.w3.org/2000/svg"
 {height}
 {role}
 aria-label={ariaLabel}
-fill="none"
-stroke={color}
-stroke-width={strokeWidth}
-stroke-linecap="round"
-stroke-linejoin="round"
+fill={color}
 {...$$restProps}
 class={$$props.class}
 on:click
@@ -40,15 +35,14 @@ viewBox="0 0 {displayIcon.box} {displayIcon.box}"
 
 <!--
 @component
-[Go to Document](https://shinokada.github.io/svelte-radix/)
+[Go to Document](https://svelte-heros-v2.vercel.app/)
 ## Props
 @prop name;
-@prop width = "24";
-@prop height = "24";
+@prop width = "20";
+@prop height = "20";
 @prop role = 'img';
 @prop color = 'currentColor'
 @prop ariaLabel='icon name'
-@prop strokeWidth = "1.5";
 ## Event
 - on:click
 - on:keydown

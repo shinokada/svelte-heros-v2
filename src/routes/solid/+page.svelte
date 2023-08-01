@@ -4,11 +4,11 @@
   import Tabs from 'flowbite-svelte/Tabs.svelte';
   import TabItem from 'flowbite-svelte/TabItem.svelte';
   import TableSearch from 'flowbite-svelte/TableSearch.svelte';
-  import Icon from '$lib/IconMini.svelte';
+  import Icon from '$lib/IconSolid.svelte';
   import icons from '$lib/icons.js';
   import { filterIconsByKeyword } from '../utils/filter.js'
-  
-  const miniIcons = filterIconsByKeyword(icons, '-mini');
+
+  const solidIcons = filterIconsByKeyword(icons, '-solid');
   const random_tailwind_color = () => {
     const colors = ['red', 'yellow', 'green', 'blue', 'indigo', 'purple', 'pink'];
     const shades = ['300', '400', '500'];
@@ -23,12 +23,12 @@
   const contentClass = 'rounded-lg dark:bg-neutral-950 mt-4';
   let searchTerm = '';
 
-  $: filteredIconNames = Object.keys(miniIcons).filter(name => {
+  $: filteredIconNames = Object.keys(solidIcons).filter(name => {
     return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
   });
-  let size="20"
+  let size="24"
 </script>
-<h1>Svelte Heros v2: Mini Icons</h1>
+<h1>Svelte Heros v2: Solid icons</h1>
 <TableSearch
   placeholder="Search by icon name"
   hoverable={true}
@@ -37,7 +37,7 @@
 >
 <div class="xl:w-1/3 lg:w-2/5 md:w-1/2 sm:w-3/4 w-full p-4">
   <Label class="text-lg py-4 ">Icon size: {size}</Label>
-  <Range id="range1" min="16" max="30" bind:value={size} />
+  <Range id="range1" min="20" max="50" bind:value={size} />
 </div>
   <Tabs style="pill" {contentClass} class="p-4">
     <TabItem open>

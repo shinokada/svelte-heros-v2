@@ -1,6 +1,6 @@
 {
   "name": "svelte-heros-v2",
-  "version": "0.8.3",
+  "version": "0.9.0",
   "main": "dist/index.js",
   "description": "Hero icon v2 components for Svelte",
   "author": {
@@ -77,19 +77,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/shinokada/svelte-heros-v2"
-  },
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "svelte": "./dist/index.js"
-    },
-    "./Icon.svelte": {
-      "types": "./dist/Icon.svelte.d.ts",
-      "svelte": "./dist/Icon.svelte"
-    },
-    "./icons.js": {
-      "types": "./dist/icons.d.ts",
-      "svelte": "./dist/icons.js"
-    }
   }
 }
