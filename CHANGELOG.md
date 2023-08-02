@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.4](https://github.com/shinokada/svelte-heros-v2/compare/v0.9.3...v0.9.4) (2023-08-02)
+
+
+### Bug Fixes
+
+* remove stroke-width from outline ([e910cd2](https://github.com/shinokada/svelte-heros-v2/commit/e910cd24b91defdf3c8087aef8061bb6d14e4c48))
+
 ### [0.9.3](https://github.com/shinokada/svelte-heros-v2/compare/v0.9.2...v0.9.3) (2023-08-01)
 
 ### [0.9.2](https://github.com/shinokada/svelte-heros-v2/compare/v0.9.1...v0.9.2) (2023-08-01)
