@@ -50,17 +50,7 @@ pnpm i -D svelte-heros-v2
 
 ## Props
 
-### IconOutline
-
-- @prop name;
-- @prop width = "24";
-- @prop height = "24";
-- @prop role = 'img';
-- @prop color = 'currentColor'
-- @prop ariaLabel='icon name'
-- @prop strokeWidth = "1.5";
-
-### IconSolid
+### IconOutline IconSolid
 
 - @prop name;
 - @prop width = "24";
