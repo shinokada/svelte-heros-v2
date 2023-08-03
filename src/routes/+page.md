@@ -177,7 +177,7 @@ You can pass other attibutes as well.
     color: '#ff0000'
   };
   onMount(() => {
-    const icon = new Icon({ target: document.body, props });
+    const icon = new IconOutline({ target: document.body, props });
   });
 </script>
 ```
