@@ -1,0 +1,1 @@
+export const ArrowdownOutline = { name: 'ArrowdownOutline', box: 24, svg: ' <path d=\"M19.5 13.5L12 21M12 21L4.5 13.5M12 21L12 3\"  stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>  ' };

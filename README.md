@@ -1,3 +1,9 @@
+<script lang="ts">
+    import type { PageData } from './$types';
+  export let data: PageData;
+  console.log('data from home', data)
+</script>
+
 # Svelte Heros v2
 
 <div class="flex gap-2 my-8">
@@ -43,9 +49,9 @@ pnpm i -D svelte-heros-v2
   import { IconOutline, IconSolid, IconMini } from 'svelte-heros-v2';
 </script>
 
-<IconOutline name="academic-cap-outline" />
-<IconSolid name="academic-cap-solid" />
-<IconMini name="academic-cap-mini" />
+<IconOutline name="AcademicCapOutline" />
+<IconSolid name="AcademicCapSolid" />
+<IconMini name="AcademicCapMini" />
 ```
 
 ## Props
@@ -77,13 +83,13 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 Use the `width` and `height` props to change the size of icons.
 
 ```html
-<IconOutline name="academic-cap-outline" width="100" height="100" />
+<IconOutline name="AcademicCapOutline" width="100" height="100" />
 ```
 
 If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
 
 ```html
-<IconOutline name="academic-cap-outline" class="shrink-0 h-20 w-20" />
+<IconOutline name="AcademicCapOutline" class="shrink-0 h-20 w-20" />
 ```
 
 ## CSS HEX Colors
@@ -91,7 +97,7 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 Use the `color` prop to change colors with HEX color code.
 
 ```html
-<IconOutline name="academic-cap-outline" color="#c61515" />
+<IconOutline name="AcademicCapOutline" color="#c61515" />
 ```
 
 ## CSS frameworks suport
@@ -101,13 +107,13 @@ You can apply CSS framework color and other attributes directly to the icon comp
 Tailwind CSS example:
 
 ```html
-<IconOutline name="academic-cap-outline" class="text-red-700 inline m-1" />
+<IconOutline name="AcademicCapOutline" class="text-red-700 inline m-1" />
 ```
 
 Bootstrap examples:
 
 ```html
-<IconOutline name="academic-cap-outline" class="position-absolute top-0 px-1" />
+<IconOutline name="AcademicCapOutline" class="position-absolute top-0 px-1" />
 ```
 
 ## Dark mode
@@ -117,16 +123,16 @@ If you are using the dark mode on your website with Tailwind CSS, add your dark 
 Let's use `dark` for the dark mode class as an example.
 
 ```html
-<IconOutline name="academic-cap-outline"  class="text-blue-700 dark:text-red-500" />
+<IconOutline name="AcademicCapOutline"  class="text-blue-700 dark:text-red-500" />
 ```
 
 ## aria-label
 
-All icons have aria-label. For example `academic-cap-outline` has `aria-label="academic cap outline"`.
+All icons have aria-label. For example `AcademicCapOutline` has `aria-label="academic cap outline"`.
 Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<IconOutline name="academic-cap-outline" ariaLabel="red academic cap outline" color="#c61515"/>
+<IconOutline name="AcademicCapOutline" ariaLabel="red academic cap outline" color="#c61515"/>
 ```
 
 ## Unfocusable icon
@@ -134,7 +140,7 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ```html
-<IconOutline name="academic-cap-outline"  tabindex="-1" />
+<IconOutline name="AcademicCapOutline"  tabindex="-1" />
 ```
 
 ## Events
@@ -156,13 +162,13 @@ All icons have the following events:
 You can pass other attibutes as well.
 
 ```html
-<IconOutline name="academic-cap-outline"  tabindex="0" />
+<IconOutline name="AcademicCapOutline"  tabindex="0" />
 ```
 
 ## Using svelte:component
 
 ```html
-<svelte:component this="{IconOutline}" name="academic-cap-outline" />
+<svelte:component this="{IconOutline}" name="AcademicCapOutline" />
 ```
 
 ## Using onMount
@@ -172,7 +178,7 @@ You can pass other attibutes as well.
   import { IconOutline } from 'svelte-heros-v2';
   import { onMount } from 'svelte';
   const props = {
-    name: 'academic-cap-outline',
+    name: 'AcademicCapOutline',
     size: '50',
     color: '#ff0000'
   };
@@ -180,34 +186,6 @@ You can pass other attibutes as well.
     const icon = new IconOutline({ target: document.body, props });
   });
 </script>
-```
-
-
-## Import all
-
-Use `import { IconOutline, icons } from 'svelte-heros-v2';`.
-
-```html
-<script>
-  import { IconOutline, icons } from 'svelte-heros-v2';
-  function filterIconsByKeyword(icons, keyword) {
-    const filteredIcons = {};
-    for (const key in icons) {
-      if (key.includes(keyword)) {
-        filteredIcons[key] = icons[key];
-      }
-    }
-    return filteredIcons;
-  }
-  const outlineIcons = filterIconsByKeyword(icons, '-outline');
-</script>
-
-{#each Object.keys(outlineIcons) as name}
-<div class="flex gap-4 items-center text-lg">
-  <IconOutline name={name} class="shrink-0"/>
-  {name}
-</div>
-{/each}
 ```
 
 ## Other icons

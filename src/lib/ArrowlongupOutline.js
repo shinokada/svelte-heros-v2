@@ -1,0 +1,1 @@
+export const ArrowlongupOutline = { name: 'ArrowlongupOutline', box: 24, svg: ' <path d=\"M8.25 6.75L12 3M12 3L15.75 6.75M12 3V21\"  stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>  ' };
