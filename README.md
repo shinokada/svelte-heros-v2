@@ -61,19 +61,7 @@ If you need only a few icons from this library in your Svelte app, import them d
 If you are a TypeScript user, install **typescript version 5.0.0 or above**.
 
 ```sh
-pnpm i -D typescript@beta
-```
-
-To avoid any complaints from the editor, you may need to add `node16` or `nodenext` to `moduleResolution` in your tsconfig.json file.
-
-```json
-{
-  //...
-  "compilerOptions": {
-    // ...
-    "moduleResolution": "nodenext"
-  }
-}
+pnpm i -D typescript@latest
 ```
 
 ## Props
