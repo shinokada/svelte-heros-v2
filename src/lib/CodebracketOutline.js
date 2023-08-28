@@ -1,1 +1,0 @@
-export const CodebracketOutline = { name: 'CodebracketOutline', box: 24, svg: ' <path d=\"M17.25 6.75L22.5 12L17.25 17.25M6.75 17.25L1.5 12L6.75 6.75M14.25 3.75L9.75 20.25\"  stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>  ' };

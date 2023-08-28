@@ -1,1 +1,0 @@
-export const Bars4Outline = { name: 'Bars4Outline', box: 24, svg: ' <path d=\"M3.75 5.25H20.25M3.75 9.75H20.25M3.75 14.25H20.25M3.75 18.75H20.25\"  stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>  ' };

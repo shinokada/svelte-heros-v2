@@ -1,1 +1,0 @@
-export const ChevronupdownOutline = { name: 'ChevronupdownOutline', box: 24, svg: ' <path d=\"M8.25 15L12 18.75L15.75 15M8.25 9L12 5.25L15.75 9\"  stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>  ' };

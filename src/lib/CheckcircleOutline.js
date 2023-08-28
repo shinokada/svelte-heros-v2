@@ -1,1 +1,0 @@
-export const CheckcircleOutline = { name: 'CheckcircleOutline', box: 24, svg: ' <path d=\"M9 12.75L11.25 15L15 9.75M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\"  stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>  ' };
