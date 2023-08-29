@@ -1,6 +1,6 @@
 {
   "name": "svelte-heros-v2",
-  "version": "0.10.7",
+  "version": "0.10.8",
   "main": "dist/index.js",
   "description": "Hero icon v2 components for Svelte",
   "author": {
