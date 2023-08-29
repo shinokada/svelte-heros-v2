@@ -1,19 +1,20 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
   // heroicons v2.0.18
-  export let size = "24";
+  export let size = '24';
   export let viewBox: string = '0 0 24 24';
-  export let role = "img";
-  export let strokeWidth = "1.5";
-  export let color = "currentColor";
-  export let variation: "solid" | "outline" | "mini"= "outline";
+  export let role = 'img';
+  export let strokeWidth = '1.5';
+  export let color = 'currentColor';
+  export let variation: 'solid' | 'outline' | 'mini' = 'outline';
 
-  if(variation === "mini"){
-    size = "20"
-    viewBox = '0 0 20 20'
+  if (variation === 'mini') {
+    size = '20';
+    viewBox = '0 0 20 20';
   }
-  
-export let ariaLabel="arrow down" </script>
+
+  export let ariaLabel = 'arrow down';
+</script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -22,8 +23,8 @@ export let ariaLabel="arrow down" </script>
   {...$$restProps}
   {role}
   aria-label={ariaLabel}
-  fill="none" 
- {viewBox}
+  fill="none"
+  {viewBox}
   stroke-width={strokeWidth}
   on:click
   on:keydown
@@ -35,23 +36,40 @@ export let ariaLabel="arrow down" </script>
   on:mouseover
   on:mouseout
 >
-{#if variation === 'outline'}
-  <path d="M19.5 13.5L12 21M12 21L4.5 13.5M12 21L12 3" stroke="{color}" stroke-width="{strokeWidth}" stroke-linecap="round" stroke-linejoin="round"/> 
-{:else if variation === 'mini'}
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 3C10.4142 3 10.75 3.33579 10.75 3.75L10.75 14.3879L14.7094 10.2302C14.9965 9.93159 15.4713 9.92228 15.7698 10.2094C16.0684 10.4965 16.0777 10.9713 15.7906 11.2698L10.5406 16.7698C10.3992 16.9169 10.204 17 10 17C9.79599 17 9.60078 16.9169 9.45938 16.7698L4.20938 11.2698C3.92228 10.9713 3.93159 10.4965 4.23017 10.2094C4.52875 9.92228 5.00353 9.93159 5.29063 10.2302L9.25 14.3879L9.25 3.75C9.25 3.33579 9.58579 3 10 3Z" fill="{color}"/> 
-{:else}
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.25C12.4142 2.25 12.75 2.58579 12.75 3L12.75 19.1893L18.9697 12.9697C19.2626 12.6768 19.7374 12.6768 20.0303 12.9697C20.3232 13.2626 20.3232 13.7374 20.0303 14.0303L12.5303 21.5303C12.2374 21.8232 11.7626 21.8232 11.4697 21.5303L3.96967 14.0303C3.67678 13.7374 3.67678 13.2626 3.96967 12.9697C4.26256 12.6768 4.73744 12.6768 5.03033 12.9697L11.25 19.1893L11.25 3C11.25 2.58579 11.5858 2.25 12 2.25Z" fill="{color}"/> 
-{/if}
+  {#if variation === 'outline'}
+    <path
+      d="M19.5 13.5L12 21M12 21L4.5 13.5M12 21L12 3"
+      stroke={color}
+      stroke-width={strokeWidth}
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  {:else if variation === 'mini'}
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M10 3C10.4142 3 10.75 3.33579 10.75 3.75L10.75 14.3879L14.7094 10.2302C14.9965 9.93159 15.4713 9.92228 15.7698 10.2094C16.0684 10.4965 16.0777 10.9713 15.7906 11.2698L10.5406 16.7698C10.3992 16.9169 10.204 17 10 17C9.79599 17 9.60078 16.9169 9.45938 16.7698L4.20938 11.2698C3.92228 10.9713 3.93159 10.4965 4.23017 10.2094C4.52875 9.92228 5.00353 9.93159 5.29063 10.2302L9.25 14.3879L9.25 3.75C9.25 3.33579 9.58579 3 10 3Z"
+      fill={color}
+    />
+  {:else}
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M12 2.25C12.4142 2.25 12.75 2.58579 12.75 3L12.75 19.1893L18.9697 12.9697C19.2626 12.6768 19.7374 12.6768 20.0303 12.9697C20.3232 13.2626 20.3232 13.7374 20.0303 14.0303L12.5303 21.5303C12.2374 21.8232 11.7626 21.8232 11.4697 21.5303L3.96967 14.0303C3.67678 13.7374 3.67678 13.2626 3.96967 12.9697C4.26256 12.6768 4.73744 12.6768 5.03033 12.9697L11.25 19.1893L11.25 3C11.25 2.58579 11.5858 2.25 12 2.25Z"
+      fill={color}
+    />
+  {/if}
 </svg>
 
 <!--
 @component
 [Go to docs](https://svelte-heros-v2.vercel.app)
 ## Props
-@prop export let size = "24";
+@prop export let size = '24';
 @prop export let viewBox: string = '0 0 24 24';
-@prop export let role = "img";
-@prop export let strokeWidth = "1.5";
-@prop export let color = "currentColor";
-@prop export let variation: "solid" | "outline" | "mini"= "outline";
+@prop export let role = 'img';
+@prop export let strokeWidth = '1.5';
+@prop export let color = 'currentColor';
+@prop export let variation: 'solid' | 'outline' | 'mini' = 'outline';
+@prop export let ariaLabel = 'arrow down';
 -->

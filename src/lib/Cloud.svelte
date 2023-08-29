@@ -1,19 +1,20 @@
 <script lang="ts">
   // https://github.com/shinokada/svelte-heros-v2
   // heroicons v2.0.18
-  export let size = "24";
+  export let size = '24';
   export let viewBox: string = '0 0 24 24';
-  export let role = "img";
-  export let strokeWidth = "1.5";
-  export let color = "currentColor";
-  export let variation: "solid" | "outline" | "mini"= "outline";
+  export let role = 'img';
+  export let strokeWidth = '1.5';
+  export let color = 'currentColor';
+  export let variation: 'solid' | 'outline' | 'mini' = 'outline';
 
-  if(variation === "mini"){
-    size = "20"
-    viewBox = '0 0 20 20'
+  if (variation === 'mini') {
+    size = '20';
+    viewBox = '0 0 20 20';
   }
-  
-export let ariaLabel="cloud" </script>
+
+  export let ariaLabel = 'cloud';
+</script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -22,8 +23,8 @@ export let ariaLabel="cloud" </script>
   {...$$restProps}
   {role}
   aria-label={ariaLabel}
-  fill="none" 
- {viewBox}
+  fill="none"
+  {viewBox}
   stroke-width={strokeWidth}
   on:click
   on:keydown
@@ -35,23 +36,38 @@ export let ariaLabel="cloud" </script>
   on:mouseover
   on:mouseout
 >
-{#if variation === 'outline'}
-  <path d="M2.25 15C2.25 17.4853 4.26472 19.5 6.75 19.5H18C20.0711 19.5 21.75 17.8211 21.75 15.75C21.75 14.1479 20.7453 12.7805 19.3316 12.2433C19.4407 11.9324 19.5 11.5981 19.5 11.25C19.5 9.59315 18.1569 8.25 16.5 8.25C16.1767 8.25 15.8654 8.30113 15.5737 8.39575C14.9765 6.1526 12.9312 4.5 10.5 4.5C7.6005 4.5 5.25 6.85051 5.25 9.75C5.25 10.0832 5.28105 10.4092 5.3404 10.7252C3.54555 11.3167 2.25 13.0071 2.25 15Z" stroke="{color}" stroke-width="{strokeWidth}" stroke-linecap="round" stroke-linejoin="round"/> 
-{:else if variation === 'mini'}
-  <path d="M1 12.5C1 14.9853 3.01472 17 5.5 17H15C17.2091 17 19 15.2091 19 13C19 11.4649 18.1353 10.1318 16.8664 9.4612C16.9534 9.15579 17 8.83334 17 8.5C17 6.567 15.433 5 13.5 5C13.1017 5 12.7189 5.06655 12.3621 5.18913C11.5758 3.87771 10.1404 3 8.5 3C6.01472 3 4 5.01472 4 7.5C4 7.75044 4.02046 7.9961 4.05979 8.2354C2.28084 8.83595 1 10.5184 1 12.5Z" fill="{color}"/> 
-{:else}
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 9.75C4.5 6.43629 7.18629 3.75 10.5 3.75C13.028 3.75 15.1893 5.31282 16.0733 7.52408C16.2135 7.50816 16.3559 7.5 16.5 7.5C18.5711 7.5 20.25 9.17893 20.25 11.25C20.25 11.4459 20.2349 11.6386 20.2058 11.827C21.5744 12.5981 22.5 14.0653 22.5 15.75C22.5 18.2353 20.4853 20.25 18 20.25H6.75C3.85051 20.25 1.5 17.8995 1.5 15C1.5 12.8968 2.73627 11.084 4.52024 10.2459C4.50683 10.0822 4.5 9.91686 4.5 9.75Z" fill="{color}"/> 
-{/if}
+  {#if variation === 'outline'}
+    <path
+      d="M2.25 15C2.25 17.4853 4.26472 19.5 6.75 19.5H18C20.0711 19.5 21.75 17.8211 21.75 15.75C21.75 14.1479 20.7453 12.7805 19.3316 12.2433C19.4407 11.9324 19.5 11.5981 19.5 11.25C19.5 9.59315 18.1569 8.25 16.5 8.25C16.1767 8.25 15.8654 8.30113 15.5737 8.39575C14.9765 6.1526 12.9312 4.5 10.5 4.5C7.6005 4.5 5.25 6.85051 5.25 9.75C5.25 10.0832 5.28105 10.4092 5.3404 10.7252C3.54555 11.3167 2.25 13.0071 2.25 15Z"
+      stroke={color}
+      stroke-width={strokeWidth}
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  {:else if variation === 'mini'}
+    <path
+      d="M1 12.5C1 14.9853 3.01472 17 5.5 17H15C17.2091 17 19 15.2091 19 13C19 11.4649 18.1353 10.1318 16.8664 9.4612C16.9534 9.15579 17 8.83334 17 8.5C17 6.567 15.433 5 13.5 5C13.1017 5 12.7189 5.06655 12.3621 5.18913C11.5758 3.87771 10.1404 3 8.5 3C6.01472 3 4 5.01472 4 7.5C4 7.75044 4.02046 7.9961 4.05979 8.2354C2.28084 8.83595 1 10.5184 1 12.5Z"
+      fill={color}
+    />
+  {:else}
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M4.5 9.75C4.5 6.43629 7.18629 3.75 10.5 3.75C13.028 3.75 15.1893 5.31282 16.0733 7.52408C16.2135 7.50816 16.3559 7.5 16.5 7.5C18.5711 7.5 20.25 9.17893 20.25 11.25C20.25 11.4459 20.2349 11.6386 20.2058 11.827C21.5744 12.5981 22.5 14.0653 22.5 15.75C22.5 18.2353 20.4853 20.25 18 20.25H6.75C3.85051 20.25 1.5 17.8995 1.5 15C1.5 12.8968 2.73627 11.084 4.52024 10.2459C4.50683 10.0822 4.5 9.91686 4.5 9.75Z"
+      fill={color}
+    />
+  {/if}
 </svg>
 
 <!--
 @component
 [Go to docs](https://svelte-heros-v2.vercel.app)
 ## Props
-@prop export let size = "24";
+@prop export let size = '24';
 @prop export let viewBox: string = '0 0 24 24';
-@prop export let role = "img";
-@prop export let strokeWidth = "1.5";
-@prop export let color = "currentColor";
-@prop export let variation: "solid" | "outline" | "mini"= "outline";
+@prop export let role = 'img';
+@prop export let strokeWidth = '1.5';
+@prop export let color = 'currentColor';
+@prop export let variation: 'solid' | 'outline' | 'mini' = 'outline';
+@prop export let ariaLabel = 'cloud';
 -->
