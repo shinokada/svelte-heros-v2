@@ -4,20 +4,18 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.10.1](https://github.com/shinokada/svelte-heros-v2/compare/v0.9.5...v0.10.1) (2023-08-28)
 
-
 ### Features
 
-* go back to individual components ([308cc35](https://github.com/shinokada/svelte-heros-v2/commit/308cc35a56be95599e4245b5eef5aea997d12392))
-* smaller compiled size ([8754d2b](https://github.com/shinokada/svelte-heros-v2/commit/8754d2b36e3cdc921cfb444b0fb2fb9d3aa8f7f5))
+- go back to individual components ([308cc35](https://github.com/shinokada/svelte-heros-v2/commit/308cc35a56be95599e4245b5eef5aea997d12392))
+- smaller compiled size ([8754d2b](https://github.com/shinokada/svelte-heros-v2/commit/8754d2b36e3cdc921cfb444b0fb2fb9d3aa8f7f5))
 
 ### [0.9.5](https://github.com/shinokada/svelte-heros-v2/compare/v0.9.4...v0.9.5) (2023-08-03)
 
 ### [0.9.4](https://github.com/shinokada/svelte-heros-v2/compare/v0.9.3...v0.9.4) (2023-08-02)
 
-
 ### Bug Fixes
 
-* remove stroke-width from outline ([e910cd2](https://github.com/shinokada/svelte-heros-v2/commit/e910cd24b91defdf3c8087aef8061bb6d14e4c48))
+- remove stroke-width from outline ([e910cd2](https://github.com/shinokada/svelte-heros-v2/commit/e910cd24b91defdf3c8087aef8061bb6d14e4c48))
 
 ### [0.9.3](https://github.com/shinokada/svelte-heros-v2/compare/v0.9.2...v0.9.3) (2023-08-01)
 
@@ -25,41 +23,36 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.9.1](https://github.com/shinokada/svelte-heros-v2/compare/v0.8.3...v0.9.1) (2023-08-01)
 
-
 ### Features
 
-* add IconSolid and IconOutline ([f76d591](https://github.com/shinokada/svelte-heros-v2/commit/f76d591c51e61a12b6aa151bf832245554e5adf3))
+- add IconSolid and IconOutline ([f76d591](https://github.com/shinokada/svelte-heros-v2/commit/f76d591c51e61a12b6aa151bf832245554e5adf3))
 
 ### [0.8.3](https://github.com/shinokada/svelte-heros-v2/compare/v0.8.2...v0.8.3) (2023-07-31)
 
-
 ### Bug Fixes
 
-* footer links ([3a21e4f](https://github.com/shinokada/svelte-heros-v2/commit/3a21e4f29d7388b995b0f7aa589635da0d33215f))
+- footer links ([3a21e4f](https://github.com/shinokada/svelte-heros-v2/commit/3a21e4f29d7388b995b0f7aa589635da0d33215f))
 
 ### [0.8.2](https://github.com/shinokada/svelte-heros-v2/compare/v0.8.1...v0.8.2) (2023-07-30)
 
 ### [0.8.1](https://github.com/shinokada/svelte-heros-v2/compare/v0.7.4...v0.8.1) (2023-07-30)
 
-
 ### Features
 
-* use two files ([1b4401b](https://github.com/shinokada/svelte-heros-v2/commit/1b4401bd0e719eb07e4543082dadd05d91c51468))
+- use two files ([1b4401b](https://github.com/shinokada/svelte-heros-v2/commit/1b4401bd0e719eb07e4543082dadd05d91c51468))
 
 ### [0.7.4](https://github.com/shinokada/svelte-heros-v2/compare/v0.7.3...v0.7.4) (2023-07-20)
 
-
 ### Features
 
-* add a link to icons and names ([5d89771](https://github.com/shinokada/svelte-heros-v2/commit/5d89771cb3fdde9b8de5de5ee56ca4e1bdea9d15))
-* layout update ([f563746](https://github.com/shinokada/svelte-heros-v2/commit/f563746ee52f987aa7b7a7aac5334da8832612d0))
-
+- add a link to icons and names ([5d89771](https://github.com/shinokada/svelte-heros-v2/commit/5d89771cb3fdde9b8de5de5ee56ca4e1bdea9d15))
+- layout update ([f563746](https://github.com/shinokada/svelte-heros-v2/commit/f563746ee52f987aa7b7a7aac5334da8832612d0))
 
 ### Bug Fixes
 
-* homepage update ([85bd633](https://github.com/shinokada/svelte-heros-v2/commit/85bd633ea6a9739f1cb0595cde4990cfb6801b7c))
-* range bar width update ([3c4f41b](https://github.com/shinokada/svelte-heros-v2/commit/3c4f41b5f8495498c21634641046baabb18df5ee))
-* update flowbite-svelte v0.40.1, add @floating-ui/dom remove flowbite and popper, add tests ([84c05e9](https://github.com/shinokada/svelte-heros-v2/commit/84c05e9f6871efe39b0d4a7a9715de19d8e9d0bc))
+- homepage update ([85bd633](https://github.com/shinokada/svelte-heros-v2/commit/85bd633ea6a9739f1cb0595cde4990cfb6801b7c))
+- range bar width update ([3c4f41b](https://github.com/shinokada/svelte-heros-v2/commit/3c4f41b5f8495498c21634641046baabb18df5ee))
+- update flowbite-svelte v0.40.1, add @floating-ui/dom remove flowbite and popper, add tests ([84c05e9](https://github.com/shinokada/svelte-heros-v2/commit/84c05e9f6871efe39b0d4a7a9715de19d8e9d0bc))
 
 ### [0.7.3](https://github.com/shinokada/svelte-heros-v2/compare/v0.7.1...v0.7.3) (2023-06-15)
 

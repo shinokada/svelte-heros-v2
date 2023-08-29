@@ -43,7 +43,11 @@ span.emoji {
 }
 
 span.emoji {
-  font-family: Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family:
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
   font-size: 1.2em;
 }
 
@@ -54,7 +58,9 @@ span.emoji {
   position: fixed;
   right: 0;
   top: 0;
-  transition: width 0.2s, opacity 0.4s;
+  transition:
+    width 0.2s,
+    opacity 0.4s;
   width: 0;
   z-index: 999999;
 }
@@ -78,7 +84,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #34495e;
-  font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+  font-family:
+    Source Sans Pro,
+    Helvetica Neue,
+    Arial,
+    sans-serif;
   font-size: 15px;
   letter-spacing: 0;
   margin: 0;
@@ -441,7 +451,12 @@ body.sticky .sidebar-toggle {
   border-radius: 100%;
   color: var(--white);
   content: '!';
-  font-family: Dosis, Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+  font-family:
+    Dosis,
+    Source Sans Pro,
+    Helvetica Neue,
+    Arial,
+    sans-serif;
   font-size: 14px;
   font-weight: 700;
   left: -12px;
@@ -828,7 +843,11 @@ body {
 .markdown-section code,
 .markdown-section output:after,
 .markdown-section pre {
-  font-family: Roboto Mono, Monaco, courier, monospace;
+  font-family:
+    Roboto Mono,
+    Monaco,
+    courier,
+    monospace;
 }
 
 .markdown-section code,

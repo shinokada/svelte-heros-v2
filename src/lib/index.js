@@ -181,6 +181,7 @@ export { default as Hashtag } from './Hashtag.svelte';
 export { default as Heart } from './Heart.svelte';
 export { default as Home } from './Home.svelte';
 export { default as HomeModern } from './HomeModern.svelte';
+export { default as Icon } from './Icon.svelte';
 export { default as Identification } from './Identification.svelte';
 export { default as Inbox } from './Inbox.svelte';
 export { default as InboxArrowDown } from './InboxArrowDown.svelte';

@@ -14,7 +14,6 @@ Hero Icons v2 uses Heroicon v2 to create Svelte SVG icons. You can select outlin
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
-
 ## Repo
 
 [GitHub Repo](https://github.com/shinokada/svelte-heros-v2)
@@ -28,7 +27,6 @@ Thank you for considering my open-source package. If you use it in a commercial 
 [Svelte-Heros-V2 License](https://github.com/shinokada/svelte-heros-v2/blob/main/LICENSE)
 
 [tailwindlabs/heroicons LICENSE](https://github.com/tailwindlabs/heroicons/blob/main/LICENSE)
-
 
 ## Installation
 
@@ -85,8 +83,7 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 The default variation value is outline. Use the `variation` prop to change it to solid or mini.
 
 ```html
-<AcademicCap variation="solid" /> 
-<AcademicCap variation="mini" />
+<AcademicCap variation="solid" /> <AcademicCap variation="mini" />
 ```
 
 ## Size
@@ -110,8 +107,7 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 Use the `color` prop to change colors with HEX color code.
 
 ```html
-<AcademicCap color="#ff0000" /> 
-<AcademicCap color="#00ffd8" />
+<AcademicCap color="#ff0000" /> <AcademicCap color="#00ffd8" />
 ```
 
 ## Stroke width
@@ -162,7 +158,6 @@ If you want to make an icon unfocusable, add `tabindex="-1"`.
 ```html
 <AcademicCap tabindex="-1" />
 ```
-
 
 ## Events
 
@@ -236,7 +231,9 @@ Use `import * as Icon from 'svelte-heros-v2'`.
   let isSolid = false;
 </script>
 
-<Map size="50" on:click={() => (isSolid = !isSolid)} variation={isSolid ? 'solid' : 'outline'} />
+<map size="50" on:click="{()" ="">
+  (isSolid = !isSolid)} variation={isSolid ? 'solid' : 'outline'} /></map
+>
 ```
 
 ## Other icons
