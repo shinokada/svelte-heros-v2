@@ -8,6 +8,29 @@
     }
     return filteredIcons;
   }
+  export function filterIconObjectByKeyword(iconNamesObj, keyword) {
+    const filteredIcons = {};
+
+    for (const iconName in iconNamesObj) {
+        if (iconNamesObj[iconName].includes(keyword)) {
+            filteredIcons[iconName] = iconNamesObj[iconName];
+        }
+    }
+
+    return filteredIcons;
+  }
+
+  export function filterIconArrayByKeyword(iconNames, keyword) {
+    const filteredIcons = [];
+    
+    for (const iconName of iconNames) {
+      if (iconName && iconName.includes(keyword)) {
+        filteredIcons.push(iconName);
+      }
+    }
+    
+    return filteredIcons;
+  }
 
   export function excludeItemsByKeywords(items, keywords) {
     const filteredItems = {};
