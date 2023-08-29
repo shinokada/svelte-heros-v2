@@ -1,16 +1,17 @@
 <script lang="ts">
-  // https://github.com/shinokada/svelte-heros-v2
-  // heroicons v2.0.18
-  export let size = '24';
-  export let viewBox: string = '0 0 24 24';
+  export let size = '';
+  export let viewBox = '';
   export let role = 'img';
   export let strokeWidth = '1.5';
   export let color = 'currentColor';
   export let variation: 'solid' | 'outline' | 'mini' = 'outline';
 
   if (variation === 'mini') {
-    size = '20';
-    viewBox = '0 0 20 20';
+    size = size || '20';
+    viewBox = viewBox || '0 0 20 20';
+  } else {
+    size = size || '24';
+    viewBox = viewBox || '0 0 24 24';
   }
 
   export let ariaLabel = 'building library';
@@ -73,8 +74,8 @@
 @component
 [Go to docs](https://svelte-heros-v2.vercel.app)
 ## Props
-@prop export let size = '24';
-@prop export let viewBox: string = '0 0 24 24';
+@prop export let size = '';
+@prop export let viewBox = '';
 @prop export let role = 'img';
 @prop export let strokeWidth = '1.5';
 @prop export let color = 'currentColor';

@@ -102,6 +102,84 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 <AcademicCap class="shrink-0 h-20 w-20" />
 ```
 
+## Creating global default icon
+
+The `Icon` component is a wrapper of `svelte:component`. 
+You can use it to create a global default setting or extend a component.
+
+You can create a config file, `/src/lib/icon.config.json`.
+
+```json
+{
+	"config1":{
+		"size": 40,
+		"variation": "solid",
+		"color": "#FF5733"
+	},
+	"config2":{
+		"size": 50,
+		"variation": "outline",
+		"color": "#445533"
+	}
+}
+```
+
+Use the above config in you page:
+
+```html
+<script lang="ts">
+type IconConfig = {
+	config1: {
+		size: number;
+		variation: string;
+		color: string;
+	};
+	config2: {
+		size: number;
+		variation: string;
+		color: string;
+	};
+};
+import config from '$lib/icon.config.json'
+import { Icon, AcademicCap, XMark } from 'svelte-heros-v2'
+
+const iconConfig: IconConfig = config;
+const config1 = iconConfig.config1;
+const config2 = iconConfig.config2;
+</script>
+
+<Icon {...config1} icon={AcademicCap}/>
+<Icon {...config2}  icon={XMark} />
+```
+
+Or create your default icon in a `src/lib/MyIcon.svelte`:
+
+```html
+<script lang="ts">
+  import type { ComponentType } from 'svelte';
+  const config = {
+    size: 30,
+    variation: 'solid',
+    color: '#FF5733'
+  };
+  import { Icon } from 'svelte-heros-v2'
+  export let icon: ComponentType;
+  </script>
+  
+  <Icon {...config} {icon}/>
+```
+
+Using in you `+page.svelte` file:
+
+```html
+<script>
+  import MyIcon from '$lib/MyIcon.svelte'
+  import { AcademicCap } from 'svelte-heros-v2'
+</script>
+
+<MyIcon icon={AcademicCap} />
+```
+
 ## CSS HEX Colors
 
 Use the `color` prop to change colors with HEX color code.
