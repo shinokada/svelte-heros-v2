@@ -102,46 +102,51 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 <AcademicCap class="shrink-0 h-20 w-20" />
 ```
 
-## Creating global default icon
-
-The `Icon` component is a wrapper of `svelte:component`.
-You can use it to create a global default setting or extend a component.
+## Creating a Default Global Icon Setting in Svelte
 
 You can create a config file, `/src/lib/icon.config.json`.
+
+The `Icon` component serves as a wrapper for svelte:component, allowing you to establish a global default setting or expand the capabilities of a component.
+
+To create a default global icon setting, follow these steps:
+
+### Configuration File
+
+Start by creating a configuration file named `/src/lib/icon.config.json` with the following structure:
 
 ```json
 {
   "config1": {
     "size": 40,
-    "variation": "solid",
     "color": "#FF5733"
   },
   "config2": {
     "size": 50,
-    "variation": "outline",
     "color": "#445533"
   }
 }
 ```
 
-Use the above config in you page:
+In this JSON file, you can define different configurations (config1 and config2 in this case) for your icons, specifying attributes like size, variation, and color.
+
+### Implementation
+
+In your Svelte page file, make use of the configurations from the JSON file:
 
 ```html
 <script lang="ts">
   type IconConfig = {
     config1: {
       size: number;
-      variation: string;
       color: string;
     };
     config2: {
       size: number;
-      variation: string;
       color: string;
     };
   };
   import config from '$lib/icon.config.json';
-  import { Icon, AcademicCap, XMark } from 'svelte-heros-v2';
+  import { Icon, AcademicCap, ShoppingBag } from 'svelte-heros-v2';
 
   const iconConfig: IconConfig = config;
   const config1 = iconConfig.config1;
@@ -149,17 +154,22 @@ Use the above config in you page:
 </script>
 
 <Icon {...config1} icon="{AcademicCap}" />
-<Icon {...config2} icon="{XMark}" />
+<Icon {...config2} icon="{ShoppingBag}" />
 ```
 
-Or create your default icon in a `src/lib/MyIcon.svelte`:
+We import the configurations from the JSON file and assign them to config1 and config2. We then utilize the Icon component with the spread attributes to apply the respective configurations to each icon.
+
+### Custom Default Icon
+
+If you wish to create a custom default icon, you can follow these steps:
+
+Create a Svelte component named `src/lib/MyIcon.svelte`:
 
 ```html
 <script lang="ts">
   import type { ComponentType } from 'svelte';
   const config = {
     size: 30,
-    variation: 'solid',
     color: '#FF5733'
   };
   import { Icon } from 'svelte-heros-v2';
@@ -169,7 +179,11 @@ Or create your default icon in a `src/lib/MyIcon.svelte`:
 <Icon {...config} {icon} />
 ```
 
-Using in you `+page.svelte` file:
+This component, `MyIcon.svelte`, accepts an `icon` prop which you can use to pass in the specific icon component you want to display. The default configuration is also applied to the icon.
+
+### Implementation in a Page
+
+To use your custom default icon in a Svelte page, do the following:
 
 ```html
 <script>
@@ -179,6 +193,8 @@ Using in you `+page.svelte` file:
 
 <MyIcon icon="{AcademicCap}" />
 ```
+
+Here, we import the `MyIcon` component and the `AcademicCap` icon. By passing the `AcademicCap` icon to the `icon` prop of MyIcon, you apply the default configuration to the icon.
 
 ## CSS HEX Colors
 
