@@ -1,11 +1,13 @@
+
+
 # Svelte Heros v2
 
 <div class="flex gap-2 my-8">
-<a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="Sponsor" height="25" style="height: 25px !important;" width="102"></a>
-<a href="https://www.npmjs.com/package/svelte-heros-v2" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-heros-v2" alt="npm" height="25" style="height: 25px !important;" width="97"></a>
-<a href="https://twitter.com/shinokada" rel="nofollow" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada" height="25" style="height: 25px !important;" width="161"></a>
-<a href="http://www.apache.org/licenses/" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-heros-v2" alt="License" height="25" style="height: 25px !important;" width="132"></a>
-<a href="https://www.npmjs.com/package/svelte-heros-v2" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-heros-v2.svg" alt="npm" height="25" style="height: 25px !important;" width="152"></a>
+<a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="Sponsor"></a>
+<a href="https://www.npmjs.com/package/svelte-heros-v2" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-heros-v2" alt="npm"></a>
+<a href="https://twitter.com/shinokada" rel="nofollow" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada"></a>
+<a href="http://www.apache.org/licenses/" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-heros-v2" alt="License"></a>
+<a href="https://www.npmjs.com/package/svelte-heros-v2" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-heros-v2.svg" alt="npm"></a>
 </div>
 
 **If you are looking for the version 1, go to [Svelte-Heros](https://github.com/shinokada/svelte-heros)**
@@ -64,13 +66,13 @@ pnpm i -D typescript@latest
 
 ## Props
 
-- size = "24";
-- viewBox: string = '0 0 24 24';
-- role = "img";
-- strokeWidth = "1.5"
-- color="currentColor";
-- variation: "solid" | "outline" | "mini"= "outline";
-- ariaLabel = 'icon file name';
+- size: string = ctx.size || '24';
+- role: string = ctx.role || 'img';
+- color: string = ctx.color || 'currentColor';
+- variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
+- viewBox: string = ctx.viewBox || '0 0 24 24';
+- strokeWidth: string = ctx.strokeWidth || '1.5';
+- ariaLabel = 'file name';
 
 ## IDE support
 
@@ -102,7 +104,48 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 <AcademicCap class="shrink-0 h-20 w-20" />
 ```
 
-## Creating a Default Global Icon Setting in Svelte
+
+## Setting Global Icon using setContext
+
+You can establish global icon preferences in your Svelte application using `setContext`. This allows you to configure icon-related properties once and share them across multiple components. Here's how you can do it:
+
+```html
+<script>
+  import { setContext } from 'svelte';
+
+  // Define your global icon settings
+  const iconCtx = {
+    strokeWidth: '2',
+    size: '100', // Icon size in pixels
+    color: '#ff4488', // Icon color in hexadecimal or CSS color name
+    role: 'svg icon image' // Accessible role for the icon
+  };
+  setContext('iconCtx', iconCtx);
+</script>
+```
+
+The `size`, `color`, `role`, and other properties are optional, allowing you to fine-tune the appearance and accessibility of your icons as needed.
+
+If you set `size`, icons can be customized with different colors. For example:
+
+```html
+<script>
+  import { setContext } from 'svelte';
+  import { AcademicCap } from 'svelte-heros-v2';
+  const iconCtx = {
+    size: '50'
+  };
+  setContext('iconCtx', iconCtx);
+</script>
+
+<AcademicCap color="#ff4488" />
+```
+
+Remember that you can set only one or two of these properties, allowing you to tailor icon settings to your specific design and accessibility requirements.
+
+Feel free to mix and match these properties as needed to create visually appealing and accessible icons in your Svelte application.
+
+## Creating a Default Icon Setting
 
 You can create a config file, `/src/lib/icon.config.json`.
 
