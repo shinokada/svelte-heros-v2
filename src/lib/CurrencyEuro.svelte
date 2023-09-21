@@ -1,10 +1,21 @@
 <script lang="ts">
-  export let size = '';
-  export let viewBox = '';
-  export let role = 'img';
-  export let strokeWidth = '1.5';
-  export let color = 'currentColor';
-  export let variation: 'solid' | 'outline' | 'mini' = 'outline';
+  interface CtxType {
+    size?: string;
+    role?: string;
+    color?: string;
+    variation?: 'solid' | 'outline' | 'mini';
+    viewBox?: string;
+    strokeWidth?: string;
+  }
+
+  import { getContext } from 'svelte';
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  export let size: string = ctx.size || '24';
+  export let role: string = ctx.role || 'img';
+  export let color: string = ctx.color || 'currentColor';
+  export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
+  export let viewBox: string = ctx.viewBox || '0 0 24 24';
+  export let strokeWidth: string = ctx.strokeWidth || '1.5';
 
   if (variation === 'mini') {
     size = size || '20';
@@ -66,11 +77,11 @@
 @component
 [Go to docs](https://svelte-heros-v2.vercel.app)
 ## Props
-@prop export let size = '';
-@prop export let viewBox = '';
-@prop export let role = 'img';
-@prop export let strokeWidth = '1.5';
-@prop export let color = 'currentColor';
-@prop export let variation: 'solid' | 'outline' | 'mini' = 'outline';
+@prop export let size: string = ctx.size || '24';
+@prop export let role: string = ctx.role || 'img';
+@prop export let color: string = ctx.color || 'currentColor';
+@prop export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
+@prop export let viewBox: string = ctx.viewBox || '0 0 24 24';
+@prop export let strokeWidth: string = ctx.strokeWidth || '1.5';
 @prop export let ariaLabel = 'currency euro';
 -->
