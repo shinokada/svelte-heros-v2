@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.12](https://github.com/shinokada/svelte-heros-v2/compare/v0.10.11...v0.10.12) (2023-09-21)
+
+
+### Features
+
+* add context ([e6cfd96](https://github.com/shinokada/svelte-heros-v2/commit/e6cfd96f7c517528d089b3eb5e12268e9f31177e))
+* add sidebar menu ([df1b042](https://github.com/shinokada/svelte-heros-v2/commit/df1b042c82a7cd59105e1c5ebd8061b0b57fec7a))
+
 ### [0.10.11](https://github.com/shinokada/svelte-heros-v2/compare/v0.10.10...v0.10.11) (2023-08-30)
 
 ### [0.10.10](https://github.com/shinokada/svelte-heros-v2/compare/v0.10.9...v0.10.10) (2023-08-30)
