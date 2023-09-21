@@ -1,3 +1,7 @@
+---
+layout: mainLayout
+---
+
 # Svelte Heros v2
 
 <div class="flex gap-2 my-8">
