@@ -4,7 +4,6 @@ layout: mainLayout
 
 # Svelte Heros v2
 
-
 <div class="flex gap-2 my-8">
 <a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="Sponsor"></a>
 <a href="https://www.npmjs.com/package/svelte-heros-v2" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-heros-v2" alt="npm"></a>
@@ -12,7 +11,6 @@ layout: mainLayout
 <a href="http://www.apache.org/licenses/" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-heros-v2" alt="License"></a>
 <a href="https://www.npmjs.com/package/svelte-heros-v2" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-heros-v2.svg" alt="npm"></a>
 </div>
-
 
 **If you are looking for the version 1, go to [Svelte-Heros](https://github.com/shinokada/svelte-heros)**
 
@@ -107,7 +105,6 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 ```html
 <AcademicCap class="shrink-0 h-20 w-20" />
 ```
-
 
 ## Setting Global Icon using setContext
 
