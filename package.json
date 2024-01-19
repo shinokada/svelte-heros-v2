@@ -148,9 +148,17 @@
       "types": "./dist/ArrowLeftCircle.svelte.d.ts",
       "svelte": "./dist/ArrowLeftCircle.svelte"
     },
+    "./ArrowLeftEndOnRectangle.svelte": {
+      "types": "./dist/ArrowLeftEndOnRectangle.svelte.d.ts",
+      "svelte": "./dist/ArrowLeftEndOnRectangle.svelte"
+    },
     "./ArrowLeftOnRectangle.svelte": {
       "types": "./dist/ArrowLeftOnRectangle.svelte.d.ts",
       "svelte": "./dist/ArrowLeftOnRectangle.svelte"
+    },
+    "./ArrowLeftStartOnRectangle.svelte": {
+      "types": "./dist/ArrowLeftStartOnRectangle.svelte.d.ts",
+      "svelte": "./dist/ArrowLeftStartOnRectangle.svelte"
     },
     "./ArrowLongDown.svelte": {
       "types": "./dist/ArrowLongDown.svelte.d.ts",
@@ -184,9 +192,17 @@
       "types": "./dist/ArrowRightCircle.svelte.d.ts",
       "svelte": "./dist/ArrowRightCircle.svelte"
     },
+    "./ArrowRightEndOnRectangle.svelte": {
+      "types": "./dist/ArrowRightEndOnRectangle.svelte.d.ts",
+      "svelte": "./dist/ArrowRightEndOnRectangle.svelte"
+    },
     "./ArrowRightOnRectangle.svelte": {
       "types": "./dist/ArrowRightOnRectangle.svelte.d.ts",
       "svelte": "./dist/ArrowRightOnRectangle.svelte"
+    },
+    "./ArrowRightStartOnRectangle.svelte": {
+      "types": "./dist/ArrowRightStartOnRectangle.svelte.d.ts",
+      "svelte": "./dist/ArrowRightStartOnRectangle.svelte"
     },
     "./ArrowSmallDown.svelte": {
       "types": "./dist/ArrowSmallDown.svelte.d.ts",

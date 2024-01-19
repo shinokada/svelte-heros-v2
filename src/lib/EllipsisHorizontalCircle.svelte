@@ -82,3 +82,16 @@
     />
   {/if}
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-heros-v2.vercel.app)
+## Props
+@prop export let size: string = ctx.size || '24';
+@prop export let role: string = ctx.role || 'img';
+@prop export let color: string = ctx.color || 'currentColor';
+@prop export let variation: 'solid' | 'outline' | 'mini' | 'micro' = ctx.variation || 'outline';
+@prop export let viewBox: string = ctx.viewBox || '0 0 24 24';
+@prop export let strokeWidth: string = ctx.strokeWidth || '1.5';
+@prop export let ariaLabel = 'ellipsis horizontal circle';
+-->
