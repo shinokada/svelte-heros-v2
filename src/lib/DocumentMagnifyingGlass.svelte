@@ -3,7 +3,7 @@
     size?: string;
     role?: string;
     color?: string;
-    variation?: 'solid' | 'outline' | 'mini';
+    variation?: 'solid' | 'outline' | 'mini' | 'micro';
     viewBox?: string;
     strokeWidth?: string;
   }
@@ -13,13 +13,16 @@
   export let size: string = ctx.size || '24';
   export let role: string = ctx.role || 'img';
   export let color: string = ctx.color || 'currentColor';
-  export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
+  export let variation: 'solid' | 'outline' | 'mini' | 'micro' = ctx.variation || 'outline';
   export let viewBox: string = ctx.viewBox || '0 0 24 24';
   export let strokeWidth: string = ctx.strokeWidth || '1.5';
 
   if (variation === 'mini') {
     size = size || '20';
     viewBox = viewBox || '0 0 20 20';
+  } else if (variation === 'micro') {
+    size = size || '16';
+    viewBox = viewBox || '0 0 16 16';
   } else {
     size = size || '24';
     viewBox = viewBox || '0 0 24 24';
@@ -67,6 +70,17 @@
       d="M4.5 2C3.67157 2 3 2.67157 3 3.5V16.5C3 17.3284 3.67157 18 4.5 18H15.5C16.3284 18 17 17.3284 17 16.5V7.62132C17 7.2235 16.842 6.84197 16.5607 6.56066L12.4393 2.43934C12.158 2.15804 11.7765 2 11.3787 2H4.5ZM9.5 7C7.84315 7 6.5 8.34315 6.5 10C6.5 11.6569 7.84315 13 9.5 13C10.056 13 10.5773 12.8483 11.0239 12.5845L12.2197 13.7803C12.5126 14.0732 12.9874 14.0732 13.2803 13.7803C13.5732 13.4874 13.5732 13.0126 13.2803 12.7197L12.0845 11.5239C12.3483 11.0773 12.5 10.556 12.5 10C12.5 8.34315 11.1569 7 9.5 7Z"
       fill={color}
     />
+  {:else if variation === 'micro'}
+    <path
+      d="M6 7.5C6 6.67157 6.67157 6 7.5 6C8.32843 6 9 6.67157 9 7.5C9 7.91442 8.83293 8.28839 8.56066 8.56066C8.28839 8.83293 7.91442 9 7.5 9C6.67157 9 6 8.32843 6 7.5Z"
+      fill={color}
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M4 2C3.17157 2 2.5 2.67157 2.5 3.5V12.5C2.5 13.3284 3.17157 14 4 14H12C12.8284 14 13.5 13.3284 13.5 12.5V6.62132C13.5 6.2235 13.342 5.84197 13.0607 5.56066L9.93934 2.43934C9.65804 2.15804 9.2765 2 8.87868 2H4ZM7.5 4.5C5.84315 4.5 4.5 5.84315 4.5 7.5C4.5 9.15685 5.84315 10.5 7.5 10.5C8.05604 10.5 8.57728 10.3483 9.02386 10.0845L10.2197 11.2803C10.5126 11.5732 10.9874 11.5732 11.2803 11.2803C11.5732 10.9874 11.5732 10.5126 11.2803 10.2197L10.0845 9.02386C10.3483 8.57728 10.5 8.05604 10.5 7.5C10.5 5.84315 9.15685 4.5 7.5 4.5Z"
+      fill={color}
+    />
   {:else}
     <path
       d="M11.625 16.5C12.6605 16.5 13.5 15.6605 13.5 14.625C13.5 13.5895 12.6605 12.75 11.625 12.75C10.5895 12.75 9.75 13.5895 9.75 14.625C9.75 15.6605 10.5895 16.5 11.625 16.5Z"
@@ -84,16 +98,3 @@
     />
   {/if}
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-heros-v2.vercel.app)
-## Props
-@prop export let size: string = ctx.size || '24';
-@prop export let role: string = ctx.role || 'img';
-@prop export let color: string = ctx.color || 'currentColor';
-@prop export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
-@prop export let viewBox: string = ctx.viewBox || '0 0 24 24';
-@prop export let strokeWidth: string = ctx.strokeWidth || '1.5';
-@prop export let ariaLabel = 'document magnifying glass';
--->

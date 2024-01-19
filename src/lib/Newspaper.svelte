@@ -3,7 +3,7 @@
     size?: string;
     role?: string;
     color?: string;
-    variation?: 'solid' | 'outline' | 'mini';
+    variation?: 'solid' | 'outline' | 'mini' | 'micro';
     viewBox?: string;
     strokeWidth?: string;
   }
@@ -13,13 +13,16 @@
   export let size: string = ctx.size || '24';
   export let role: string = ctx.role || 'img';
   export let color: string = ctx.color || 'currentColor';
-  export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
+  export let variation: 'solid' | 'outline' | 'mini' | 'micro' = ctx.variation || 'outline';
   export let viewBox: string = ctx.viewBox || '0 0 24 24';
   export let strokeWidth: string = ctx.strokeWidth || '1.5';
 
   if (variation === 'mini') {
     size = size || '20';
     viewBox = viewBox || '0 0 20 20';
+  } else if (variation === 'micro') {
+    size = size || '16';
+    viewBox = viewBox || '0 0 16 16';
   } else {
     size = size || '24';
     viewBox = viewBox || '0 0 24 24';
@@ -67,6 +70,17 @@
       d="M16.5 6.5H15.5V15.25C15.5 15.9404 16.0596 16.5 16.75 16.5C17.4404 16.5 18 15.9404 18 15.25V8C18 7.17157 17.3284 6.5 16.5 6.5Z"
       fill={color}
     />
+  {:else if variation === 'micro'}
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M10 3C10 2.44772 9.55229 2 9 2H3C2.44772 2 2 2.44772 2 3V12C2 13.1046 2.89543 14 4 14H12C10.8954 14 10 13.1046 10 12V3ZM4 4H8V6H4V4ZM8 7.5H4V9H8V7.5ZM4 10.5H8V12H4V10.5Z"
+      fill={color}
+    />
+    <path
+      d="M13 5H11.5V11.25C11.5 11.9404 12.0596 12.5 12.75 12.5C13.4404 12.5 14 11.9404 14 11.25V6C14 5.44772 13.5523 5 13 5Z"
+      fill={color}
+    />
   {:else}
     <path
       fill-rule="evenodd"
@@ -80,16 +94,3 @@
     />
   {/if}
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-heros-v2.vercel.app)
-## Props
-@prop export let size: string = ctx.size || '24';
-@prop export let role: string = ctx.role || 'img';
-@prop export let color: string = ctx.color || 'currentColor';
-@prop export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
-@prop export let viewBox: string = ctx.viewBox || '0 0 24 24';
-@prop export let strokeWidth: string = ctx.strokeWidth || '1.5';
-@prop export let ariaLabel = 'newspaper';
--->

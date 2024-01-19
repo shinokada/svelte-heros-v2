@@ -3,7 +3,7 @@
     size?: string;
     role?: string;
     color?: string;
-    variation?: 'solid' | 'outline' | 'mini';
+    variation?: 'solid' | 'outline' | 'mini' | 'micro';
     viewBox?: string;
     strokeWidth?: string;
   }
@@ -13,13 +13,16 @@
   export let size: string = ctx.size || '24';
   export let role: string = ctx.role || 'img';
   export let color: string = ctx.color || 'currentColor';
-  export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
+  export let variation: 'solid' | 'outline' | 'mini' | 'micro' = ctx.variation || 'outline';
   export let viewBox: string = ctx.viewBox || '0 0 24 24';
   export let strokeWidth: string = ctx.strokeWidth || '1.5';
 
   if (variation === 'mini') {
     size = size || '20';
     viewBox = viewBox || '0 0 20 20';
+  } else if (variation === 'micro') {
+    size = size || '16';
+    viewBox = viewBox || '0 0 16 16';
   } else {
     size = size || '24';
     viewBox = viewBox || '0 0 24 24';
@@ -73,6 +76,19 @@
       d="M2.75 16.25C2.33579 16.25 2 16.5858 2 17C2 17.4143 2.33579 17.75 2.75 17.75H17.25C17.6642 17.75 18 17.4143 18 17C18 16.5858 17.6642 16.25 17.25 16.25H2.75Z"
       fill={color}
     />
+  {:else if variation === 'micro'}
+    <path
+      d="M2 4C2 2.89543 2.89543 2 4 2H12C13.1046 2 14 2.89543 14 4C14 5.10457 13.1046 6 12 6H4C2.89543 6 2 5.10457 2 4Z"
+      fill={color}
+    />
+    <path
+      d="M2 9.25C2 8.83579 2.33579 8.5 2.75 8.5H13.25C13.6642 8.5 14 8.83579 14 9.25C14 9.66421 13.6642 10 13.25 10H2.75C2.33579 10 2 9.66421 2 9.25Z"
+      fill={color}
+    />
+    <path
+      d="M2.75 12.5C2.33579 12.5 2 12.8358 2 13.25C2 13.6642 2.33579 14 2.75 14H13.25C13.6642 14 14 13.6642 14 13.25C14 12.8358 13.6642 12.5 13.25 12.5H2.75Z"
+      fill={color}
+    />
   {:else}
     <path
       d="M5.625 3.75C4.17525 3.75 3 4.92525 3 6.375C3 7.82475 4.17525 9 5.625 9H18.375C19.8247 9 21 7.82475 21 6.375C21 4.92525 19.8247 3.75 18.375 3.75H5.625Z"
@@ -92,16 +108,3 @@
     />
   {/if}
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-heros-v2.vercel.app)
-## Props
-@prop export let size: string = ctx.size || '24';
-@prop export let role: string = ctx.role || 'img';
-@prop export let color: string = ctx.color || 'currentColor';
-@prop export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
-@prop export let viewBox: string = ctx.viewBox || '0 0 24 24';
-@prop export let strokeWidth: string = ctx.strokeWidth || '1.5';
-@prop export let ariaLabel = 'queue list';
--->

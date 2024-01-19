@@ -3,7 +3,7 @@
     size?: string;
     role?: string;
     color?: string;
-    variation?: 'solid' | 'outline' | 'mini';
+    variation?: 'solid' | 'outline' | 'mini' | 'micro';
     viewBox?: string;
     strokeWidth?: string;
   }
@@ -13,13 +13,16 @@
   export let size: string = ctx.size || '24';
   export let role: string = ctx.role || 'img';
   export let color: string = ctx.color || 'currentColor';
-  export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
+  export let variation: 'solid' | 'outline' | 'mini' | 'micro' = ctx.variation || 'outline';
   export let viewBox: string = ctx.viewBox || '0 0 24 24';
   export let strokeWidth: string = ctx.strokeWidth || '1.5';
 
   if (variation === 'mini') {
     size = size || '20';
     viewBox = viewBox || '0 0 20 20';
+  } else if (variation === 'micro') {
+    size = size || '16';
+    viewBox = viewBox || '0 0 16 16';
   } else {
     size = size || '24';
     viewBox = viewBox || '0 0 24 24';
@@ -63,6 +66,8 @@
       d="M10 15C9.58579 15 9.25 14.6642 9.25 14.25L9.25 7.61208L7.29063 9.76983C7.00353 10.0684 6.52875 10.0777 6.23017 9.79062C5.93159 9.50353 5.92228 9.02875 6.20938 8.73017L9.45938 5.23017C9.60078 5.08311 9.79599 5 10 5C10.204 5 10.3992 5.08311 10.5406 5.23017L13.7906 8.73017C14.0777 9.02875 14.0684 9.50353 13.7698 9.79062C13.4713 10.0777 12.9965 10.0684 12.7094 9.76983L10.75 7.61208V14.25C10.75 14.6642 10.4142 15 10 15Z"
       fill={color}
     />
+  {:else if variation === 'micro'}
+    replace_svg_micro
   {:else}
     <path
       fill-rule="evenodd"
@@ -72,16 +77,3 @@
     />
   {/if}
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-heros-v2.vercel.app)
-## Props
-@prop export let size: string = ctx.size || '24';
-@prop export let role: string = ctx.role || 'img';
-@prop export let color: string = ctx.color || 'currentColor';
-@prop export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
-@prop export let viewBox: string = ctx.viewBox || '0 0 24 24';
-@prop export let strokeWidth: string = ctx.strokeWidth || '1.5';
-@prop export let ariaLabel = 'arrow small up';
--->

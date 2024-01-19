@@ -3,7 +3,7 @@
     size?: string;
     role?: string;
     color?: string;
-    variation?: 'solid' | 'outline' | 'mini';
+    variation?: 'solid' | 'outline' | 'mini' | 'micro';
     viewBox?: string;
     strokeWidth?: string;
   }
@@ -13,13 +13,16 @@
   export let size: string = ctx.size || '24';
   export let role: string = ctx.role || 'img';
   export let color: string = ctx.color || 'currentColor';
-  export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
+  export let variation: 'solid' | 'outline' | 'mini' | 'micro' = ctx.variation || 'outline';
   export let viewBox: string = ctx.viewBox || '0 0 24 24';
   export let strokeWidth: string = ctx.strokeWidth || '1.5';
 
   if (variation === 'mini') {
     size = size || '20';
     viewBox = viewBox || '0 0 20 20';
+  } else if (variation === 'micro') {
+    size = size || '16';
+    viewBox = viewBox || '0 0 16 16';
   } else {
     size = size || '24';
     viewBox = viewBox || '0 0 24 24';
@@ -64,6 +67,14 @@
       d="M1 3.5C1 2.67157 1.67157 2 2.5 2H17.5C18.3284 2 19 2.67157 19 3.5V13.5C19 14.3284 18.3284 15 17.5 15H12V16.5H15.25C15.6642 16.5 16 16.8358 16 17.25C16 17.6642 15.6642 18 15.25 18H4.75C4.33579 18 4 17.6642 4 17.25C4 16.8358 4.33579 16.5 4.75 16.5H8V15H2.5C1.67157 15 1 14.3284 1 13.5V3.5ZM17.5 3.5L2.5 3.5V13.5H17.5V3.5Z"
       fill={color}
     />
+  {:else if variation === 'micro'}
+    <path d="M12 5H4V9H12V5Z" fill={color} />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M1 3C1 2.44772 1.44772 2 2 2H14C14.5523 2 15 2.44772 15 3V11C15 11.5523 14.5523 12 14 12H10V13.5H12.25C12.6642 13.5 13 13.8358 13 14.25C13 14.6642 12.6642 15 12.25 15H3.75C3.33579 15 3 14.6642 3 14.25C3 13.8358 3.33579 13.5 3.75 13.5H6V12H2C1.44772 12 1 11.5523 1 11V3ZM2.5 10.5V3.5H13.5V10.5H2.5Z"
+      fill={color}
+    />
   {:else}
     <path d="M19.5 6H4.5V15H19.5V6Z" fill={color} />
     <path
@@ -74,16 +85,3 @@
     />
   {/if}
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-heros-v2.vercel.app)
-## Props
-@prop export let size: string = ctx.size || '24';
-@prop export let role: string = ctx.role || 'img';
-@prop export let color: string = ctx.color || 'currentColor';
-@prop export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
-@prop export let viewBox: string = ctx.viewBox || '0 0 24 24';
-@prop export let strokeWidth: string = ctx.strokeWidth || '1.5';
-@prop export let ariaLabel = 'tv';
--->

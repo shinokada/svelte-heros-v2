@@ -3,7 +3,7 @@
     size?: string;
     role?: string;
     color?: string;
-    variation?: 'solid' | 'outline' | 'mini';
+    variation?: 'solid' | 'outline' | 'mini' | 'micro';
     viewBox?: string;
     strokeWidth?: string;
   }
@@ -13,13 +13,16 @@
   export let size: string = ctx.size || '24';
   export let role: string = ctx.role || 'img';
   export let color: string = ctx.color || 'currentColor';
-  export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
+  export let variation: 'solid' | 'outline' | 'mini' | 'micro' = ctx.variation || 'outline';
   export let viewBox: string = ctx.viewBox || '0 0 24 24';
   export let strokeWidth: string = ctx.strokeWidth || '1.5';
 
   if (variation === 'mini') {
     size = size || '20';
     viewBox = viewBox || '0 0 20 20';
+  } else if (variation === 'micro') {
+    size = size || '16';
+    viewBox = viewBox || '0 0 16 16';
   } else {
     size = size || '24';
     viewBox = viewBox || '0 0 24 24';
@@ -63,6 +66,13 @@
       d="M10 2C10.4142 2 10.75 2.33579 10.75 2.75V10.25C10.75 10.6642 10.4142 11 10 11C9.58579 11 9.25 10.6642 9.25 10.25V2.75C9.25 2.33579 9.58579 2 10 2ZM5.40381 4.34315C5.6967 4.63604 5.6967 5.11091 5.40381 5.40381C2.8654 7.94221 2.8654 12.0578 5.40381 14.5962C7.94221 17.1346 12.0578 17.1346 14.5962 14.5962C17.1346 12.0578 17.1346 7.94221 14.5962 5.40381C14.3033 5.11091 14.3033 4.63604 14.5962 4.34315C14.8891 4.05025 15.364 4.05025 15.6569 4.34315C18.781 7.46734 18.781 12.5327 15.6569 15.6569C12.5327 18.781 7.46734 18.781 4.34315 15.6569C1.21895 12.5327 1.21895 7.46734 4.34315 4.34315C4.63604 4.05025 5.11091 4.05025 5.40381 4.34315Z"
       fill={color}
     />
+  {:else if variation === 'micro'}
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M8 1C8.41421 1 8.75 1.33579 8.75 1.75V8.25C8.75 8.66421 8.41421 9 8 9C7.58579 9 7.25 8.66421 7.25 8.25V1.75C7.25 1.33579 7.58579 1 8 1ZM4.11091 3.05025C4.40381 3.34315 4.40381 3.81802 4.11091 4.11091C1.96303 6.2588 1.96303 9.7412 4.11091 11.8891C6.2588 14.037 9.7412 14.037 11.8891 11.8891C14.037 9.7412 14.037 6.2588 11.8891 4.11091C11.5962 3.81802 11.5962 3.34315 11.8891 3.05025C12.182 2.75736 12.6569 2.75736 12.9497 3.05025C15.6834 5.78392 15.6834 10.2161 12.9497 12.9497C10.2161 15.6834 5.78392 15.6834 3.05025 12.9497C0.316582 10.2161 0.316583 5.78392 3.05025 3.05025C3.34315 2.75736 3.81802 2.75736 4.11091 3.05025Z"
+      fill={color}
+    />
   {:else}
     <path
       fill-rule="evenodd"
@@ -72,16 +82,3 @@
     />
   {/if}
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-heros-v2.vercel.app)
-## Props
-@prop export let size: string = ctx.size || '24';
-@prop export let role: string = ctx.role || 'img';
-@prop export let color: string = ctx.color || 'currentColor';
-@prop export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
-@prop export let viewBox: string = ctx.viewBox || '0 0 24 24';
-@prop export let strokeWidth: string = ctx.strokeWidth || '1.5';
-@prop export let ariaLabel = 'power';
--->

@@ -1,7 +1,3 @@
----
-layout: mainLayout
----
-
 # Svelte Heros v2
 
 <div class="flex gap-2 my-8">
@@ -71,7 +67,7 @@ pnpm i -D typescript@latest
 - size: string = ctx.size || '24';
 - role: string = ctx.role || 'img';
 - color: string = ctx.color || 'currentColor';
-- variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
+- variation: 'solid' | 'outline' | 'mini' | 'micro' = ctx.variation || 'outline';
 - viewBox: string = ctx.viewBox || '0 0 24 24';
 - strokeWidth: string = ctx.strokeWidth || '1.5';
 - ariaLabel = 'file name';
@@ -84,7 +80,7 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 
 ## Variation
 
-The default variation value is outline. Use the `variation` prop to change it to solid or mini.
+The default variation value is outline. Use the `variation` prop to change it to solid, mini or micro.
 
 ```html
 <AcademicCap variation="solid" /> <AcademicCap variation="mini" />

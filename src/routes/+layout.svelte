@@ -78,6 +78,7 @@
         <NavLi class="lg:px-2 lg:mb-0" href="/outline">Outline</NavLi>
         <NavLi class="lg:px-2 lg:mb-0" href="/solid">Solid</NavLi>
         <NavLi class="lg:px-2 lg:mb-0" href="/mini">Mini</NavLi>
+        <NavLi class="lg:px-2 lg:mb-0" href="/micro">Micro</NavLi>
         <NavLi class="lg:px-2 lg:mb-0" href="https://github.com/shinokada/svelte-heros-v2"
           >GitHub</NavLi
         >

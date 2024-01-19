@@ -3,7 +3,7 @@
     size?: string;
     role?: string;
     color?: string;
-    variation?: 'solid' | 'outline' | 'mini';
+    variation?: 'solid' | 'outline' | 'mini' | 'micro';
     viewBox?: string;
     strokeWidth?: string;
   }
@@ -13,13 +13,16 @@
   export let size: string = ctx.size || '24';
   export let role: string = ctx.role || 'img';
   export let color: string = ctx.color || 'currentColor';
-  export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
+  export let variation: 'solid' | 'outline' | 'mini' | 'micro' = ctx.variation || 'outline';
   export let viewBox: string = ctx.viewBox || '0 0 24 24';
   export let strokeWidth: string = ctx.strokeWidth || '1.5';
 
   if (variation === 'mini') {
     size = size || '20';
     viewBox = viewBox || '0 0 20 20';
+  } else if (variation === 'micro') {
+    size = size || '16';
+    viewBox = viewBox || '0 0 16 16';
   } else {
     size = size || '24';
     viewBox = viewBox || '0 0 24 24';
@@ -67,35 +70,33 @@
       d="M2.28033 4.21967C1.98744 3.92678 1.51256 3.92678 1.21967 4.21967C0.926777 4.51256 0.926777 4.98744 1.21967 5.28033L11.7197 15.7803C12.0126 16.0732 12.4874 16.0732 12.7803 15.7803C13.0732 15.4874 13.0732 15.0126 12.7803 14.7197L2.28033 4.21967Z"
       fill={color}
     />
+  {:else if variation === 'micro'}
+    <path d="M1 10V6.68198L6.31802 12H3C1.89543 12 1 11.1046 1 10Z" fill={color} />
+    <path d="M10 6V9.31802L4.68198 4H8C9.10457 4 10 4.89543 10 6Z" fill={color} />
+    <path
+      d="M14.537 4.05711C14.8173 4.1732 15 4.44668 15 4.75002V11.25C15 11.5534 14.8173 11.8268 14.537 11.9429C14.2568 12.059 13.9342 11.9949 13.7197 11.7804L11.7197 9.78035C11.579 9.6397 11.5 9.44893 11.5 9.25002V6.75002C11.5 6.55111 11.579 6.36034 11.7197 6.21969L13.7197 4.21969C13.9342 4.00519 14.2568 3.94103 14.537 4.05711Z"
+      fill={color}
+    />
+    <path
+      d="M2.78033 4.21967C2.48744 3.92678 2.01256 3.92678 1.71967 4.21967C1.42678 4.51256 1.42678 4.98744 1.71967 5.28033L8.21967 11.7803C8.51256 12.0732 8.98744 12.0732 9.28033 11.7803C9.57322 11.4874 9.57322 11.0126 9.28033 10.7197L2.78033 4.21967Z"
+      fill={color}
+    />
   {:else}
     <path
-      d="M3.53033 2.46967C3.23744 2.17678 2.76256 2.17678 2.46967 2.46967C2.17678 2.76256 2.17678 3.23744 2.46967 3.53033L20.4697 21.5303C20.7626 21.8232 21.2374 21.8232 21.5303 21.5303C21.8232 21.2374 21.8232 20.7626 21.5303 20.4697L3.53033 2.46967Z"
+      d="M0.96967 3.96967C1.26256 3.67678 1.73744 3.67678 2.03033 3.96967L17.0303 18.9697C17.3232 19.2626 17.3232 19.7374 17.0303 20.0303C16.7374 20.3232 16.2626 20.3232 15.9697 20.0303L0.96967 5.03033C0.676777 4.73744 0.676777 4.26256 0.96967 3.96967Z"
       fill={color}
     />
     <path
-      d="M22.5 17.6893C22.5 18.1614 22.2984 18.5502 21.996 18.814L17.25 14.068V7.93931L19.9393 5.24996C20.8843 4.30501 22.5 4.97427 22.5 6.31063V17.6893Z"
+      d="M17.25 16.0606L19.9393 18.75C20.8843 19.6949 22.5 19.0257 22.5 17.6893V6.31063C22.5 4.97427 20.8843 4.30501 19.9393 5.24996L17.25 7.93931V16.0606Z"
       fill={color}
     />
     <path
-      d="M15.75 7.5V12.568L7.68198 4.5H12.75C14.4069 4.5 15.75 5.84315 15.75 7.5Z"
+      d="M15.75 7.5V15.568L4.68198 4.5H12.75C14.4069 4.5 15.75 5.84315 15.75 7.5Z"
       fill={color}
     />
     <path
-      d="M1.5 7.5C1.5 6.71787 1.79931 6.00564 2.28963 5.47161L15.1363 18.3183C14.5882 19.0366 13.7232 19.5 12.75 19.5H4.5C2.84315 19.5 1.5 18.1569 1.5 16.5V7.5Z"
+      d="M1.5 16.5V7.68198L13.2727 19.4546C13.1029 19.4845 12.9283 19.5 12.75 19.5H4.5C2.84315 19.5 1.5 18.1569 1.5 16.5Z"
       fill={color}
     />
   {/if}
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-heros-v2.vercel.app)
-## Props
-@prop export let size: string = ctx.size || '24';
-@prop export let role: string = ctx.role || 'img';
-@prop export let color: string = ctx.color || 'currentColor';
-@prop export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
-@prop export let viewBox: string = ctx.viewBox || '0 0 24 24';
-@prop export let strokeWidth: string = ctx.strokeWidth || '1.5';
-@prop export let ariaLabel = 'video camera slash';
--->

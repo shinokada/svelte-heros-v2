@@ -3,7 +3,7 @@
     size?: string;
     role?: string;
     color?: string;
-    variation?: 'solid' | 'outline' | 'mini';
+    variation?: 'solid' | 'outline' | 'mini' | 'micro';
     viewBox?: string;
     strokeWidth?: string;
   }
@@ -13,13 +13,16 @@
   export let size: string = ctx.size || '24';
   export let role: string = ctx.role || 'img';
   export let color: string = ctx.color || 'currentColor';
-  export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
+  export let variation: 'solid' | 'outline' | 'mini' | 'micro' = ctx.variation || 'outline';
   export let viewBox: string = ctx.viewBox || '0 0 24 24';
   export let strokeWidth: string = ctx.strokeWidth || '1.5';
 
   if (variation === 'mini') {
     size = size || '20';
     viewBox = viewBox || '0 0 20 20';
+  } else if (variation === 'micro') {
+    size = size || '16';
+    viewBox = viewBox || '0 0 16 16';
   } else {
     size = size || '24';
     viewBox = viewBox || '0 0 24 24';
@@ -71,6 +74,21 @@
       d="M18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10ZM9.99994 4C10.4142 4 10.7499 4.33579 10.7499 4.75V5.06584C11.3423 5.17106 11.9182 5.40427 12.4031 5.77893C12.8293 6.10829 13.1467 6.51836 13.3282 6.97896C13.4801 7.36432 13.2908 7.79985 12.9055 7.95174C12.5201 8.10363 12.0846 7.91437 11.9327 7.52901C11.8599 7.34437 11.72 7.14675 11.4859 6.96586C11.278 6.80519 11.0264 6.68225 10.7499 6.60312V9.29944C11.448 9.39233 12.1327 9.61819 12.7085 9.99467C13.4955 10.5093 13.9999 11.2644 13.9999 12.125C13.9999 12.9856 13.4955 13.7407 12.7085 14.2553C12.1327 14.6318 11.448 14.8577 10.7499 14.9506V15.25C10.7499 15.6642 10.4142 16 9.99994 16C9.58573 16 9.24994 15.6642 9.24994 15.25V14.9506C8.55186 14.8577 7.8672 14.6318 7.29141 14.2553C6.80887 13.9398 6.4337 13.5376 6.21337 13.0672C6.0377 12.692 6.19937 12.2455 6.57449 12.0699C6.9496 11.8942 7.39611 12.0559 7.57178 12.431C7.65258 12.6035 7.81692 12.8067 8.11229 12.9999C8.42537 13.2046 8.8183 13.3526 9.24994 13.4324V10.6842C8.65762 10.5789 8.08167 10.3457 7.59681 9.97107C6.90033 9.43288 6.49994 8.68017 6.49994 7.875C6.49994 7.06983 6.90034 6.31712 7.59681 5.77893C8.08167 5.40427 8.65762 5.17106 9.24994 5.06584V4.75C9.24994 4.33579 9.58573 4 9.99994 4Z"
       fill={color}
     />
+  {:else if variation === 'micro'}
+    <path
+      d="M6.375 5.5H7.25V7.25H6.375C5.89175 7.25 5.5 6.85825 5.5 6.375C5.5 5.89175 5.89175 5.5 6.375 5.5Z"
+      fill={color}
+    />
+    <path
+      d="M8.75 10.5V8.75H9.625C10.1082 8.75 10.5 9.14175 10.5 9.625C10.5 10.1082 10.1082 10.5 9.625 10.5H8.75Z"
+      fill={color}
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8ZM7.25 3.75C7.25 3.33579 7.58579 3 8 3C8.41421 3 8.75 3.33579 8.75 3.75V4H11.25C11.6642 4 12 4.33579 12 4.75C12 5.16421 11.6642 5.5 11.25 5.5H8.75V7.25H9.625C10.9367 7.25 12 8.31332 12 9.625C12 10.9367 10.9367 12 9.625 12H8.75V12.25C8.75 12.6642 8.41421 13 8 13C7.58579 13 7.25 12.6642 7.25 12.25V12H4.75C4.33579 12 4 11.6642 4 11.25C4 10.8358 4.33579 10.5 4.75 10.5H7.25V8.75H6.375C5.06332 8.75 4 7.68668 4 6.375C4 5.06332 5.06332 4 6.375 4H7.25V3.75Z"
+      fill={color}
+    />
   {:else}
     <path
       d="M10.4636 8.74626C10.6908 8.56577 10.9607 8.43451 11.25 8.35249V11.1474C10.9552 11.0637 10.686 10.9304 10.4636 10.7537C10.0699 10.441 9.91752 10.073 9.91752 9.75C9.91752 9.42705 10.0699 9.05904 10.4636 8.74626Z"
@@ -88,16 +106,3 @@
     />
   {/if}
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-heros-v2.vercel.app)
-## Props
-@prop export let size: string = ctx.size || '24';
-@prop export let role: string = ctx.role || 'img';
-@prop export let color: string = ctx.color || 'currentColor';
-@prop export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
-@prop export let viewBox: string = ctx.viewBox || '0 0 24 24';
-@prop export let strokeWidth: string = ctx.strokeWidth || '1.5';
-@prop export let ariaLabel = 'currency dollar';
--->

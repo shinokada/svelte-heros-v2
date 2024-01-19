@@ -3,7 +3,7 @@
     size?: string;
     role?: string;
     color?: string;
-    variation?: 'solid' | 'outline' | 'mini';
+    variation?: 'solid' | 'outline' | 'mini' | 'micro';
     viewBox?: string;
     strokeWidth?: string;
   }
@@ -13,13 +13,16 @@
   export let size: string = ctx.size || '24';
   export let role: string = ctx.role || 'img';
   export let color: string = ctx.color || 'currentColor';
-  export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
+  export let variation: 'solid' | 'outline' | 'mini' | 'micro' = ctx.variation || 'outline';
   export let viewBox: string = ctx.viewBox || '0 0 24 24';
   export let strokeWidth: string = ctx.strokeWidth || '1.5';
 
   if (variation === 'mini') {
     size = size || '20';
     viewBox = viewBox || '0 0 20 20';
+  } else if (variation === 'micro') {
+    size = size || '16';
+    viewBox = viewBox || '0 0 16 16';
   } else {
     size = size || '24';
     viewBox = viewBox || '0 0 24 24';
@@ -63,6 +66,13 @@
       d="M13.8871 3.18189C14.283 3.21913 14.6773 3.262 15.07 3.31043C16.1942 3.44911 17 4.41371 17 5.51659V16.75C17 17.9926 15.9926 19 14.75 19H5.25C4.00736 19 3 17.9926 3 16.75V5.51659C3 4.41371 3.80579 3.44911 4.93005 3.31043C5.32266 3.26201 5.71697 3.21913 6.11291 3.18189C6.46903 1.92267 7.62676 1 9 1H11C12.3732 1 13.531 1.92267 13.8871 3.18189ZM7.5 4C7.5 3.17157 8.17157 2.5 9 2.5H11C11.8284 2.5 12.5 3.17157 12.5 4V4.5H7.5V4Z"
       fill={color}
     />
+  {:else if variation === 'micro'}
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M10.9863 3H12C13.1046 3 14 3.89543 14 5V13C14 14.1046 13.1046 15 12 15H4C2.89543 15 2 14.1046 2 13V5C2 3.89543 2.89543 3 4 3H5.01373C5.13809 1.87501 6.09186 1 7.25 1H8.75C9.90814 1 10.8619 1.87501 10.9863 3ZM9.5 4V3.25C9.5 2.83579 9.16421 2.5 8.75 2.5H7.25C6.83579 2.5 6.5 2.83579 6.5 3.25V4H9.5Z"
+      fill={color}
+    />
   {:else}
     <path
       fill-rule="evenodd"
@@ -72,16 +82,3 @@
     />
   {/if}
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-heros-v2.vercel.app)
-## Props
-@prop export let size: string = ctx.size || '24';
-@prop export let role: string = ctx.role || 'img';
-@prop export let color: string = ctx.color || 'currentColor';
-@prop export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
-@prop export let viewBox: string = ctx.viewBox || '0 0 24 24';
-@prop export let strokeWidth: string = ctx.strokeWidth || '1.5';
-@prop export let ariaLabel = 'clipboard';
--->

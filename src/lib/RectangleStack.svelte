@@ -3,7 +3,7 @@
     size?: string;
     role?: string;
     color?: string;
-    variation?: 'solid' | 'outline' | 'mini';
+    variation?: 'solid' | 'outline' | 'mini' | 'micro';
     viewBox?: string;
     strokeWidth?: string;
   }
@@ -13,13 +13,16 @@
   export let size: string = ctx.size || '24';
   export let role: string = ctx.role || 'img';
   export let color: string = ctx.color || 'currentColor';
-  export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
+  export let variation: 'solid' | 'outline' | 'mini' | 'micro' = ctx.variation || 'outline';
   export let viewBox: string = ctx.viewBox || '0 0 24 24';
   export let strokeWidth: string = ctx.strokeWidth || '1.5';
 
   if (variation === 'mini') {
     size = size || '20';
     viewBox = viewBox || '0 0 20 20';
+  } else if (variation === 'micro') {
+    size = size || '16';
+    viewBox = viewBox || '0 0 16 16';
   } else {
     size = size || '24';
     viewBox = viewBox || '0 0 24 24';
@@ -69,6 +72,16 @@
       d="M3.25011 6.5C3.20906 6.5 3.16817 6.50066 3.12744 6.50197C3.43576 5.62705 4.26971 5 5.25011 5H14.7501C15.7305 5 16.5645 5.62705 16.8728 6.50197C16.832 6.50066 16.7912 6.5 16.7501 6.5H3.25011Z"
       fill={color}
     />
+  {:else if variation === 'micro'}
+    <path d="M5 3.5C5 2.67157 5.67157 2 6.5 2H9.5C10.3284 2 11 2.67157 11 3.5H5Z" fill={color} />
+    <path
+      d="M4.5 5C3.67157 5 3 5.67157 3 6.5V6.54148C3.1626 6.5142 3.32964 6.5 3.5 6.5H12.5C12.6704 6.5 12.8374 6.5142 13 6.54148V6.5C13 5.67157 12.3284 5 11.5 5H4.5Z"
+      fill={color}
+    />
+    <path
+      d="M12.5 8H3.5C2.67157 8 2 8.67157 2 9.5V12.5C2 13.3284 2.67157 14 3.5 14H12.5C13.3284 14 14 13.3284 14 12.5V9.5C14 8.67157 13.3284 8 12.5 8Z"
+      fill={color}
+    />
   {:else}
     <path
       d="M5.56641 4.65724C5.9435 4.55472 6.34029 4.5 6.74986 4.5H17.2499C17.6594 4.5 18.0562 4.55472 18.4333 4.65724C17.9406 3.67454 16.924 3 15.7499 3H8.24986C7.0757 3 6.0591 3.67454 5.56641 4.65724Z"
@@ -84,16 +97,3 @@
     />
   {/if}
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-heros-v2.vercel.app)
-## Props
-@prop export let size: string = ctx.size || '24';
-@prop export let role: string = ctx.role || 'img';
-@prop export let color: string = ctx.color || 'currentColor';
-@prop export let variation: 'solid' | 'outline' | 'mini' = ctx.variation || 'outline';
-@prop export let viewBox: string = ctx.viewBox || '0 0 24 24';
-@prop export let strokeWidth: string = ctx.strokeWidth || '1.5';
-@prop export let ariaLabel = 'rectangle stack';
--->

@@ -10,6 +10,11 @@ test('Mini page has expected h1', async ({ page }) => {
   expect(await page.textContent('h1')).toBe('Svelte Heros v2: Mini');
 });
 
+test('Micro page has expected h1', async ({ page }) => {
+  await page.goto('/micro');
+  expect(await page.textContent('h1')).toBe('Svelte Heros v2: Micro');
+});
+
 test('Outline page has expected h1', async ({ page }) => {
   await page.goto('/outline');
   expect(await page.textContent('h1')).toBe('Svelte Heros v2: Outline');
