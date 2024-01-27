@@ -35,14 +35,14 @@
     "dist"
   ],
   "devDependencies": {
-    "@floating-ui/dom": "^1.5.4",
-    "@playwright/test": "^1.41.0",
-    "@sveltejs/adapter-auto": "^3.1.0",
-    "@sveltejs/kit": "^2.4.0",
+    "@floating-ui/dom": "^1.6.0",
+    "@playwright/test": "^1.41.1",
+    "@sveltejs/adapter-auto": "^3.1.1",
+    "@sveltejs/kit": "^2.5.0",
     "@sveltejs/package": "^2.2.6",
     "@sveltejs/vite-plugin-svelte": "^3.0.1",
-    "@typescript-eslint/eslint-plugin": "^6.19.0",
-    "@typescript-eslint/parser": "^6.19.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
@@ -63,7 +63,7 @@
     "tailwindcss": "^3.4.1",
     "tslib": "^2.6.2",
     "typescript": "^5.3.3",
-    "vite": "^5.0.11",
+    "vite": "^5.0.12",
     "vitest": "^0.34.6"
   },
   "svelte": "./dist/index.js",
@@ -77,7 +77,7 @@
     "icons"
   ],
   "peerDependencies": {
-    "svelte": "^3.54.0 || ^4.0.0"
+    "svelte": "^3.54.0 || ^4.0.0 || ^5.0.0"
   },
   "repository": {
     "type": "git",
