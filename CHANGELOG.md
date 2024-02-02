@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.2.0](https://github.com/shinokada/svelte-heros-v2/compare/v1.1.0...v1.2.0) (2024-01-27)
 
-
 ### Features
 
-* add 5.0.0 to peerDependencies ([944de98](https://github.com/shinokada/svelte-heros-v2/commit/944de981bec538b102f65016ffee1266fc319ac9))
+- add 5.0.0 to peerDependencies ([944de98](https://github.com/shinokada/svelte-heros-v2/commit/944de981bec538b102f65016ffee1266fc319ac9))
 
 ## [1.1.0](https://github.com/shinokada/svelte-heros-v2/compare/v0.10.12...v1.1.0) (2024-01-19)
 
