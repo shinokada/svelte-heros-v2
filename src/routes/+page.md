@@ -18,16 +18,6 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 [GitHub Repo](https://github.com/shinokada/svelte-heros-v2)
 
-## Original source
-
-[tailwindlabs/heroicons](https://github.com/tailwindlabs/heroicons)
-
-## License
-
-[Svelte-Heros-V2 License](https://github.com/shinokada/svelte-heros-v2/blob/main/LICENSE)
-
-[tailwindlabs/heroicons LICENSE](https://github.com/tailwindlabs/heroicons/blob/main/LICENSE)
-
 ## Installation
 
 ```sh
@@ -370,6 +360,16 @@ Use `import * as Icon from 'svelte-heros-v2'`.
 >
 ```
 
+## Original source
+
+[tailwindlabs/heroicons](https://github.com/tailwindlabs/heroicons)
+
+## License
+
+[Svelte-Heros-V2 License](https://github.com/shinokada/svelte-heros-v2/blob/main/LICENSE)
+
+[tailwindlabs/heroicons LICENSE](https://github.com/tailwindlabs/heroicons/blob/main/LICENSE)
+
 ## Other icons
 
-[Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
+[Svelte-Icon-Sets](https://svelte-svg-icons.codewithshin.com/)
