@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/shinokada/svelte-heros-v2/compare/v1.2.1...v1.2.2) (2024-03-01)
+
+
+### Bug Fixes
+
+* @typescript-eslint/eslint-plugin update ([2752e7f](https://github.com/shinokada/svelte-heros-v2/commit/2752e7f4fcfe3012bd1cf8572066c783ffc300e4))
+
 ### [1.2.1](https://github.com/shinokada/svelte-heros-v2/compare/v1.2.0...v1.2.1) (2024-03-01)
 
 
