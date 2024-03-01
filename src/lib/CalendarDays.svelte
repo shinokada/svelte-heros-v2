@@ -201,7 +201,7 @@
 
 <!--
 @component
-[Go to docs](https://svelte-heros-v2.vercel.app)
+[Go to docs](https://svelte-heros-v2.codewithshin.com)
 ## Props
 @prop export let size: string = ctx.size || '24';
 @prop export let role: string = ctx.role || 'img';

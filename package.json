@@ -1275,6 +1275,7 @@
     "./XMark.svelte": {
       "types": "./dist/XMark.svelte.d.ts",
       "svelte": "./dist/XMark.svelte"
-    }
+    },
+    "./package.json": "./package.json"
   }
 }
