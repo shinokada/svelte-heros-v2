@@ -41,7 +41,7 @@
     "@sveltejs/kit": "^2.5.2",
     "@sveltejs/package": "^2.2.7",
     "@sveltejs/vite-plugin-svelte": "^3.0.2",
-    "@typescript-eslint/eslint-plugin": "link:typescript-eslint/eslint-plugin@typescript-eslint/eslint-plugin@latest",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.57.0",
