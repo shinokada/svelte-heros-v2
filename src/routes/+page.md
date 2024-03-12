@@ -1,3 +1,17 @@
+---
+layout: mainLayout
+---
+
+<script>
+  import { Banner } from 'flowbite-svelte';
+</script>
+
+<Banner id="default-banner" dismissable={false} classDiv='p-2'>
+  <p class="flex items-center gap-4 text-sm font-normal text-gray-500 dark:text-gray-400">
+      To Keep It Going, Please Show Your Love. ❤️<a href='https://ko-fi.com/Z8Z2CHALG' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+  </p>
+</Banner>
+
 # Svelte Heros v2
 
 <div class="flex gap-2 my-8">
