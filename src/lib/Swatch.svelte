@@ -138,4 +138,9 @@
   </svg>
 {/if}
 
-
+<!--
+@component
+[Go to docs](https://svelte-heros-v2.codewithshin.com/)
+## Props
+@props: 
+-->
