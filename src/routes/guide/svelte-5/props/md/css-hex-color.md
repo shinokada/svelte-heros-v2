@@ -1,0 +1,1 @@
+<AcademicCap color="#ff0000" />

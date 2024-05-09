@@ -1,0 +1,1 @@
+<AcademicCap size="40" />
