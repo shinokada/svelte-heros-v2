@@ -1,20 +1,24 @@
 # Changelog
 
+## 1.3.0
+
+### Minor Changes
+
+- feat: add withEvents, title, desc props ([`a350210a004b66607bfbbb85d8a94b66f7122270`](https://github.com/shinokada/svelte-heros-v2/commit/a350210a004b66607bfbbb85d8a94b66f7122270))
+
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ### [1.2.2](https://github.com/shinokada/svelte-heros-v2/compare/v1.2.1...v1.2.2) (2024-03-01)
 
-
 ### Bug Fixes
 
-* @typescript-eslint/eslint-plugin update ([2752e7f](https://github.com/shinokada/svelte-heros-v2/commit/2752e7f4fcfe3012bd1cf8572066c783ffc300e4))
+- @typescript-eslint/eslint-plugin update ([2752e7f](https://github.com/shinokada/svelte-heros-v2/commit/2752e7f4fcfe3012bd1cf8572066c783ffc300e4))
 
 ### [1.2.1](https://github.com/shinokada/svelte-heros-v2/compare/v1.2.0...v1.2.1) (2024-03-01)
 
-
 ### Bug Fixes
 
-* layout update add class to NavHamburger ([7e28792](https://github.com/shinokada/svelte-heros-v2/commit/7e287927723abd15110531e78ae3fc25034a45c3))
+- layout update add class to NavHamburger ([7e28792](https://github.com/shinokada/svelte-heros-v2/commit/7e287927723abd15110531e78ae3fc25034a45c3))
 
 ## [1.2.0](https://github.com/shinokada/svelte-heros-v2/compare/v1.1.0...v1.2.0) (2024-01-27)
 
