@@ -2,6 +2,8 @@
 - role: string = ctx.role || 'img';
 - color: string = ctx.color || 'currentColor';
 - variation: 'solid' | 'outline' | 'mini' | 'micro' = ctx.variation || 'outline';
-- viewBox: string = ctx.viewBox || '0 0 24 24';
 - strokeWidth: string = ctx.strokeWidth || '1.5';
-- ariaLabel = 'file name';
+- withEvents: boolean = ctx.withEvents || false;
+- title: TitleType = {};
+- desc: DescType = {};
+- ariaLabel: string = 'academic cap';

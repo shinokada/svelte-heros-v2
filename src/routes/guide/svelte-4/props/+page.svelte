@@ -62,11 +62,16 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/bootstrap.md'] as string} />
 
-<H2>Aria-Label</H2>
+<H2>A11y</H2>
 
 <p>All icons have aria-label. For example <Code>AcademicCap</Code> has <Code>aria-label="academic cap"</Code>. Use <Code>ariaLabel</Code> prop to modify the <Code>aria-label</Code> value.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/aria-label.md'] as string} />
+
+<p>Use <Code>title</Code>, <Code>desc</Code>, and <Code>ariaLabel</Code> props to make your icons accessible.</p>
+
+<HighlightCompo codeLang="ts" code={modules['./md/a11y-2.md'] as string} />
+
 
 <H2>Dark mode</H2>
 
@@ -76,11 +81,16 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/dark-mode.md'] as string} />
 
-<H2>Unfocusable icon</H2>
+<H2>withEvents</H2>
 
-<p>If you want to make an icon unfocusable, add <Code>tabindex="-1"</Code>.</p>
+<p>As default all icons are unfocusable. However you can add <Code>withEvents</Code> prop to make your icons focusable.</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/unfocusable-icon.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./md/withevents.md'] as string} />
+
+<p>It is possible to add <Code>tabindex="0"</Code>, but it is not recommended for A11y.
+If you want to use it add <Code>withEvents</Code> props.</p>
+
+<HighlightCompo codeLang="ts" code={modules['./md/withevents-2.md'] as string} />
 
 <H2>Events</H2>
 
