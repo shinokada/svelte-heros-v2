@@ -1,5 +1,11 @@
 # svelte-heros-v2
 
+## 2.0.0-next.2
+
+### Patch Changes
+
+- chore: add npx changeset pre enter next ([`4d03d13e2f797d66f5e317cff79507876faab34a`](https://github.com/shinokada/svelte-heros-v2/commit/4d03d13e2f797d66f5e317cff79507876faab34a))
+
 ## 2.0.0
 
 ### Patch Changes
