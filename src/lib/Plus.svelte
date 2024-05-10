@@ -1,14 +1,16 @@
 <script lang="ts">
   import { getContext } from 'svelte';
-  
+
   type TitleType = {
     id?: string;
     title?: string;
   };
+  
   type DescType = {
     id?: string;
     desc?: string;
   };
+  
   interface BaseProps {
     size?: string;
     role?: string;
@@ -21,14 +23,17 @@
     onkeyup?: (event: KeyboardEvent) => void;
     class?: string;
   }
+  
   interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
+  
   interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
   }
   
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+
   let { 
     size = ctx.size || '24', 
     role = ctx.role || 'img', 
@@ -51,7 +56,6 @@
   let viewBox: string = $state(''); 
 
   function updateHasDescription() {
-    // Double negation converts truthy values to true, falsy to false
     hasDescription = !!(title.id || desc.id); 
   }
   updateHasDescription();
@@ -138,9 +142,4 @@
   </svg>
 {/if}
 
-<!--
-@component
-[Go to docs](https://svelte-heros-v2.codewithshin.com/)
-## Props
-@props: 
--->
+
