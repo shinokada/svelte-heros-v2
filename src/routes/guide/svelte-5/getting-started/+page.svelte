@@ -32,7 +32,7 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation-2.md'] as string} />
 
-<p>Replace 2.0.0-next.x with the latest v2 version. Check the <A target="_blank" href="https://github.com/shinokada/svelte-heros-v2/releases">latest version at the GitHub Releases</A>. Enable Runes in svelte.config.js:</p>
+<p>Enable Runes in svelte.config.js:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation-3.md'] as string} />
 

@@ -1,1 +1,1 @@
-pnpm i -D svelte-heros-v2@2.0.0-next.x
+pnpm i -D svelte-heros-v2@next
