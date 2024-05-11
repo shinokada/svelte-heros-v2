@@ -1,5 +1,11 @@
 # svelte-heros-v2
 
+## 2.0.0-next.3
+
+### Patch Changes
+
+- fix: change hasDescription to derived ([`763b1aecd457bfe0f43e71a9312c9e9aa51e05be`](https://github.com/shinokada/svelte-heros-v2/commit/763b1aecd457bfe0f43e71a9312c9e9aa51e05be))
+
 ## 2.0.0-next.2
 
 ### Patch Changes
