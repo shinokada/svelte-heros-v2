@@ -32,7 +32,7 @@
 
 <H2>CSS HEX Colors</H2>
 
-<p>Use the color attribute to change colors with HEX color code for Filled and Outlined components.</p>
+<p>Use the color attribute to change colors with HEX color code:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/css-hex-color.md'] as string} />
 
