@@ -87,8 +87,8 @@ devDependencies:
     specifier: ^3.7.1
     version: 3.7.1(postcss-load-config@5.1.0)(postcss@8.4.38)(svelte@5.0.0-next.130)
   svelte-lib-helpers:
-    specifier: ^0.4.5
-    version: 0.4.5
+    specifier: ^0.4.6
+    version: 0.4.6
   svelte-preprocess:
     specifier: ^5.1.4
     version: 5.1.4(postcss-load-config@5.1.0)(postcss@8.4.38)(svelte@5.0.0-next.130)(typescript@5.4.5)
@@ -1277,8 +1277,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /apexcharts@3.49.0:
-    resolution: {integrity: sha512-2T9HnbQFLCuYRPndQLmh+bEQFoz0meUbvASaGgiSKDuYhWcLBodJtIpKql2aOtMx4B/sHrWW0dm90HsW4+h2PQ==}
+  /apexcharts@3.49.1:
+    resolution: {integrity: sha512-MqGtlq/KQuO8j0BBsUJYlRG8VBctKwYdwuBtajHgHTmSgUU3Oai+8oYN/rKCXwXzrUlYA+GiMgotAIbXY2BCGw==}
     dependencies:
       '@yr/monotone-cubic-spline': 1.0.3
       svg.draggable.js: 2.2.2
@@ -2365,16 +2365,16 @@ packages:
       is-glob: 4.0.3
     dev: true
 
-  /glob@10.3.14:
-    resolution: {integrity: sha512-4fkAqu93xe9Mk7le9v0y3VrPDqLKHarNi2s4Pv7f2yOvfhWfhc7hRPHC/JyqMqb8B/Dt/eGS4n7ykwf3fOsl8g==}
-    engines: {node: '>=16 || 14 >=14.17'}
+  /glob@10.3.15:
+    resolution: {integrity: sha512-0c6RlJt1TICLyvJYIApxb8GsXoai0KUP7AxKKAtsYXdgJR1mGEUa7DgwShbdk1nly0PYoZj01xd4hzbq3fsjpw==}
+    engines: {node: '>=16 || 14 >=14.18'}
     hasBin: true
     dependencies:
       foreground-child: 3.1.1
       jackspeak: 2.3.6
       minimatch: 9.0.4
       minipass: 7.1.1
-      path-scurry: 1.11.0
+      path-scurry: 1.11.1
     dev: true
 
   /glob@7.2.3:
@@ -3310,9 +3310,9 @@ packages:
     resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==}
     dev: true
 
-  /path-scurry@1.11.0:
-    resolution: {integrity: sha512-LNHTaVkzaYaLGlO+0u3rQTz7QrHTFOuKyba9JMTQutkmtNew8dw8wOD7mTU/5fCPZzCWpfW0XnQKzY61P0aTaw==}
-    engines: {node: '>=16 || 14 >=14.17'}
+  /path-scurry@1.11.1:
+    resolution: {integrity: sha512-Xa4Nw17FS9ApQFJ9umLiJS4orGjm7ZzwUrwamcGQuHSzDyth9boKDaycYdDcZDuqYATXw4HFXgaqWTctW/v1HA==}
+    engines: {node: '>=16 || 14 >=14.18'}
     dependencies:
       lru-cache: 10.2.2
       minipass: 7.1.1
@@ -4130,7 +4130,7 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.5
       commander: 4.1.1
-      glob: 10.3.14
+      glob: 10.3.15
       lines-and-columns: 1.2.4
       mz: 2.7.0
       pirates: 4.0.6
@@ -4166,7 +4166,7 @@ packages:
     dependencies:
       '@floating-ui/dom': 1.6.5
       '@sveltejs/kit': 2.5.7(@sveltejs/vite-plugin-svelte@3.1.0)(svelte@5.0.0-next.130)(vite@5.2.11)
-      apexcharts: 3.49.0
+      apexcharts: 3.49.1
       svelte: 5.0.0-next.130
       tailwind-merge: 2.3.0
       tailwindcss: 3.4.3
@@ -4225,8 +4225,8 @@ packages:
       svelte: 5.0.0-next.130
     dev: true
 
-  /svelte-lib-helpers@0.4.5:
-    resolution: {integrity: sha512-dtEWqjQBI2ZyLffAbfrqoOETUzIkDQ3ug7+3efWIw+Iff8x/3yyIQImDj9JXB7KMk7LFYmXQ7KGXRGxje5qKyQ==}
+  /svelte-lib-helpers@0.4.6:
+    resolution: {integrity: sha512-Q20fZg0QTc746x4ZztruslLuNnQhTQ26ICQGNHoOY+nbmv8XmTW8JJHmQk2pG6m0+kzvGVvXK8gVkPIieWwKNw==}
     hasBin: true
     dependencies:
       yargs: 17.7.2

@@ -23,9 +23,10 @@
 @component
 [Go to docs](https://svelte-heros-v2.codewithshin.com/)
 ## Props
-@props: icon: ComponentType;
-@props:size?: number;
-@props:role?: string;
-@props:ariaLabel?: string;
-@props:class?: string;
+@prop icon
+@prop size = 24
+@prop role = 'img'
+@prop ariaLabel = 'Icon'
+@prop class: classname
+@prop ...restProps
 -->
