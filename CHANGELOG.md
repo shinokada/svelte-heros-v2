@@ -1,5 +1,11 @@
 # svelte-heros-v2
 
+## 2.0.0-next.4
+
+### Patch Changes
+
+- fix: component docs ([`2f30e10573815b9e91d5cc0dd9bab7cba382f91c`](https://github.com/shinokada/svelte-heros-v2/commit/2f30e10573815b9e91d5cc0dd9bab7cba382f91c))
+
 ## 2.0.0-next.3
 
 ### Patch Changes
