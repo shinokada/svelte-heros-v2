@@ -1,6 +1,6 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
-  import { A } from 'svelte-5-ui-lib'
+
   import { AcademicCap } from '$lib';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
