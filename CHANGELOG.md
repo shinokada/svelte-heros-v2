@@ -1,5 +1,11 @@
 # svelte-heros-v2
 
+## 2.0.0-next.5
+
+### Patch Changes
+
+- fix: change size=number to string for Icon.svelte, run format and lib-helpers ([`8839d062dcafd8b9407757142c00831b3ff89a98`](https://github.com/shinokada/svelte-heros-v2/commit/8839d062dcafd8b9407757142c00831b3ff89a98))
+
 ## 2.0.0-next.4
 
 ### Patch Changes
