@@ -12,11 +12,11 @@ export const load = ({ url }) => {
     description,
     og: {
       title,
-      description,
+      description
     },
     twitter: {
       title,
-      description,
+      description
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

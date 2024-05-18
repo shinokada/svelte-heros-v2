@@ -6,11 +6,11 @@ export const load = () => {
     description: 'Svelte 5 Getting started example',
     og: {
       title: 'Svelte 5 Getting started example - Svelte Heros v2',
-      description: 'Svelte 5 Getting started example',
+      description: 'Svelte 5 Getting started example'
     },
     twitter: {
       title: 'Svelte 5 Getting started example - Svelte Heros v2',
-      description: 'Svelte 5 Getting started example',
+      description: 'Svelte 5 Getting started example'
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

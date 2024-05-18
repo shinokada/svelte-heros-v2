@@ -6,11 +6,11 @@ export const load = () => {
     description: 'Custom icons example',
     og: {
       title: 'Custom icons example - Svelte Heros v2',
-      description: 'Custom icons example',
+      description: 'Custom icons example'
     },
     twitter: {
       title: 'Custom icons example - Svelte Heros v2',
-      description: 'Custom icons example',
+      description: 'Custom icons example'
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

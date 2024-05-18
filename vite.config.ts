@@ -9,22 +9,21 @@ import svelte5uilibPackage from 'svelte-5-ui-lib/package.json' assert { type: 'j
 import runesmetatagsPackage from 'runes-meta-tags/package.json' assert { type: 'json' };
 import runaticsPackage from './node_modules/runatics/package.json' assert { type: 'json' };
 
-
 export default defineConfig({
   plugins: [sveltekit()],
   define: {
-		__NAME__: `"${pkg.name}"`,
-		__DESCRIPTION__: `"${pkg.description}"`,
-		__VERSION__: `"${pkg.version}"`,
-		__GITHUBURL__: `"${pkg.repository.url}"`,
-		__ORIGINAL_SOURCE_NAME__: `"${pkg.contributors[0].name}"`,
-		__ORIGINAL_SOURCE_URL__: `"${pkg.contributors[0].url}"`,
-		__RUNATICS_VERSION__: `"${runaticsPackage.version}"`,
-		__RUNES_METATAGS_VERSION__: `"${runesmetatagsPackage.version}"`,
-		__SVELTE_VERSION__: `"${sveltePackage.version}"`,
-		__SVELTEKIT_VERSION__: `"${svelteKitPackage.version}"`,
-		__SVELTE_RUNE_HIGHLIGHT_VERSION__: `"${svelterunehighlightPackage.version}"`,
-		__SVELTE_5_UI_LIB_VERSION__: `"${svelte5uilibPackage.version}"`,
-		__VITE_VERSION__: `"${vitePackage.version}"`,
-	},
+    __NAME__: `"${pkg.name}"`,
+    __DESCRIPTION__: `"${pkg.description}"`,
+    __VERSION__: `"${pkg.version}"`,
+    __GITHUBURL__: `"${pkg.repository.url}"`,
+    __ORIGINAL_SOURCE_NAME__: `"${pkg.contributors[0].name}"`,
+    __ORIGINAL_SOURCE_URL__: `"${pkg.contributors[0].url}"`,
+    __RUNATICS_VERSION__: `"${runaticsPackage.version}"`,
+    __RUNES_METATAGS_VERSION__: `"${runesmetatagsPackage.version}"`,
+    __SVELTE_VERSION__: `"${sveltePackage.version}"`,
+    __SVELTEKIT_VERSION__: `"${svelteKitPackage.version}"`,
+    __SVELTE_RUNE_HIGHLIGHT_VERSION__: `"${svelterunehighlightPackage.version}"`,
+    __SVELTE_5_UI_LIB_VERSION__: `"${svelte5uilibPackage.version}"`,
+    __VITE_VERSION__: `"${vitePackage.version}"`
+  }
 });

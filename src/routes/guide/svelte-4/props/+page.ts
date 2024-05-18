@@ -6,11 +6,11 @@ export const load = () => {
     description: 'Svelte Heros v2 Props for Svelte 4',
     og: {
       title: 'Svelte 4 Props - Svelte Heros v2',
-      description: 'Svelte Heros v2 Props for Svelte 4',
+      description: 'Svelte Heros v2 Props for Svelte 4'
     },
     twitter: {
       title: 'Svelte 4 Props - Svelte Heros v2',
-      description: 'Svelte Heros v2 Props for Svelte 4',
+      description: 'Svelte Heros v2 Props for Svelte 4'
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

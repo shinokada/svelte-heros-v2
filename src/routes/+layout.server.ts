@@ -5,7 +5,7 @@ import { metaTitle, metaDescription, metaImg } from 'runes-meta-tags';
 export const load = ({ url }) => {
   const siteName = metaTitle('/', __NAME__);
   const title = metaTitle(url.pathname, __NAME__);
-  const basicDesc = 'Hero icon v2 components for Svelte'
+  const basicDesc = 'Hero icon v2 components for Svelte';
   const description = metaDescription(url.pathname, basicDesc);
   const image = metaImg(url.pathname, __NAME__);
   const keywords = 'Svelte, Runes, Sveltekit, Hero icons, svg icons, icons';
@@ -21,7 +21,7 @@ export const load = ({ url }) => {
       title,
       description,
       image,
-      imageAlt: title,
+      imageAlt: title
     },
     og: {
       type: 'website',

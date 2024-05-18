@@ -5,17 +5,17 @@
     id?: string;
     title?: string;
   };
-  
+
   type DescType = {
     id?: string;
     desc?: string;
   };
-  
+
   interface BaseProps {
     size?: string;
     role?: string;
     color?: string;
-    variation?: "solid" | "outline" | "mini" | "micro";
+    variation?: 'solid' | 'outline' | 'mini' | 'micro';
     strokeWidth?: string;
     withEvents?: boolean;
     onclick?: (event: MouseEvent) => void;
@@ -23,51 +23,50 @@
     onkeyup?: (event: KeyboardEvent) => void;
     class?: string;
   }
-  
+
   interface CtxType extends BaseProps {}
-  
-  interface Props extends BaseProps{
+
+  interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
   }
-  
+
   const ctx: CtxType = getContext('iconCtx') ?? {};
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    color = ctx.color || 'currentColor', 
-    variation = ctx.variation || "outline",
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    variation = ctx.variation || 'outline',
     strokeWidth = ctx.strokeWidth || '1.5',
-    withEvents = ctx.withEvents || false, 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel = "arrow left on rectangle", 
-    onclick, 
-    onkeydown, 
+    withEvents = ctx.withEvents || false,
+    title,
+    desc,
+    class: classname,
+    ariaLabel = 'arrow left on rectangle',
+    onclick,
+    onkeydown,
     onkeyup,
-    ...restProps 
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
-  let viewBox: string = $state(''); 
+  let viewBox: string = $state('');
 
   $effect(() => {
     if (variation === 'mini') {
-      size = size || "20";
+      size = size || '20';
       viewBox = '0 0 20 20';
-    } else if (variation === 'micro'){
-      size = size || "16";
+    } else if (variation === 'micro') {
+      size = size || '16';
       viewBox = '0 0 16 16';
     } else {
-      size = size || "24";
+      size = size || '24';
       viewBox = '0 0 24 24';
     }
-  })
-  
+  });
 </script>
 
 {#if withEvents}
@@ -83,25 +82,47 @@
     aria-describedby={hasDescription ? ariaDescribedby : undefined}
     {viewBox}
     stroke-width={strokeWidth}
-    onclick={onclick}
-    onkeydown={onkeydown}
-    onkeyup={onkeyup}
+    {onclick}
+    {onkeydown}
+    {onkeyup}
   >
     {#if title?.id && title.title}
-      <title id="{title.id}">{title.title}</title>
+      <title id={title.id}>{title.title}</title>
     {/if}
     {#if desc?.id && desc.desc}
-      <desc id="{desc.id}">{desc.desc}</desc>
+      <desc id={desc.id}>{desc.desc}</desc>
     {/if}
-      {#if variation === 'outline'}
-        <path d="M15.75 9V5.25C15.75 4.00736 14.7426 3 13.5 3L7.5 3C6.25736 3 5.25 4.00736 5.25 5.25L5.25 18.75C5.25 19.9926 6.25736 21 7.5 21H13.5C14.7426 21 15.75 19.9926 15.75 18.75V15M12 9L9 12M9 12L12 15M9 12L21.75 12" stroke="{color}" stroke-width="{strokeWidth}" stroke-linecap="round" stroke-linejoin="round"/> 
-      {:else if variation === 'mini'}
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 4.25C3 3.00736 4.00736 2 5.25 2H10.75C11.9926 2 13 3.00736 13 4.25V6.25C13 6.66421 12.6642 7 12.25 7C11.8358 7 11.5 6.66421 11.5 6.25V4.25C11.5 3.83579 11.1642 3.5 10.75 3.5H5.25C4.83579 3.5 4.5 3.83579 4.5 4.25V15.75C4.5 16.1642 4.83579 16.5 5.25 16.5H10.75C11.1642 16.5 11.5 16.1642 11.5 15.75V13.75C11.5 13.3358 11.8358 13 12.25 13C12.6642 13 13 13.3358 13 13.75V15.75C13 16.9926 11.9926 18 10.75 18H5.25C4.00736 18 3 16.9926 3 15.75V4.25Z" fill="{color}"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M19 10C19 9.58579 18.6642 9.25 18.25 9.25H8.70447L9.75172 8.30747C10.0596 8.03038 10.0846 7.55616 9.80747 7.24828C9.53038 6.94039 9.05616 6.91543 8.74828 7.19253L6.24828 9.44253C6.09024 9.58476 6 9.78738 6 10C6 10.2126 6.09024 10.4152 6.24828 10.5575L8.74828 12.8075C9.05616 13.0846 9.53038 13.0596 9.80747 12.7517C10.0846 12.4438 10.0596 11.9696 9.75172 11.6925L8.70447 10.75H18.25C18.6642 10.75 19 10.4142 19 10Z" fill="{color}"/> 
-      {:else if variation === 'micro'}
-        replace_svg_micro
-      {:else}
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 3.75C6.67157 3.75 6 4.42157 6 5.25L6 18.75C6 19.5784 6.67157 20.25 7.5 20.25H13.5C14.3284 20.25 15 19.5784 15 18.75V15C15 14.5858 15.3358 14.25 15.75 14.25C16.1642 14.25 16.5 14.5858 16.5 15V18.75C16.5 20.4069 15.1569 21.75 13.5 21.75H7.5C5.84315 21.75 4.5 20.4069 4.5 18.75L4.5 5.25C4.5 3.59315 5.84315 2.25 7.5 2.25L13.5 2.25C15.1569 2.25 16.5 3.59315 16.5 5.25V9C16.5 9.41421 16.1642 9.75 15.75 9.75C15.3358 9.75 15 9.41421 15 9V5.25C15 4.42157 14.3284 3.75 13.5 3.75L7.5 3.75ZM12.5303 8.46967C12.8232 8.76256 12.8232 9.23744 12.5303 9.53033L10.8107 11.25L21.75 11.25C22.1642 11.25 22.5 11.5858 22.5 12C22.5 12.4142 22.1642 12.75 21.75 12.75L10.8107 12.75L12.5303 14.4697C12.8232 14.7626 12.8232 15.2374 12.5303 15.5303C12.2374 15.8232 11.7626 15.8232 11.4697 15.5303L8.46967 12.5303C8.17678 12.2374 8.17678 11.7626 8.46967 11.4697L11.4697 8.46967C11.7626 8.17678 12.2374 8.17678 12.5303 8.46967Z" fill="{color}"/> 
-      {/if}
+    {#if variation === 'outline'}
+      <path
+        d="M15.75 9V5.25C15.75 4.00736 14.7426 3 13.5 3L7.5 3C6.25736 3 5.25 4.00736 5.25 5.25L5.25 18.75C5.25 19.9926 6.25736 21 7.5 21H13.5C14.7426 21 15.75 19.9926 15.75 18.75V15M12 9L9 12M9 12L12 15M9 12L21.75 12"
+        stroke={color}
+        stroke-width={strokeWidth}
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    {:else if variation === 'mini'}
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M3 4.25C3 3.00736 4.00736 2 5.25 2H10.75C11.9926 2 13 3.00736 13 4.25V6.25C13 6.66421 12.6642 7 12.25 7C11.8358 7 11.5 6.66421 11.5 6.25V4.25C11.5 3.83579 11.1642 3.5 10.75 3.5H5.25C4.83579 3.5 4.5 3.83579 4.5 4.25V15.75C4.5 16.1642 4.83579 16.5 5.25 16.5H10.75C11.1642 16.5 11.5 16.1642 11.5 15.75V13.75C11.5 13.3358 11.8358 13 12.25 13C12.6642 13 13 13.3358 13 13.75V15.75C13 16.9926 11.9926 18 10.75 18H5.25C4.00736 18 3 16.9926 3 15.75V4.25Z"
+        fill={color}
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M19 10C19 9.58579 18.6642 9.25 18.25 9.25H8.70447L9.75172 8.30747C10.0596 8.03038 10.0846 7.55616 9.80747 7.24828C9.53038 6.94039 9.05616 6.91543 8.74828 7.19253L6.24828 9.44253C6.09024 9.58476 6 9.78738 6 10C6 10.2126 6.09024 10.4152 6.24828 10.5575L8.74828 12.8075C9.05616 13.0846 9.53038 13.0596 9.80747 12.7517C10.0846 12.4438 10.0596 11.9696 9.75172 11.6925L8.70447 10.75H18.25C18.6642 10.75 19 10.4142 19 10Z"
+        fill={color}
+      />
+    {:else if variation === 'micro'}
+      replace_svg_micro
+    {:else}
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M7.5 3.75C6.67157 3.75 6 4.42157 6 5.25L6 18.75C6 19.5784 6.67157 20.25 7.5 20.25H13.5C14.3284 20.25 15 19.5784 15 18.75V15C15 14.5858 15.3358 14.25 15.75 14.25C16.1642 14.25 16.5 14.5858 16.5 15V18.75C16.5 20.4069 15.1569 21.75 13.5 21.75H7.5C5.84315 21.75 4.5 20.4069 4.5 18.75L4.5 5.25C4.5 3.59315 5.84315 2.25 7.5 2.25L13.5 2.25C15.1569 2.25 16.5 3.59315 16.5 5.25V9C16.5 9.41421 16.1642 9.75 15.75 9.75C15.3358 9.75 15 9.41421 15 9V5.25C15 4.42157 14.3284 3.75 13.5 3.75L7.5 3.75ZM12.5303 8.46967C12.8232 8.76256 12.8232 9.23744 12.5303 9.53033L10.8107 11.25L21.75 11.25C22.1642 11.25 22.5 11.5858 22.5 12C22.5 12.4142 22.1642 12.75 21.75 12.75L10.8107 12.75L12.5303 14.4697C12.8232 14.7626 12.8232 15.2374 12.5303 15.5303C12.2374 15.8232 11.7626 15.8232 11.4697 15.5303L8.46967 12.5303C8.17678 12.2374 8.17678 11.7626 8.46967 11.4697L11.4697 8.46967C11.7626 8.17678 12.2374 8.17678 12.5303 8.46967Z"
+        fill={color}
+      />
+    {/if}
   </svg>
 {:else}
   <svg
@@ -118,20 +139,42 @@
     stroke-width={strokeWidth}
   >
     {#if title?.id && title.title}
-      <title id="{title.id}">{title.title}</title>
+      <title id={title.id}>{title.title}</title>
     {/if}
     {#if desc?.id && desc.desc}
-      <desc id="{desc.id}">{desc.desc}</desc>
+      <desc id={desc.id}>{desc.desc}</desc>
     {/if}
-      {#if variation === 'outline'}
-        <path d="M15.75 9V5.25C15.75 4.00736 14.7426 3 13.5 3L7.5 3C6.25736 3 5.25 4.00736 5.25 5.25L5.25 18.75C5.25 19.9926 6.25736 21 7.5 21H13.5C14.7426 21 15.75 19.9926 15.75 18.75V15M12 9L9 12M9 12L12 15M9 12L21.75 12" stroke="{color}" stroke-width="{strokeWidth}" stroke-linecap="round" stroke-linejoin="round"/> 
-      {:else if variation === 'mini'}
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 4.25C3 3.00736 4.00736 2 5.25 2H10.75C11.9926 2 13 3.00736 13 4.25V6.25C13 6.66421 12.6642 7 12.25 7C11.8358 7 11.5 6.66421 11.5 6.25V4.25C11.5 3.83579 11.1642 3.5 10.75 3.5H5.25C4.83579 3.5 4.5 3.83579 4.5 4.25V15.75C4.5 16.1642 4.83579 16.5 5.25 16.5H10.75C11.1642 16.5 11.5 16.1642 11.5 15.75V13.75C11.5 13.3358 11.8358 13 12.25 13C12.6642 13 13 13.3358 13 13.75V15.75C13 16.9926 11.9926 18 10.75 18H5.25C4.00736 18 3 16.9926 3 15.75V4.25Z" fill="{color}"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M19 10C19 9.58579 18.6642 9.25 18.25 9.25H8.70447L9.75172 8.30747C10.0596 8.03038 10.0846 7.55616 9.80747 7.24828C9.53038 6.94039 9.05616 6.91543 8.74828 7.19253L6.24828 9.44253C6.09024 9.58476 6 9.78738 6 10C6 10.2126 6.09024 10.4152 6.24828 10.5575L8.74828 12.8075C9.05616 13.0846 9.53038 13.0596 9.80747 12.7517C10.0846 12.4438 10.0596 11.9696 9.75172 11.6925L8.70447 10.75H18.25C18.6642 10.75 19 10.4142 19 10Z" fill="{color}"/> 
-      {:else if variation === 'micro'}
-        replace_svg_micro
-      {:else}
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 3.75C6.67157 3.75 6 4.42157 6 5.25L6 18.75C6 19.5784 6.67157 20.25 7.5 20.25H13.5C14.3284 20.25 15 19.5784 15 18.75V15C15 14.5858 15.3358 14.25 15.75 14.25C16.1642 14.25 16.5 14.5858 16.5 15V18.75C16.5 20.4069 15.1569 21.75 13.5 21.75H7.5C5.84315 21.75 4.5 20.4069 4.5 18.75L4.5 5.25C4.5 3.59315 5.84315 2.25 7.5 2.25L13.5 2.25C15.1569 2.25 16.5 3.59315 16.5 5.25V9C16.5 9.41421 16.1642 9.75 15.75 9.75C15.3358 9.75 15 9.41421 15 9V5.25C15 4.42157 14.3284 3.75 13.5 3.75L7.5 3.75ZM12.5303 8.46967C12.8232 8.76256 12.8232 9.23744 12.5303 9.53033L10.8107 11.25L21.75 11.25C22.1642 11.25 22.5 11.5858 22.5 12C22.5 12.4142 22.1642 12.75 21.75 12.75L10.8107 12.75L12.5303 14.4697C12.8232 14.7626 12.8232 15.2374 12.5303 15.5303C12.2374 15.8232 11.7626 15.8232 11.4697 15.5303L8.46967 12.5303C8.17678 12.2374 8.17678 11.7626 8.46967 11.4697L11.4697 8.46967C11.7626 8.17678 12.2374 8.17678 12.5303 8.46967Z" fill="{color}"/> 
-      {/if}
+    {#if variation === 'outline'}
+      <path
+        d="M15.75 9V5.25C15.75 4.00736 14.7426 3 13.5 3L7.5 3C6.25736 3 5.25 4.00736 5.25 5.25L5.25 18.75C5.25 19.9926 6.25736 21 7.5 21H13.5C14.7426 21 15.75 19.9926 15.75 18.75V15M12 9L9 12M9 12L12 15M9 12L21.75 12"
+        stroke={color}
+        stroke-width={strokeWidth}
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    {:else if variation === 'mini'}
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M3 4.25C3 3.00736 4.00736 2 5.25 2H10.75C11.9926 2 13 3.00736 13 4.25V6.25C13 6.66421 12.6642 7 12.25 7C11.8358 7 11.5 6.66421 11.5 6.25V4.25C11.5 3.83579 11.1642 3.5 10.75 3.5H5.25C4.83579 3.5 4.5 3.83579 4.5 4.25V15.75C4.5 16.1642 4.83579 16.5 5.25 16.5H10.75C11.1642 16.5 11.5 16.1642 11.5 15.75V13.75C11.5 13.3358 11.8358 13 12.25 13C12.6642 13 13 13.3358 13 13.75V15.75C13 16.9926 11.9926 18 10.75 18H5.25C4.00736 18 3 16.9926 3 15.75V4.25Z"
+        fill={color}
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M19 10C19 9.58579 18.6642 9.25 18.25 9.25H8.70447L9.75172 8.30747C10.0596 8.03038 10.0846 7.55616 9.80747 7.24828C9.53038 6.94039 9.05616 6.91543 8.74828 7.19253L6.24828 9.44253C6.09024 9.58476 6 9.78738 6 10C6 10.2126 6.09024 10.4152 6.24828 10.5575L8.74828 12.8075C9.05616 13.0846 9.53038 13.0596 9.80747 12.7517C10.0846 12.4438 10.0596 11.9696 9.75172 11.6925L8.70447 10.75H18.25C18.6642 10.75 19 10.4142 19 10Z"
+        fill={color}
+      />
+    {:else if variation === 'micro'}
+      replace_svg_micro
+    {:else}
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M7.5 3.75C6.67157 3.75 6 4.42157 6 5.25L6 18.75C6 19.5784 6.67157 20.25 7.5 20.25H13.5C14.3284 20.25 15 19.5784 15 18.75V15C15 14.5858 15.3358 14.25 15.75 14.25C16.1642 14.25 16.5 14.5858 16.5 15V18.75C16.5 20.4069 15.1569 21.75 13.5 21.75H7.5C5.84315 21.75 4.5 20.4069 4.5 18.75L4.5 5.25C4.5 3.59315 5.84315 2.25 7.5 2.25L13.5 2.25C15.1569 2.25 16.5 3.59315 16.5 5.25V9C16.5 9.41421 16.1642 9.75 15.75 9.75C15.3358 9.75 15 9.41421 15 9V5.25C15 4.42157 14.3284 3.75 13.5 3.75L7.5 3.75ZM12.5303 8.46967C12.8232 8.76256 12.8232 9.23744 12.5303 9.53033L10.8107 11.25L21.75 11.25C22.1642 11.25 22.5 11.5858 22.5 12C22.5 12.4142 22.1642 12.75 21.75 12.75L10.8107 12.75L12.5303 14.4697C12.8232 14.7626 12.8232 15.2374 12.5303 15.5303C12.2374 15.8232 11.7626 15.8232 11.4697 15.5303L8.46967 12.5303C8.17678 12.2374 8.17678 11.7626 8.46967 11.4697L11.4697 8.46967C11.7626 8.17678 12.2374 8.17678 12.5303 8.46967Z"
+        fill={color}
+      />
+    {/if}
   </svg>
 {/if}
 
@@ -142,13 +185,13 @@
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
 @prop color = ctx.color || 'currentColor'
-@prop variation = ctx.variation || "outline"
+@prop variation = ctx.variation || 'outline'
 @prop strokeWidth = ctx.strokeWidth || '1.5'
 @prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
 @prop class: classname
-@prop ariaLabel = "arrow left on rectangle"
+@prop ariaLabel = 'arrow left on rectangle'
 @prop onclick
 @prop onkeydown
 @prop onkeyup

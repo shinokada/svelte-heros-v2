@@ -6,11 +6,11 @@ export const load = () => {
     description: 'Outline Icons',
     og: {
       title: 'Outline Icons - Svelte Heros v2',
-      description: 'Outline Icons',
+      description: 'Outline Icons'
     },
     twitter: {
       title: 'Outline Icons - Svelte Heros v2',
-      description: 'Outline Icons',
+      description: 'Outline Icons'
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

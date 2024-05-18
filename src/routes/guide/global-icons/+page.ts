@@ -6,11 +6,11 @@ export const load = () => {
     description: 'Global icons example',
     og: {
       title: 'Global icons example - Svelte Heros v2',
-      description: 'Global icons example',
+      description: 'Global icons example'
     },
     twitter: {
       title: 'Global icons example - Svelte Heros v2',
-      description: 'Global icons example',
+      description: 'Global icons example'
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

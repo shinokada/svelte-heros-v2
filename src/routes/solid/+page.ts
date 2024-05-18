@@ -6,11 +6,11 @@ export const load = () => {
     description: 'Solid Icons',
     og: {
       title: 'Solid Icons - Svelte Heros v2',
-      description: 'Solid Icons',
+      description: 'Solid Icons'
     },
     twitter: {
       title: 'Solid Icons - Svelte Heros v2',
-      description: 'Solid Icons',
+      description: 'Solid Icons'
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

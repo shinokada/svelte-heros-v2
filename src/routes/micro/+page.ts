@@ -6,11 +6,11 @@ export const load = () => {
     description: 'Micro Icons',
     og: {
       title: 'Micro Icons - Svelte Heros v2',
-      description: 'Micro Icons',
+      description: 'Micro Icons'
     },
     twitter: {
       title: 'Micro Icons - Svelte Heros v2',
-      description: 'Micro Icons',
+      description: 'Micro Icons'
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

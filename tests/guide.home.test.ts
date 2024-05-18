@@ -6,7 +6,9 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('Guide home page has expected h1, meta title', async ({ page }) => {
-  await expect(page.getByRole('heading', { name: 'Getting Started: Svelte Heros v2 for Svelte 4/5' })).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: 'Getting Started: Svelte Heros v2 for Svelte 4/5' })
+  ).toBeVisible();
 });
 
 test('Guide home page has expected meta title', async ({ page }) => {
@@ -24,7 +26,10 @@ test('Guide home page has expected meta og', async ({ page }) => {
   const metaOgDescription = page.locator('meta[property="og:description"]');
   await expect(metaOgDescription).toHaveAttribute('content', 'Getting Started - Svelte Heros V2');
   const metaOgUrl = page.locator('meta[property="og:url"]');
-  await expect(metaOgUrl).toHaveAttribute('content', 'http://localhost:4173/guide/svelte-4/getting-started');
+  await expect(metaOgUrl).toHaveAttribute(
+    'content',
+    'http://localhost:4173/guide/svelte-4/getting-started'
+  );
   const metaOgImage = page.locator('meta[property="og:image"]');
   await expect(metaOgImage).toHaveAttribute(
     'content',
@@ -36,7 +41,10 @@ test('Guide home page has expected meta twitter', async ({ page }) => {
   const metaTwitterTitle = page.locator('meta[name="twitter:title"]');
   await expect(metaTwitterTitle).toHaveAttribute('content', 'Getting Started - Svelte Heros V2');
   const metaTwitterDescription = page.locator('meta[name="twitter:description"]');
-  await expect(metaTwitterDescription).toHaveAttribute('content', 'Getting Started - Svelte Heros V2');
+  await expect(metaTwitterDescription).toHaveAttribute(
+    'content',
+    'Getting Started - Svelte Heros V2'
+  );
   const metaTwitterImage = page.locator('meta[name="twitter:image"]');
   await expect(metaTwitterImage).toHaveAttribute(
     'content',

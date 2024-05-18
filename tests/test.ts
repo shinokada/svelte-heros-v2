@@ -30,7 +30,6 @@ test('guide/custom-icons page has expected h1', async ({ page }) => {
   await expect(page.locator('h1')).toHaveText('Setting Global Icon using setContext');
 });
 
-
 test('/outline page has expected h1', async ({ page }) => {
   await page.goto('/outline');
   await expect(page.locator('h1')).toHaveText('Svelte Heros v2: Outline');
