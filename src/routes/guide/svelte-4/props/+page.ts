@@ -2,15 +2,15 @@ import type { MetaProps } from 'runes-meta-tags';
 
 export const load = () => {
   const pageMetaTags = Object.freeze({
-    title: 'Svelte 4 Props - Svelte Heros v2',
-    description: 'Svelte Heros v2 Props for Svelte 4',
+    title: 'Props - Svelte Heros v2 v1',
+    description: 'How to use props with Svelte Heros v2 v1',
     og: {
-      title: 'Svelte 4 Props - Svelte Heros v2',
-      description: 'Svelte Heros v2 Props for Svelte 4'
+      title: 'Props - Svelte Heros v2 v1',
+      description: 'How to use props with Svelte Heros v2 v1'
     },
     twitter: {
-      title: 'Svelte 4 Props - Svelte Heros v2',
-      description: 'Svelte Heros v2 Props for Svelte 4'
+      title: 'Props - Svelte Heros v2 v1',
+      description: 'How to use props with Svelte Heros v2 v1'
     }
   }) satisfies MetaProps;
   return { pageMetaTags };
