@@ -8,7 +8,7 @@
   });
 </script>
 
-<h1>Custom Default Icons</h1>
+<h1>Custom icons - Svelte Heros v2</h1>
 
 <p>If you wish to create a custom default icon, you can follow these steps.</p>
 <p>Create a Svelte component named `src/lib/MyIcon.svelte`:</p>

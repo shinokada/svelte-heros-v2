@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { ComponentType } from 'svelte';
+  import type { Component } from 'svelte';
   import { IconPage, filterStringKeys } from 'runes-webkit';
   import * as icons from '$lib';
   const keyIcons = filterStringKeys(icons);
@@ -9,9 +9,9 @@
 </script>
 
 <IconPage
-  icons={filteredIcons as ComponentType}
+  icons={filteredIcons as Component}
   variation="micro"
-  title="Svelte Heros v2: Micro"
+  title="Micro Icons - Svelte Heros v2"
   minSize="14"
   maxSize="30"
   defaultSize="16"

@@ -15,7 +15,7 @@
   });
 </script>
 
-<h1>Svelte Heros v2 for Svelte 4/5: Props</h1>
+<h1>Props - Svelte Heros v2 v1</h1>
 
 <H2>Prop</H2>
 

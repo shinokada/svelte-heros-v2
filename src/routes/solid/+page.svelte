@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { ComponentType } from 'svelte';
+  import type { Component } from 'svelte';
   import { IconPage, filterStringKeys } from 'runes-webkit';
   import * as icons from '$lib';
   const keyIcons = filterStringKeys(icons);
@@ -8,4 +8,4 @@
   );
 </script>
 
-<IconPage icons={filteredIcons as ComponentType} variation="solid" title="Svelte Heros v2: Solid" />
+<IconPage icons={filteredIcons as Component} variation="solid" title="Solid Icons - Svelte Heros v2" />

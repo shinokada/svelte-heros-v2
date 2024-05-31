@@ -8,7 +8,7 @@
   });
 </script>
 
-<h1>Setting Global Icon using setContext</h1>
+<h1>Setting Global Icon - Svelte Heros v2</h1>
 
 <p>
   You can establish global icon preferences in your Svelte application using <Code>setContext</Code

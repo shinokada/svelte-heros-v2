@@ -11,7 +11,7 @@
   let isSolid = $state(false);
 </script>
 
-<h1>Svelte Heros v2 for Svelte Runes: Props</h1>
+<h1>Props - Svelte Heros v2 v2</h1>
 
 <H2>Props</H2>
 

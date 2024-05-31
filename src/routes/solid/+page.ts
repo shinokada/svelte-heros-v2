@@ -1,16 +1,24 @@
 import type { MetaProps } from 'runes-meta-tags';
 
-export const load = () => {
+const title = 'Solid Icons - Svelte Heros v2'
+const description = 'Easily Find & Copy SVG Icon name for Your Project'
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-heros-v2'
+const ogUrl = 'http://localhost:4173/icons'
+
+export const load = ({ url }) => {
   const pageMetaTags = Object.freeze({
-    title: 'Solid Icons - Svelte Heros v2',
-    description: 'Solid Icons and icon names you can copy',
+    title,
+    description,
     og: {
-      title: 'Solid Icons - Svelte Heros v2',
-      description: 'Solid Icons and icon names you can copy'
+      title,
+      description,
+      image: imgUrl,
+      url: ogUrl
     },
     twitter: {
-      title: 'Solid Icons - Svelte Heros v2',
-      description: 'Solid Icons and icon names you can copy'
+      title,
+      description,
+      image: imgUrl
     }
   }) satisfies MetaProps;
   return { pageMetaTags };
