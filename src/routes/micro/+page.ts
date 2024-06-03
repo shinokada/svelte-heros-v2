@@ -6,7 +6,7 @@ const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-heros-v2'
 const ogUrl = 'http://localhost:4173/icons'
 
 export const load = ({ url }) => {
-  const pageMetaTags = Object.freeze({
+  const pageMetaTags: MetaProps = {
     title,
     description,
     og: {
@@ -20,6 +20,6 @@ export const load = ({ url }) => {
       description,
       image: imgUrl
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };

@@ -4,7 +4,7 @@ const title = 'Custom icons - Svelte Heros v2'
 const description = 'How to create a custom icons with Svelte Heros v2'
 const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-heros-v2'
 export const load = () => {
-  const pageMetaTags = Object.freeze({
+  const pageMetaTags: MetaProps = {
     title,
     description,
     og: {
@@ -17,6 +17,6 @@ export const load = () => {
       description,
       image: imgUrl
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };
