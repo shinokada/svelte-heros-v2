@@ -3,9 +3,7 @@
   import { IconPage, filterStringKeys } from 'runes-webkit';
   import * as icons from '$lib';
   const keyIcons = filterStringKeys(icons);
-  const filteredIcons = Object.fromEntries(
-    Object.entries(keyIcons).filter(([key]) => key !== 'Icon')
-  );
+ 
 </script>
 
-<IconPage icons={filteredIcons as Component} variation="solid" title="Solid Icons - Svelte Heros v2" />
+<IconPage icons={keyIcons as Component} variation="solid" title="Solid Icons - Svelte Heros v2" />

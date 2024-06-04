@@ -69,14 +69,14 @@ importers:
         specifier: ^0.3.2
         version: 0.3.2(svelte@5.0.0-next.148)
       runes-webkit:
-        specifier: ^0.8.0
-        version: 0.8.0(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)
+        specifier: ^0.8.1
+        version: 0.8.1(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)
       svelte:
         specifier: 5.0.0-next.148
         version: 5.0.0-next.148
       svelte-5-ui-lib:
-        specifier: ^0.5.0
-        version: 0.5.0(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(tailwindcss@3.4.3)
+        specifier: ^0.5.1
+        version: 0.5.1(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(tailwindcss@3.4.3)
       svelte-check:
         specifier: ^3.8.0
         version: 3.8.0(postcss-load-config@4.0.2(postcss@8.4.38))(postcss@8.4.38)(svelte@5.0.0-next.148)
@@ -1444,8 +1444,8 @@ packages:
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
-  jackspeak@3.1.2:
-    resolution: {integrity: sha512-kWmLKn2tRtfYMF/BakihVVRzBKOxz4gJMiL2Rj91WnAB5TPZumSH99R/Yf1qE1u4uRimvCSJfm6hnxohXeEXjQ==}
+  jackspeak@3.2.3:
+    resolution: {integrity: sha512-htOzIMPbpLid/Gq9/zaz9SfExABxqRe1sSCdxntlO/aMD6u0issZQiY25n2GKQUtJ02j7z5sfptlAOMpWWOmvw==}
     engines: {node: '>=14'}
 
   jiti@1.21.0:
@@ -2076,8 +2076,8 @@ packages:
     peerDependencies:
       svelte: ^5.0.0
 
-  runes-webkit@0.8.0:
-    resolution: {integrity: sha512-6+ZmONbgNoPpKBVvALdzHPSkAXKLjdviO+vde4EKg8/663g6PHfYXrmXuVa5EilJfwe5D+MYFwjF9YPyFZNDdA==}
+  runes-webkit@0.8.1:
+    resolution: {integrity: sha512-VqjFdJPdhREOM1qfb/3lwiBCOpSnugWV0Bkq5ht+PENrIDjBLzHH+ZlP7qgpM7msL7NivfFjtG56Es9aASIM4g==}
     engines: {node: '>=18.0.0', npm: '>=7.0.0'}
     peerDependencies:
       '@sveltejs/kit': ^2.5.5
@@ -2265,8 +2265,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svelte-5-ui-lib@0.5.0:
-    resolution: {integrity: sha512-7HZXm7eXyYbLT5lhBIgQITVu/JVctI1/uLyUSCDo0RFLG149mOupdWdPUTNOfCB3qW08GjztgVqZoFqxU8NHHQ==}
+  svelte-5-ui-lib@0.5.1:
+    resolution: {integrity: sha512-N292tDPk99brNdiEmhJ7lcgmx9chp+VWuL3jY/X9JUtWQpGVQfjz5OyoGOGyIpucQiPFRPKbHszXYjcUD5zQZw==}
     engines: {node: '>=20.0.0', npm: '>=10.0.0'}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
@@ -3958,7 +3958,7 @@ snapshots:
   glob@10.4.1:
     dependencies:
       foreground-child: 3.1.1
-      jackspeak: 3.1.2
+      jackspeak: 3.2.3
       minimatch: 9.0.4
       minipass: 7.1.2
       path-scurry: 1.11.1
@@ -4169,7 +4169,7 @@ snapshots:
 
   isexe@2.0.0: {}
 
-  jackspeak@3.1.2:
+  jackspeak@3.2.3:
     dependencies:
       '@isaacs/cliui': 8.0.2
     optionalDependencies:
@@ -4714,7 +4714,7 @@ snapshots:
     dependencies:
       svelte: 5.0.0-next.148
 
-  runes-webkit@0.8.0(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148):
+  runes-webkit@0.8.1(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148):
     dependencies:
       '@sveltejs/kit': 2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(vite@5.2.12)
       svelte: 5.0.0-next.148
@@ -4922,7 +4922,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-5-ui-lib@0.5.0(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(tailwindcss@3.4.3):
+  svelte-5-ui-lib@0.5.1(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(tailwindcss@3.4.3):
     dependencies:
       '@floating-ui/dom': 1.6.5
       '@sveltejs/kit': 2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(vite@5.2.12)
