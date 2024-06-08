@@ -141,6 +141,7 @@
           <DynamicCodeBlockStyle />
         {/if}
         <DotsHorizontalOutline
+          withEvents
           onclick={dropdown.toggle}
           class="ml-6 mr-4 dark:text-white"
           size="lg"
