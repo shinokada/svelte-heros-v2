@@ -17,7 +17,7 @@
     },
     {
       name: 'Micro',
-      icon: ChartLineUpOutline as Component,
+      icon: ChartBar as Component,
       href: '/micro'
     }
   ];
@@ -29,6 +29,7 @@
   import { page } from '$app/stores';
   import type { Component } from 'svelte';
   import type { ListType } from 'runes-webkit';
+  import { ChartBar } from '$lib'
   import {
     Footer,
     OnThisPage,
@@ -39,7 +40,6 @@
     ExpandOutline,
     GridPlusOutline,
     CogOutline,
-    ChartLineUpOutline
   } from 'runes-webkit';
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
@@ -92,8 +92,8 @@
   {#if urlsToIncludeSwitcherAndSidebar.some((path) => currentUrl.startsWith(path))}
     <Sidebar
       sidebarList={newSidebarList}
-      s_b_aside="fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-0 lg:block hidden"
-      s_b_div="fixed top-20 px-2 w-60"
+      asideClass="fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-0 lg:block hidden"
+      divClass="fixed top-20 px-2 w-60 dark_bg_theme"
     />
     <div class="relative">
       <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />

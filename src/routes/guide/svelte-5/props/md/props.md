@@ -1,14 +1,9 @@
-- size = ctx.size || '24', 
-- role = ctx.role || 'img', 
-- color = ctx.color || 'currentColor', 
-- variation = ctx.variation || "outline",
-- strokeWidth = ctx.strokeWidth || '1.5',
-- withEvents = ctx.withEvents || false, 
-- title = {}, 
-- desc = {}, 
-- class: classname, 
-- ariaLabel = "<icon file name>", 
-- onclick, 
-- onkeydown, 
-- onkeyup,
-- ...restProps 
+- size = ctx.size || '24'
+- role = ctx.role || 'img'
+- color = ctx.color || 'currentColor'
+- variation = ctx.variation || "outline"
+- strokeWidth = ctx.strokeWidth || '1.5'
+- title
+- desc
+- ariaLabel = "<icon file name>"
+- ...restProps

@@ -3,4 +3,9 @@
   let isSolid = $state(false);
 </script>
 
-<AcademicCap size="30" color="#ff0033" withEvents onclick={() => (isSolid = !isSolid)} variation={isSolid ? 'solid' : 'outline'} />
+<AcademicCap
+  size="30"
+  color="#ff0033"
+  onclick={() => (isSolid = !isSolid)}
+  variation={isSolid ? 'solid' : 'outline'}
+/>
