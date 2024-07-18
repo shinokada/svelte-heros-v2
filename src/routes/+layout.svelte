@@ -29,7 +29,7 @@
   import { page } from '$app/stores';
   import type { Component } from 'svelte';
   import type { ListType } from 'runes-webkit';
-  import { ChartBar } from '$lib'
+  import { ChartBar } from '$lib';
   import {
     Footer,
     OnThisPage,
@@ -39,7 +39,7 @@
     sidebarList,
     ExpandOutline,
     GridPlusOutline,
-    CogOutline,
+    CogOutline
   } from 'runes-webkit';
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';

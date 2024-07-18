@@ -138,9 +138,9 @@
       {/if}
       <div class="ml-auto flex items-center lg:order-1">
         {#if include}
-        <div class="hidden sm:block">
-          <DynamicCodeBlockStyle />
-        </div>
+          <div class="hidden sm:block">
+            <DynamicCodeBlockStyle />
+          </div>
         {/if}
         <DotsHorizontalOutline
           onclick={dropdown.toggle}
@@ -165,7 +165,7 @@
               </DropdownItem>
             {/if}
             <DropdownItem>
-              <Darkmode class="p-2 m-0" />
+              <Darkmode class="m-0 p-2" />
             </DropdownItem>
           </Dropdown>
         </div>

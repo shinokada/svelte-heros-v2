@@ -1,5 +1,11 @@
 # svelte-heros-v2
 
+## 2.0.0-next.6
+
+### Patch Changes
+
+- feat: extends SVGAttributes<SVGElement> ([`f1b46b54bedd5a230ad6a86355ed05c46b94b19e`](https://github.com/shinokada/svelte-heros-v2/commit/f1b46b54bedd5a230ad6a86355ed05c46b94b19e))
+
 ## 2.0.0-next.5
 
 ### Patch Changes
