@@ -152,7 +152,7 @@
             {dropdownStatus}
             {closeDropdown}
             transitionParams={dropdownTransitionParams}
-            class="absolute -left-[47px] top-8 w-12 pl-1.5"
+            divClass="absolute -left-[47px] top-8 w-12 pl-1.5"
           >
             {#if twitterUrl}
               <DropdownItem href={twitterUrl} target="_blank" aClass="p-2 m-0"
