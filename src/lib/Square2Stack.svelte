@@ -18,7 +18,7 @@
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
-  let viewBox: string = $state('');
+  let viewBox: string | undefined = $state(undefined);
 
   $effect(() => {
     if (variation === 'mini') {
