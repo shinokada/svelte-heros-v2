@@ -5,7 +5,7 @@
   const ctx: CtxType = getContext('iconCtx') ?? {};
 
   let {
-    size = ctx.size || '24',
+    size = ctx.size,
     role = ctx.role || 'img',
     color = ctx.color || 'currentColor',
     variation = ctx.variation || 'outline',
@@ -18,19 +18,16 @@
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
-  let viewBox: string | undefined = $state(undefined);
 
-  $effect(() => {
-    if (variation === 'mini') {
-      size = size || '20';
-      viewBox = '0 0 20 20';
-    } else if (variation === 'micro') {
-      size = size || '16';
-      viewBox = '0 0 16 16';
-    } else {
-      size = size || '24';
-      viewBox = '0 0 24 24';
-    }
+  let viewBox = $derived.by(() => {
+    if (variation === 'mini') return '0 0 20 20';
+    if (variation === 'micro') return '0 0 16 16';
+    return '0 0 24 24';
+  });
+  let variationSize = $derived.by(() => {
+    if (variation === 'mini') return '20';
+    if (variation === 'micro') return '16';
+    return '24';
   });
 </script>
 
@@ -38,8 +35,8 @@
   xmlns="http://www.w3.org/2000/svg"
   {...restProps}
   {role}
-  width={size}
-  height={size}
+  width={size || variationSize}
+  height={size || variationSize}
   fill="none"
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
@@ -100,7 +97,7 @@
 @component
 [Go to docs](https://svelte-heros-v2.codewithshin.com/)
 ## Props
-@prop size = ctx.size || '24'
+@prop size = ctx.size
 @prop role = ctx.role || 'img'
 @prop color = ctx.color || 'currentColor'
 @prop variation = ctx.variation || 'outline'
