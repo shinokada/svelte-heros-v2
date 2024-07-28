@@ -1,5 +1,11 @@
 # svelte-heros-v2
 
+## 2.0.0-next.7
+
+### Patch Changes
+
+- fix: default vaiation size ([`1798d0c4f8adb556a114ae219753ea01de8900c1`](https://github.com/shinokada/svelte-heros-v2/commit/1798d0c4f8adb556a114ae219753ea01de8900c1))
+
 ## 2.0.0-next.6
 
 ### Patch Changes
