@@ -5,7 +5,7 @@
   const ctx: CtxType = getContext('iconCtx') ?? {};
 
   let {
-    size = ctx.size || '24',
+    size = ctx.size,
     role = ctx.role || 'img',
     color = ctx.color || 'currentColor',
     variation = ctx.variation || 'outline',
@@ -124,7 +124,7 @@
 @component
 [Go to docs](https://svelte-heros-v2.codewithshin.com/)
 ## Props
-@prop size = ctx.size || '24'
+@prop size = ctx.size
 @prop role = ctx.role || 'img'
 @prop color = ctx.color || 'currentColor'
 @prop variation = ctx.variation || 'outline'

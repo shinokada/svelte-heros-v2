@@ -1,4 +1,4 @@
-- size = ctx.size || '24'
+- size = ctx.size
 - role = ctx.role || 'img'
 - color = ctx.color || 'currentColor'
 - variation = ctx.variation || "outline"
