@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Ad } from 'svelte-flag-icons';
-  import MyIcon from 'path/to/MyIcon.svelte'
+  import { AcademicCap } from '$lib';
+  import MyIcon from './MyIcon.svelte'
 </script>
 
-<MyIcon Icon={Ad} />
+<MyIcon Icon={AcademicCap} />
