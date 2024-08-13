@@ -61,5 +61,17 @@
     {/if}
 </svg>
 
-
-
+<!--
+@component
+[Go to docs](https://svelte-heros-v2.codewithshin.com/)
+## Props
+@prop size = ctx.size
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop variation = ctx.variation || "outline"
+@prop strokeWidth = ctx.strokeWidth || '1.5'
+@prop title
+@prop desc
+@prop ariaLabel = "arrow left start on rectangle"
+@prop ...restProps
+-->

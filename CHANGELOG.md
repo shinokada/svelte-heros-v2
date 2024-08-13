@@ -1,5 +1,11 @@
 # svelte-heros-v2
 
+## 2.0.0-next.8
+
+### Patch Changes
+
+- fix: remove svelte:component from Icon.svelte ([`2e59cf824777be77fdb388602277f9c09189c724`](https://github.com/shinokada/svelte-heros-v2/commit/2e59cf824777be77fdb388602277f9c09189c724))
+
 ## 2.0.0-next.7
 
 ### Patch Changes

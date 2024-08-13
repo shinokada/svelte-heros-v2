@@ -18,3 +18,15 @@
   {color}
   {ariaLabel}
 />
+
+<!--
+@component
+[Go to docs](https://svelte-heros-v2.codewithshin.com/)
+## Props
+@prop Icon
+@prop size = '24'
+@prop color='currentColor'
+@prop role = 'img'
+@prop ariaLabel = 'Icon'
+@prop ...restProps
+-->

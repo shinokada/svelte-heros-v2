@@ -5,6 +5,7 @@
     "svelte-heros-v2": "2.0.0-next.1"
   },
   "changesets": [
+    "fluffy-gorillas-sort",
     "long-cobras-hide",
     "moody-grapes-move",
     "nine-beans-hug",
