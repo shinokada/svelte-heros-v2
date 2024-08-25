@@ -1,49 +1,17 @@
-<script context="module" lang="ts">
-  const extra: ListType[] = [
-    {
-      name: 'Outline',
-      icon: ExpandOutline as Component,
-      href: '/outline'
-    },
-    {
-      name: 'Solid',
-      icon: CogOutline as Component,
-      href: '/solid'
-    },
-    {
-      name: 'Mini',
-      icon: GridPlusOutline as Component,
-      href: '/mini'
-    },
-    {
-      name: 'Micro',
-      icon: ChartBar as Component,
-      href: '/micro'
-    }
-  ];
-  export const newSidebarList: ListType[] = [...sidebarList, ...extra];
-</script>
-
 <script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';
-  import type { Component } from 'svelte';
-  import type { ListType } from 'runes-webkit';
-  import { ChartBar } from '$lib';
   import {
     Footer,
     OnThisPage,
     extract,
     Sidebar,
-    removeHyphensAndCapitalize,
-    sidebarList,
-    ExpandOutline,
-    GridPlusOutline,
-    CogOutline
+    removeHyphensAndCapitalize
   } from 'runes-webkit';
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
   import { Runatics } from 'runatics';
+  import { newSidebarList } from './utils/helpers';
 
   let { children, data } = $props();
   const analyticsId = data.ANALYTICS_ID_TWO;
