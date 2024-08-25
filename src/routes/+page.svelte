@@ -7,7 +7,8 @@
     BellActiveAltOutline,
     InfoCircleOutline,
     cards,
-    info
+    info,
+    type CardType
   } from 'runes-webkit';
 
   const brand = {
@@ -63,8 +64,8 @@
 
   <h1 class="my-8 flex justify-center">{removeHyphensAndCapitalize(__NAME__)}</h1>
 
-  <HomeCards cards={filteredCards} />
+  <HomeCards cards={filteredCards as CardType[]} />
   <h2 class="my-8 flex justify-center">Info</h2>
-  <HomeCards cards={newInfo} />
+  <HomeCards cards={newInfo as CardType[]} />
   <TechInfo {...pkg} />
 </div>
