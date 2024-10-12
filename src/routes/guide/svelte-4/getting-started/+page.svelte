@@ -24,13 +24,25 @@
       alt="sponsor"
     /></a
   >
-  <a href="https://www.npmjs.com/package/svelte-heros-v2" rel="nofollow" target="_blank" aria-label="npm svelte-heros-v2"
+  <a
+    href="https://www.npmjs.com/package/svelte-heros-v2"
+    rel="nofollow"
+    target="_blank"
+    aria-label="npm svelte-heros-v2"
     ><img src="https://img.shields.io/npm/v/svelte-heros-v2" alt="npm" /></a
   >
-  <a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank" aria-label="MIT License"
+  <a
+    href="https://opensource.org/licenses/MIT"
+    rel="nofollow"
+    target="_blank"
+    aria-label="MIT License"
     ><img src="https://img.shields.io/github/license/shinokada/svelte-heros-v2" alt="License" /></a
   >
-  <a href="https://www.npmjs.com/package/svelte-heros-v2" rel="nofollow" target="_blank" aria-label="npm svelte-heros-v2"
+  <a
+    href="https://www.npmjs.com/package/svelte-heros-v2"
+    rel="nofollow"
+    target="_blank"
+    aria-label="npm svelte-heros-v2"
     ><img src="https://img.shields.io/npm/dw/svelte-heros-v2.svg" alt="npm" /></a
   >
 </div>

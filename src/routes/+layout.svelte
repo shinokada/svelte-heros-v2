@@ -1,16 +1,40 @@
-
 <script lang="ts">
   import '../app.pcss';
   import { sineIn } from 'svelte/easing';
   import type { Component } from 'svelte';
   import { page } from '$app/stores';
   import { newSidebarList } from './utils/helpers';
-  import { Footer, OnThisPage, extract, removeHyphensAndCapitalize, DotsHorizontalOutline, GithubSolid, random_tailwind_color, XSolid, } from 'runes-webkit';
-  import { Navbar, NavLi, NavBrand, NavUl, uiHelpers, Darkmode, Dropdown,  DropdownUl, DropdownLi, Sidebar, SidebarGroup, SidebarDropdownWrapper, SidebarItem, CloseButton, SidebarBrand } from 'svelte-5-ui-lib';
+  import {
+    Footer,
+    OnThisPage,
+    extract,
+    removeHyphensAndCapitalize,
+    DotsHorizontalOutline,
+    GithubSolid,
+    random_tailwind_color,
+    XSolid
+  } from 'runes-webkit';
+  import {
+    Navbar,
+    NavLi,
+    NavBrand,
+    NavUl,
+    uiHelpers,
+    Darkmode,
+    Dropdown,
+    DropdownUl,
+    DropdownLi,
+    Sidebar,
+    SidebarGroup,
+    SidebarDropdownWrapper,
+    SidebarItem,
+    CloseButton,
+    SidebarBrand
+  } from 'svelte-5-ui-lib';
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import { Runatics } from 'runatics';
   import DynamicCodeBlockStyle from './utils/DynamicCodeBlockStyle.svelte';
-  
+
   type LiType = {
     name: string;
     href: string;
@@ -46,6 +70,7 @@
     href: 'https://codewithshin.com'
   };
   const urlsToIncludeSwitcherAndSidebar = ['/guide/', '/guide2/', '/how-to-use', '/quick-start'];
+  /*eslint no-undef: "off"*/
   const siteName = removeHyphensAndCapitalize(__NAME__);
   const twitterUrl = 'https://twitter.com/shinokada';
   const githubUrl = `https://github.com/shinokada/${__NAME__}`;
@@ -55,8 +80,10 @@
   let navStatus = $state(false);
   let toggleNav = nav.toggle;
   let closeNav = nav.close;
-  let headerCls = 'sticky top-0 z-40 mx-auto w-full flex-none border-b border-gray-200 bg-gray-100 dark:border-gray-600 dark:bg-sky-950';
-  let navClass = 'w-full divide-gray-200 border-gray-200 bg-gray-50 dark_bg_theme text-gray-500 dark:divide-gray-700 dark:border-gray-700 dark:transparent dark:text-gray-400 sm:px-4';
+  let headerCls =
+    'sticky top-0 z-40 mx-auto w-full flex-none border-b border-gray-200 bg-gray-100 dark:border-gray-600 dark:bg-sky-950';
+  let navClass =
+    'w-full divide-gray-200 border-gray-200 bg-gray-50 dark_bg_theme text-gray-500 dark:divide-gray-700 dark:border-gray-700 dark:transparent dark:text-gray-400 sm:px-4';
   let divClass = 'ml-auto w-full';
   let ulclass = 'dark:lg:bg-transparent lg:space-x-4';
   function isIncluded(url: string, allowedUrls: string[]): boolean {
@@ -74,17 +101,20 @@
     easing: sineIn
   };
   // sidebar
-  let iconClass = 'fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg:overflow-y-visible bg-white dark_bg_theme lg:pt-0 lg:block'
+  let iconClass =
+    'fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg:overflow-y-visible bg-white dark_bg_theme lg:pt-0 lg:block';
   $effect(() => {
     navStatus = nav.isOpen;
     dropdownStatus = dropdown.isOpen;
     currentUrl = $page.url.pathname;
-    metaTags = $page.data.pageMetaTags ? deepMerge($page.data.layoutMetaTags, $page.data.pageMetaTags ) : data.layoutMetaTags
+    metaTags = $page.data.pageMetaTags
+      ? deepMerge($page.data.layoutMetaTags, $page.data.pageMetaTags)
+      : data.layoutMetaTags;
     isOpen = sidebarUi.isOpen;
   });
 </script>
 
-{#snippet navLi(lis:LiType[])}
+{#snippet navLi(lis: LiType[])}
   {#each lis as { name, href, Icon }}
     {#if Icon}
       <Icon class="mb-3 h-8 w-8 {random_tailwind_color()}"></Icon>
@@ -100,29 +130,29 @@
   <Navbar {navClass} {toggleNav} {closeNav} {navStatus} breakPoint="lg" fluid div2Class={divClass}>
     {#snippet brand()}
       {#if urlsToIncludeSwitcherAndSidebar.some((path) => currentUrl.startsWith(path))}
-      <button
-        onclick={sidebarUi.toggle}
-        type="button"
-        class="z-100 mr-4 mt-1 lg:hidden"
-        aria-controls="navbar-default"
-      >
-        <span class="sr-only">Toggle sidebar menu</span>
-        <svg
-          class="h-5 w-5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 17 14"
+        <button
+          onclick={sidebarUi.toggle}
+          type="button"
+          class="z-100 mr-4 mt-1 lg:hidden"
+          aria-controls="navbar-default"
         >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M1 1h15M1 7h15M1 13h15"
-          />
-        </svg>
-      </button>
+          <span class="sr-only">Toggle sidebar menu</span>
+          <svg
+            class="h-5 w-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
       {/if}
       {#if siteName}
         <NavBrand
@@ -177,11 +207,25 @@
 
 <div class="lg:flex">
   {#if urlsToIncludeSwitcherAndSidebar.some((path) => currentUrl.startsWith(path))}
-    <Sidebar {isOpen} {closeSidebar} breakpoint="lg" activeClass="flex items-center p-1 text-base font-normal text-white dark:hover:text-white hover:text-gray-900 bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" nonActiveClass="p-1 hover:bg-gray-200" divClass="dark_bg_theme bg-gray-50" class="lg:top-[70px] h-screen dark_bg_theme border-r dark:border-gray-700 border-gray-50">
-      <CloseButton onclick={closeSidebar} color="gray" class="absolute right-1 top-3 p-2 lg:hidden" />
+    <Sidebar
+      {isOpen}
+      {closeSidebar}
+      breakpoint="lg"
+      activeClass="flex items-center p-1 text-base font-normal text-white dark:hover:text-white hover:text-gray-900 bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+      nonActiveClass="p-1 hover:bg-gray-200"
+      divClass="dark_bg_theme bg-gray-50"
+      class="dark_bg_theme h-screen border-r border-gray-50 lg:top-[70px] dark:border-gray-700"
+    >
+      <CloseButton
+        onclick={closeSidebar}
+        color="gray"
+        class="absolute right-1 top-3 p-2 lg:hidden"
+      />
       <SidebarGroup>
         <SidebarBrand>
-          <span class="self-center whitespace-nowrap text-lg font-semibold dark:text-white">Svelte Heros v2</span>
+          <span class="self-center whitespace-nowrap text-lg font-semibold dark:text-white"
+            >Svelte Heros v2</span
+          >
         </SidebarBrand>
         {#each newSidebarList as { name, Icon, children, href }}
           {#if children}
@@ -214,10 +258,10 @@
     </Sidebar>
   {/if}
   {#if urlsToIncludeSwitcherAndSidebar.some((path) => currentUrl.startsWith(path))}
-  <div class="relative">
-    <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />
-  </div>
+    <div class="relative">
+      <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />
+    </div>
   {/if}
-    {@render children()}
+  {@render children()}
 </div>
 <Footer {brand} {lis} />

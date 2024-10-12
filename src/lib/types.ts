@@ -9,17 +9,15 @@ type DescType = {
   desc?: string;
 };
 
-interface BaseProps extends SVGAttributes<SVGElement>{
+export interface BaseProps extends SVGAttributes<SVGElement> {
   size?: string;
   role?: string;
   color?: string;
-  variation?: "solid" | "outline" | "mini" | "micro";
+  variation?: 'solid' | 'outline' | 'mini' | 'micro';
   strokeWidth?: string;
 }
 
-export interface CtxType extends BaseProps {}
-
-export interface Props extends BaseProps{
+export interface Props extends BaseProps {
   title?: TitleType;
   desc?: DescType;
   ariaLabel?: string;

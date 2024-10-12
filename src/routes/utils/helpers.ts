@@ -1,5 +1,11 @@
 import type { Component } from 'svelte';
-import  { type ListType, sidebarList, ExpandOutline, GridPlusOutline, CogOutline } from 'runes-webkit';
+import {
+  type ListType,
+  sidebarList,
+  ExpandOutline,
+  GridPlusOutline,
+  CogOutline
+} from 'runes-webkit';
 import { ChartBar } from '$lib';
 
 const extra: ListType[] = [
