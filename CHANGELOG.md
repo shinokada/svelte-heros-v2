@@ -1,5 +1,11 @@
 # svelte-heros-v2
 
+## 2.0.0-next.9
+
+### Patch Changes
+
+- types: add types.ts ([`bad8d7addfab39502c3bab4bba80bc04567550d5`](https://github.com/shinokada/svelte-heros-v2/commit/bad8d7addfab39502c3bab4bba80bc04567550d5))
+
 ## 2.0.0-next.8
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "svelte-heros-v2",
-  "version": "2.0.0-next.8",
+  "version": "2.0.0-next.9",
   "description": "Hero icon v2 components for Svelte",
   "license": "Apache License 2.0",
   "homepage": "https://svelte-heros-v2.codewithshin.com/",
@@ -35,7 +35,7 @@
     "copy:packagejson": "svelte-lib-helpers package",
     "gen:docs5": "svelte-lib-helpers docs5",
     "gen:docs5FromType": "svelte-lib-helpers docs5FromType",
-    "lib-helpers": "npm run gen:docs5 && npm run package && npm run gen:exports && npm run copy:packagejson"
+    "lib-helpers": "pnpm format && pnpm gen:docs5 && pnpm package && pnpm gen:exports && pnpm copy:packagejson"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.9",
