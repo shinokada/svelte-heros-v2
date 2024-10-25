@@ -11,4 +11,5 @@
   minSize="14"
   maxSize="30"
   defaultSize="16"
+  tab1Class="sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
 />
