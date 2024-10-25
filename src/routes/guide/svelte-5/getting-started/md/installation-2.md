@@ -1,0 +1,1 @@
+pnpm i -D svelte-heros-v2@next

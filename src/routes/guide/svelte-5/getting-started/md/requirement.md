@@ -1,0 +1,1 @@
+- Svelte 5 or later

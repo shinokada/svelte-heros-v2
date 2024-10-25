@@ -1,0 +1,3 @@
+- onclick
+- onkeydown
+- onkeyup

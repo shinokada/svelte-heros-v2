@@ -1,16 +1,23 @@
 {
   "name": "svelte-heros-v2",
-  "version": "1.3.0",
-  "main": "dist/index.js",
+  "version": "2.0.0",
   "description": "Hero icon v2 components for Svelte",
+  "license": "Apache License 2.0",
+  "homepage": "https://svelte-heros-v2.codewithshin.com/",
   "author": {
     "name": "Shinichi Okada",
     "email": "connect@codewithshin.com",
-    "url": "https://blog.codewithshin.com"
+    "url": "https://codewithshin.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinokada/svelte-heros-v2"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=18.0.0"
   },
   "bugs": "https://github.com/shinokada/svelte-heros-v2/issues",
-  "homepage": "https://svelte-heros-v2.codewithshin.com",
-  "license": "MIT",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
@@ -20,71 +27,79 @@
     "test": "npm run test:integration && npm run test:unit",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "lint": "prettier --check --plugin prettier-plugin-svelte . && eslint .",
-    "format": "prettier --write  --plugin prettier-plugin-svelte .",
+    "lint": "prettier --check . && eslint .",
+    "format": "prettier --write .",
     "test:integration": "playwright test",
     "test:unit": "vitest",
     "gen:exports": "svelte-lib-helpers exports",
-    "gen:docs": "svelte-lib-helpers docs",
-    "gen:compo-data": "svelte-lib-helpers compo-data",
-    "copy:package": "svelte-lib-helpers package",
-    "lib-helpers": "npm run format && npm run gen:docs && npm run build && npm run gen:exports && npm run copy:package",
-    "package:publish": "standard-version && git push --follow-tags origin main && npm publish"
+    "copy:packagejson": "svelte-lib-helpers package",
+    "gen:docs5": "svelte-lib-helpers docs5",
+    "gen:docs5FromType": "svelte-lib-helpers docs5FromType",
+    "lib-helpers": "pnpm format && pnpm gen:docs5 && pnpm package && pnpm gen:exports && pnpm copy:packagejson"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.9",
+    "@playwright/test": "^1.48.1",
+    "@sveltejs/adapter-auto": "^3.3.0",
+    "@sveltejs/kit": "^2.7.2",
+    "@sveltejs/package": "^2.3.6",
+    "@sveltejs/vite-plugin-svelte": "4.0.0",
+    "@svitejs/changesets-changelog-github-compact": "^1.2.0",
+    "@types/eslint": "^9.6.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-svelte": "2.46.0",
+    "globals": "^15.11.0",
+    "highlight.js": "^11.10.0",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.2.7",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "publint": "^0.2.12",
+    "runatics": "^0.1.3",
+    "runes-meta-tags": "^0.4.0",
+    "runes-webkit": "^0.9.36",
+    "svelte": "5.1.2",
+    "svelte-5-ui-lib": "^0.9.23",
+    "svelte-check": "^4.0.5",
+    "svelte-lib-helpers": "^0.4.16",
+    "svelte-preprocess": "^6.0.3",
+    "svelte-rune-highlight": "^0.5.12",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss": "^3.4.14",
+    "tslib": "^2.8.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.11.0",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.3"
   },
   "files": [
-    "dist"
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*"
   ],
-  "devDependencies": {
-    "@changesets/cli": "^2.27.1",
-    "@floating-ui/dom": "^1.6.5",
-    "@playwright/test": "^1.44.0",
-    "@sveltejs/adapter-auto": "^3.2.0",
-    "@sveltejs/kit": "^2.5.7",
-    "@sveltejs/package": "^2.3.1",
-    "@sveltejs/vite-plugin-svelte": "^3.1.0",
-    "@svitejs/changesets-changelog-github-compact": "^1.1.0",
-    "@typescript-eslint/eslint-plugin": "^7.8.0",
-    "@typescript-eslint/parser": "^7.8.0",
-    "autoprefixer": "^10.4.19",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-svelte": "^2.39.0",
-    "flowbite-svelte": "^0.44.24",
-    "mdsvex": "^0.11.0",
-    "postcss": "^8.4.38",
-    "postcss-load-config": "^5.1.0",
-    "prettier": "^3.2.5",
-    "prettier-plugin-svelte": "^3.2.3",
-    "publint": "^0.2.7",
-    "svelte": "^4.2.16",
-    "svelte-check": "^3.7.1",
-    "svelte-lib-helpers": "^0.4.5",
-    "svelte-meta-tags": "^3.1.2",
-    "svelte-preprocess": "^5.1.4",
-    "tailwind-merge": "^1.14.0",
-    "tailwindcss": "^3.4.3",
-    "tslib": "^2.6.2",
-    "typescript": "^5.4.5",
-    "vite": "^5.2.11",
-    "vitest": "^0.34.6"
+  "peerDependencies": {
+    "svelte": "^5.0.0"
   },
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
   "keywords": [
     "svelte",
+    "runes",
     "sveltekit",
-    "Hero icons",
+    "font-awesome",
+    "heroicons",
     "svg icons",
     "icons"
   ],
-  "peerDependencies": {
-    "svelte": "^3.54.0 || ^4.0.0 || ^5.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shinokada/svelte-heros-v2"
-  },
+  "contributors": [
+    {
+      "name": "tailwindlabs/heroicons",
+      "url": "https://github.com/tailwindlabs/heroicons"
+    }
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -234,6 +249,38 @@
       "types": "./dist/ArrowTrendingUp.svelte.d.ts",
       "svelte": "./dist/ArrowTrendingUp.svelte"
     },
+    "./ArrowTurnDownLeft.svelte": {
+      "types": "./dist/ArrowTurnDownLeft.svelte.d.ts",
+      "svelte": "./dist/ArrowTurnDownLeft.svelte"
+    },
+    "./ArrowTurnDownRight.svelte": {
+      "types": "./dist/ArrowTurnDownRight.svelte.d.ts",
+      "svelte": "./dist/ArrowTurnDownRight.svelte"
+    },
+    "./ArrowTurnLeftDown.svelte": {
+      "types": "./dist/ArrowTurnLeftDown.svelte.d.ts",
+      "svelte": "./dist/ArrowTurnLeftDown.svelte"
+    },
+    "./ArrowTurnLeftUp.svelte": {
+      "types": "./dist/ArrowTurnLeftUp.svelte.d.ts",
+      "svelte": "./dist/ArrowTurnLeftUp.svelte"
+    },
+    "./ArrowTurnRightDown.svelte": {
+      "types": "./dist/ArrowTurnRightDown.svelte.d.ts",
+      "svelte": "./dist/ArrowTurnRightDown.svelte"
+    },
+    "./ArrowTurnRightUp.svelte": {
+      "types": "./dist/ArrowTurnRightUp.svelte.d.ts",
+      "svelte": "./dist/ArrowTurnRightUp.svelte"
+    },
+    "./ArrowTurnUpLeft.svelte": {
+      "types": "./dist/ArrowTurnUpLeft.svelte.d.ts",
+      "svelte": "./dist/ArrowTurnUpLeft.svelte"
+    },
+    "./ArrowTurnUpRight.svelte": {
+      "types": "./dist/ArrowTurnUpRight.svelte.d.ts",
+      "svelte": "./dist/ArrowTurnUpRight.svelte"
+    },
     "./ArrowUp.svelte": {
       "types": "./dist/ArrowUp.svelte.d.ts",
       "svelte": "./dist/ArrowUp.svelte"
@@ -374,6 +421,10 @@
       "types": "./dist/BellSnooze.svelte.d.ts",
       "svelte": "./dist/BellSnooze.svelte"
     },
+    "./Bold.svelte": {
+      "types": "./dist/Bold.svelte.d.ts",
+      "svelte": "./dist/Bold.svelte"
+    },
     "./Bolt.svelte": {
       "types": "./dist/Bolt.svelte.d.ts",
       "svelte": "./dist/Bolt.svelte"
@@ -433,6 +484,10 @@
     "./Calendar.svelte": {
       "types": "./dist/Calendar.svelte.d.ts",
       "svelte": "./dist/Calendar.svelte"
+    },
+    "./CalendarDateRange.svelte": {
+      "types": "./dist/CalendarDateRange.svelte.d.ts",
+      "svelte": "./dist/CalendarDateRange.svelte"
     },
     "./CalendarDays.svelte": {
       "types": "./dist/CalendarDays.svelte.d.ts",
@@ -650,6 +705,10 @@
       "types": "./dist/DeviceTablet.svelte.d.ts",
       "svelte": "./dist/DeviceTablet.svelte"
     },
+    "./Divide.svelte": {
+      "types": "./dist/Divide.svelte.d.ts",
+      "svelte": "./dist/Divide.svelte"
+    },
     "./Document.svelte": {
       "types": "./dist/Document.svelte.d.ts",
       "svelte": "./dist/Document.svelte"
@@ -669,6 +728,30 @@
     "./DocumentCheck.svelte": {
       "types": "./dist/DocumentCheck.svelte.d.ts",
       "svelte": "./dist/DocumentCheck.svelte"
+    },
+    "./DocumentCurrencyBangladeshi.svelte": {
+      "types": "./dist/DocumentCurrencyBangladeshi.svelte.d.ts",
+      "svelte": "./dist/DocumentCurrencyBangladeshi.svelte"
+    },
+    "./DocumentCurrencyDollar.svelte": {
+      "types": "./dist/DocumentCurrencyDollar.svelte.d.ts",
+      "svelte": "./dist/DocumentCurrencyDollar.svelte"
+    },
+    "./DocumentCurrencyEuro.svelte": {
+      "types": "./dist/DocumentCurrencyEuro.svelte.d.ts",
+      "svelte": "./dist/DocumentCurrencyEuro.svelte"
+    },
+    "./DocumentCurrencyPound.svelte": {
+      "types": "./dist/DocumentCurrencyPound.svelte.d.ts",
+      "svelte": "./dist/DocumentCurrencyPound.svelte"
+    },
+    "./DocumentCurrencyRupee.svelte": {
+      "types": "./dist/DocumentCurrencyRupee.svelte.d.ts",
+      "svelte": "./dist/DocumentCurrencyRupee.svelte"
+    },
+    "./DocumentCurrencyYen.svelte": {
+      "types": "./dist/DocumentCurrencyYen.svelte.d.ts",
+      "svelte": "./dist/DocumentCurrencyYen.svelte"
     },
     "./DocumentDuplicate.svelte": {
       "types": "./dist/DocumentDuplicate.svelte.d.ts",
@@ -709,6 +792,10 @@
     "./EnvelopeOpen.svelte": {
       "types": "./dist/EnvelopeOpen.svelte.d.ts",
       "svelte": "./dist/EnvelopeOpen.svelte"
+    },
+    "./Equals.svelte": {
+      "types": "./dist/Equals.svelte.d.ts",
+      "svelte": "./dist/Equals.svelte"
     },
     "./ExclamationCircle.svelte": {
       "types": "./dist/ExclamationCircle.svelte.d.ts",
@@ -810,6 +897,18 @@
       "types": "./dist/GlobeEuropeAfrica.svelte.d.ts",
       "svelte": "./dist/GlobeEuropeAfrica.svelte"
     },
+    "./H1.svelte": {
+      "types": "./dist/H1.svelte.d.ts",
+      "svelte": "./dist/H1.svelte"
+    },
+    "./H2.svelte": {
+      "types": "./dist/H2.svelte.d.ts",
+      "svelte": "./dist/H2.svelte"
+    },
+    "./H3.svelte": {
+      "types": "./dist/H3.svelte.d.ts",
+      "svelte": "./dist/H3.svelte"
+    },
     "./HandRaised.svelte": {
       "types": "./dist/HandRaised.svelte.d.ts",
       "svelte": "./dist/HandRaised.svelte"
@@ -862,6 +961,10 @@
       "types": "./dist/InformationCircle.svelte.d.ts",
       "svelte": "./dist/InformationCircle.svelte"
     },
+    "./Italic.svelte": {
+      "types": "./dist/Italic.svelte.d.ts",
+      "svelte": "./dist/Italic.svelte"
+    },
     "./Key.svelte": {
       "types": "./dist/Key.svelte.d.ts",
       "svelte": "./dist/Key.svelte"
@@ -881,6 +984,10 @@
     "./Link.svelte": {
       "types": "./dist/Link.svelte.d.ts",
       "svelte": "./dist/Link.svelte"
+    },
+    "./LinkSlash.svelte": {
+      "types": "./dist/LinkSlash.svelte.d.ts",
+      "svelte": "./dist/LinkSlash.svelte"
     },
     "./ListBullet.svelte": {
       "types": "./dist/ListBullet.svelte.d.ts",
@@ -954,6 +1061,10 @@
       "types": "./dist/NoSymbol.svelte.d.ts",
       "svelte": "./dist/NoSymbol.svelte"
     },
+    "./NumberedList.svelte": {
+      "types": "./dist/NumberedList.svelte.d.ts",
+      "svelte": "./dist/NumberedList.svelte"
+    },
     "./PaintBrush.svelte": {
       "types": "./dist/PaintBrush.svelte.d.ts",
       "svelte": "./dist/PaintBrush.svelte"
@@ -981,6 +1092,10 @@
     "./PencilSquare.svelte": {
       "types": "./dist/PencilSquare.svelte.d.ts",
       "svelte": "./dist/PencilSquare.svelte"
+    },
+    "./PercentBadge.svelte": {
+      "types": "./dist/PercentBadge.svelte.d.ts",
+      "svelte": "./dist/PercentBadge.svelte"
     },
     "./Phone.svelte": {
       "types": "./dist/Phone.svelte.d.ts",
@@ -1130,6 +1245,10 @@
       "types": "./dist/SignalSlash.svelte.d.ts",
       "svelte": "./dist/SignalSlash.svelte"
     },
+    "./Slash.svelte": {
+      "types": "./dist/Slash.svelte.d.ts",
+      "svelte": "./dist/Slash.svelte"
+    },
     "./Sparkles.svelte": {
       "types": "./dist/Sparkles.svelte.d.ts",
       "svelte": "./dist/Sparkles.svelte"
@@ -1170,6 +1289,10 @@
       "types": "./dist/StopCircle.svelte.d.ts",
       "svelte": "./dist/StopCircle.svelte"
     },
+    "./Strikethrough.svelte": {
+      "types": "./dist/Strikethrough.svelte.d.ts",
+      "svelte": "./dist/Strikethrough.svelte"
+    },
     "./Sun.svelte": {
       "types": "./dist/Sun.svelte.d.ts",
       "svelte": "./dist/Sun.svelte"
@@ -1205,6 +1328,10 @@
     "./Tv.svelte": {
       "types": "./dist/Tv.svelte.d.ts",
       "svelte": "./dist/Tv.svelte"
+    },
+    "./Underline.svelte": {
+      "types": "./dist/Underline.svelte.d.ts",
+      "svelte": "./dist/Underline.svelte"
     },
     "./User.svelte": {
       "types": "./dist/User.svelte.d.ts",

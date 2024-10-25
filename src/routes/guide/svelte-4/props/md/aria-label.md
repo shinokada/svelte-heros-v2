@@ -1,0 +1,1 @@
+<AcademicCap ariaLabel="red academic cap" class="text-red-500" />
