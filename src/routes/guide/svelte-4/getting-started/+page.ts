@@ -4,7 +4,7 @@ const title = 'Getting Started - Svelte Heros v2 v1';
 const description = 'How to get started with Svelte Heros v2 v1';
 const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-heros-v2';
 
-export const load = ({ url }) => {
+export const load = () => {
   const pageMetaTags: MetaProps = {
     title,
     description,
