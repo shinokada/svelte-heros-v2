@@ -57,11 +57,11 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-svelte:
-        specifier: ^3.2.8
-        version: 3.2.8(prettier@3.3.3)(svelte@5.2.7)
+        specifier: ^3.3.0
+        version: 3.3.0(prettier@3.3.3)(svelte@5.2.7)
       prettier-plugin-tailwindcss:
         specifier: ^0.6.9
-        version: 0.6.9(prettier-plugin-svelte@3.2.8(prettier@3.3.3)(svelte@5.2.7))(prettier@3.3.3)
+        version: 0.6.9(prettier-plugin-svelte@3.3.0(prettier@3.3.3)(svelte@5.2.7))(prettier@3.3.3)
       publint:
         specifier: ^0.2.12
         version: 0.2.12
@@ -72,14 +72,14 @@ importers:
         specifier: ^0.4.2
         version: 0.4.2(svelte@5.2.7)
       runes-webkit:
-        specifier: ^0.9.44
-        version: 0.9.44(@sveltejs/kit@2.8.1(@sveltejs/vite-plugin-svelte@4.0.1(svelte@5.2.7)(vite@5.4.11))(svelte@5.2.7)(vite@5.4.11))(highlight.js@11.10.0)(svelte-5-ui-lib@0.10.10(svelte@5.2.7)(tailwindcss@3.4.15))(svelte-rune-highlight@0.5.13(svelte@5.2.7))(svelte@5.2.7)(tailwindcss@3.4.15)
+        specifier: ^0.9.46
+        version: 0.9.46(@sveltejs/kit@2.8.1(@sveltejs/vite-plugin-svelte@4.0.1(svelte@5.2.7)(vite@5.4.11))(svelte@5.2.7)(vite@5.4.11))(highlight.js@11.10.0)(svelte-5-ui-lib@0.11.0(svelte@5.2.7)(tailwindcss@3.4.15))(svelte-rune-highlight@0.5.13(svelte@5.2.7))(svelte@5.2.7)(tailwind-merge@2.5.4)(tailwind-variants@0.3.0(tailwindcss@3.4.15))
       svelte:
         specifier: 5.2.7
         version: 5.2.7
       svelte-5-ui-lib:
-        specifier: ^0.10.10
-        version: 0.10.10(svelte@5.2.7)(tailwindcss@3.4.15)
+        specifier: ^0.11.0
+        version: 0.11.0(svelte@5.2.7)(tailwindcss@3.4.15)
       svelte-check:
         specifier: ^4.0.9
         version: 4.0.9(svelte@5.2.7)(typescript@5.6.3)
@@ -796,8 +796,8 @@ packages:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
 
-  caniuse-lite@1.0.30001682:
-    resolution: {integrity: sha512-rJFwz3yRO6NU6Y8aEJKPzS4fngOE8j05pd33FW5Uk9v9b5StWNhGFeVpogwS2FFl78wNDGW5NsVvlwySPEDU5w==}
+  caniuse-lite@1.0.30001683:
+    resolution: {integrity: sha512-iqmNnThZ0n70mNwvxpEC2nBJ037ZHZUoBI5Gorh1Mw6IlEAZujEoU1tXA628iZfzm7R9FvFzxbfdgml82a3k8Q==}
 
   chai@5.1.2:
     resolution: {integrity: sha512-aGtmf24DW6MLHHG5gCx4zaI3uBq3KRtxeVs0DjFH6Z0rDNbsvTxFASFvdj79pxjxZ8/5u3PIiN3IwEIQkiiuPw==}
@@ -1592,8 +1592,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier-plugin-svelte@3.2.8:
-    resolution: {integrity: sha512-PAHmmU5cGZdnhW4mWhmvxuG2PVbbHIxUuPOdUKvfE+d4Qt2d29iU5VWrPdsaW5YqVEE0nqhlvN4eoKmVMpIF3Q==}
+  prettier-plugin-svelte@3.3.0:
+    resolution: {integrity: sha512-iNoYiQUx4zwqbQDW/bk0WR75w+QiY4fHJQpGQ5v8Yr7X5m7YoSvs2buUnhoYFXNAL32ULVmrjPSc0vVOHJsO0Q==}
     peerDependencies:
       prettier: ^3.0.0
       svelte: ^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0
@@ -1731,15 +1731,17 @@ packages:
     peerDependencies:
       svelte: ^5.0.0
 
-  runes-webkit@0.9.44:
-    resolution: {integrity: sha512-V9RTOCgfqNkm8Ue1CcIuzAeR9mkrIecpe7xLFfsiau6o8c27HS8l91NzpFlyifaz4qksVZN4vBYPROYerUoEog==}
+  runes-webkit@0.9.46:
+    resolution: {integrity: sha512-M0KTB0/UfWX3Y5XyeQT6rEAUy5Q4scShMI7xeE593Jmx3Rv9+MpG0AHwhEiFW+hSNz3sX7zpJNWTy7v0FhqCkg==}
     engines: {node: '>=18.0.0', npm: '>=7.0.0'}
     peerDependencies:
       '@sveltejs/kit': ^2.5.5
       highlight.js: ^11.10.0
-      svelte: ^5.0.0-next.95
-      svelte-5-ui-lib: ^0.10.0
+      svelte: ^5.0.0
+      svelte-5-ui-lib: ^0.11.0
       svelte-rune-highlight: ^0.5.11
+      tailwind-merge: ^2.5.4
+      tailwind-variants: ^0.3.0
 
   sade@1.8.1:
     resolution: {integrity: sha512-xal3CZX1Xlo/k4ApwCFrHVACi9fBqJ7V+mwhBsuf/1IOKbBy098Fex+Wa/5QMubw09pSZ/u8EY8PWgevJsXp1A==}
@@ -1832,8 +1834,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svelte-5-ui-lib@0.10.10:
-    resolution: {integrity: sha512-QnpWcRxvTggE62efDey3RO5g5lZ3MT3QGeLt5ubcUt0tZDH0W0y0CHWv385kRE7XxvWALF3mHiGCeibEO0cW1Q==}
+  svelte-5-ui-lib@0.11.0:
+    resolution: {integrity: sha512-TV+njjEzlSBIzsMC7G7kBChSCbXjR2cCN4DWx3RlFxNIYJs6+BpI2J7xTwe9M/Y0PVG9OSWimjmBcvIugqMECQ==}
     engines: {node: '>=20.0.0', npm: '>=10.0.0'}
     peerDependencies:
       svelte: ^5.0.0
@@ -1947,8 +1949,8 @@ packages:
   tailwind-merge@2.5.4:
     resolution: {integrity: sha512-0q8cfZHMu9nuYP/b5Shb7Y7Sh1B7Nnl5GqNr1U+n2p6+mybvRtayrQ+0042Z5byvTA8ihjlP8Odo8/VnHbZu4Q==}
 
-  tailwind-variants@0.2.1:
-    resolution: {integrity: sha512-2xmhAf4UIc3PijOUcJPA1LP4AbxhpcHuHM2C26xM0k81r0maAO6uoUSHl3APmvHZcY5cZCY/bYuJdfFa4eGoaw==}
+  tailwind-variants@0.3.0:
+    resolution: {integrity: sha512-ho2k5kn+LB1fT5XdNS3Clb96zieWxbStE9wNLK7D0AV64kdZMaYzAKo0fWl6fXLPY99ffF9oBJnIj5escEl/8A==}
     engines: {node: '>=16.x', pnpm: '>=7.x'}
     peerDependencies:
       tailwindcss: '*'
@@ -2854,7 +2856,7 @@ snapshots:
   autoprefixer@10.4.20(postcss@8.4.49):
     dependencies:
       browserslist: 4.24.2
-      caniuse-lite: 1.0.30001682
+      caniuse-lite: 1.0.30001683
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
@@ -2886,7 +2888,7 @@ snapshots:
 
   browserslist@4.24.2:
     dependencies:
-      caniuse-lite: 1.0.30001682
+      caniuse-lite: 1.0.30001683
       electron-to-chromium: 1.5.63
       node-releases: 2.0.18
       update-browserslist-db: 1.1.1(browserslist@4.24.2)
@@ -2897,7 +2899,7 @@ snapshots:
 
   camelcase-css@2.0.1: {}
 
-  caniuse-lite@1.0.30001682: {}
+  caniuse-lite@1.0.30001683: {}
 
   chai@5.1.2:
     dependencies:
@@ -3637,16 +3639,16 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-svelte@3.2.8(prettier@3.3.3)(svelte@5.2.7):
+  prettier-plugin-svelte@3.3.0(prettier@3.3.3)(svelte@5.2.7):
     dependencies:
       prettier: 3.3.3
       svelte: 5.2.7
 
-  prettier-plugin-tailwindcss@0.6.9(prettier-plugin-svelte@3.2.8(prettier@3.3.3)(svelte@5.2.7))(prettier@3.3.3):
+  prettier-plugin-tailwindcss@0.6.9(prettier-plugin-svelte@3.3.0(prettier@3.3.3)(svelte@5.2.7))(prettier@3.3.3):
     dependencies:
       prettier: 3.3.3
     optionalDependencies:
-      prettier-plugin-svelte: 3.2.8(prettier@3.3.3)(svelte@5.2.7)
+      prettier-plugin-svelte: 3.3.0(prettier@3.3.3)(svelte@5.2.7)
 
   prettier@2.8.8: {}
 
@@ -3732,17 +3734,15 @@ snapshots:
       deepmerge: 4.3.1
       svelte: 5.2.7
 
-  runes-webkit@0.9.44(@sveltejs/kit@2.8.1(@sveltejs/vite-plugin-svelte@4.0.1(svelte@5.2.7)(vite@5.4.11))(svelte@5.2.7)(vite@5.4.11))(highlight.js@11.10.0)(svelte-5-ui-lib@0.10.10(svelte@5.2.7)(tailwindcss@3.4.15))(svelte-rune-highlight@0.5.13(svelte@5.2.7))(svelte@5.2.7)(tailwindcss@3.4.15):
+  runes-webkit@0.9.46(@sveltejs/kit@2.8.1(@sveltejs/vite-plugin-svelte@4.0.1(svelte@5.2.7)(vite@5.4.11))(svelte@5.2.7)(vite@5.4.11))(highlight.js@11.10.0)(svelte-5-ui-lib@0.11.0(svelte@5.2.7)(tailwindcss@3.4.15))(svelte-rune-highlight@0.5.13(svelte@5.2.7))(svelte@5.2.7)(tailwind-merge@2.5.4)(tailwind-variants@0.3.0(tailwindcss@3.4.15)):
     dependencies:
       '@sveltejs/kit': 2.8.1(@sveltejs/vite-plugin-svelte@4.0.1(svelte@5.2.7)(vite@5.4.11))(svelte@5.2.7)(vite@5.4.11)
       highlight.js: 11.10.0
       svelte: 5.2.7
-      svelte-5-ui-lib: 0.10.10(svelte@5.2.7)(tailwindcss@3.4.15)
+      svelte-5-ui-lib: 0.11.0(svelte@5.2.7)(tailwindcss@3.4.15)
       svelte-rune-highlight: 0.5.13(svelte@5.2.7)
       tailwind-merge: 2.5.4
-      tailwind-variants: 0.2.1(tailwindcss@3.4.15)
-    transitivePeerDependencies:
-      - tailwindcss
+      tailwind-variants: 0.3.0(tailwindcss@3.4.15)
 
   sade@1.8.1:
     dependencies:
@@ -3825,7 +3825,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-5-ui-lib@0.10.10(svelte@5.2.7)(tailwindcss@3.4.15):
+  svelte-5-ui-lib@0.11.0(svelte@5.2.7)(tailwindcss@3.4.15):
     dependencies:
       '@floating-ui/dom': 1.6.12
       apexcharts: 3.54.1
@@ -3929,7 +3929,7 @@ snapshots:
 
   tailwind-merge@2.5.4: {}
 
-  tailwind-variants@0.2.1(tailwindcss@3.4.15):
+  tailwind-variants@0.3.0(tailwindcss@3.4.15):
     dependencies:
       tailwind-merge: 2.5.4
       tailwindcss: 3.4.15
