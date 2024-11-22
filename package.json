@@ -15,7 +15,7 @@
   },
   "engines": {
     "npm": ">=7.0.0",
-    "node": ">=18.0.0"
+    "node": "^20.0.0"
   },
   "bugs": "https://github.com/shinokada/svelte-heros-v2/issues",
   "scripts": {
