@@ -12,7 +12,8 @@
     DotsHorizontalOutline,
     GithubSolid,
     random_tailwind_color,
-    XSolid, Bluesky
+    XSolid,
+    Bluesky
   } from 'runes-webkit';
   import {
     Navbar,
@@ -182,9 +183,9 @@
             {closeDropdown}
             params={dropdownTransitionParams}
             class="absolute -left-[88px] top-2 w-12 p-1.5"
-					>
-						<DropdownUl class="py-0">
-							{#if blueskyUrl}
+          >
+            <DropdownUl class="py-0">
+              {#if blueskyUrl}
                 <DropdownLi href={blueskyUrl} target="_blank" aClass="p-0.5 m-0">
                   <Bluesky size="30" />
                 </DropdownLi>

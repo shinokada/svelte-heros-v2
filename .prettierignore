@@ -17,3 +17,4 @@ playwright-report
 .vercel
 
 *.md
+/src/routes/utils/highlight
