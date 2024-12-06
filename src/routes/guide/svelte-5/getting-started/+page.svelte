@@ -1,5 +1,36 @@
 <script lang="ts">
   import { HighlightCompo, Code, H2 } from 'runes-webkit';
+  import { GitHubSponsor, type GitHubSponsorPropsType,  NpmVersion, type NpmVersionPropsType, License, type LicensePropsType, NpmDownload, type NpmDownloadPropsType } from 'svelte-shields';
+
+  const sponsor: GitHubSponsorPropsType = {
+    user: 'shinokada',
+    logo:'github',
+    color: 'red',
+    link: ['https://github.com/sponsors/shinokada', 'https://github.com/sponsors/shinokada']
+  };
+  const npmversion: NpmVersionPropsType = {
+    packageName: 'svelte-heros-v2',
+    color: 'red',
+    logo:'svelte',
+    link: [
+      'https://www.npmjs.com/package/svelte-heros-v2',
+      'https://www.npmjs.com/package/svelte-heros-v2?activeTab=versions'
+    ]
+  };
+  const license: LicensePropsType = {
+    source: 'github',
+    github_user: 'shinokada',
+    github_repo: 'svelte-heros-v2',
+    link: [
+      'https://github.com/shinokada/svelte-heros-v2/blob/master/LICENSE',
+      'https://github.com/shinokada/svelte-heros-v2/blob/master/LICENSE'
+    ]
+  };
+  const downloads: NpmDownloadPropsType = {
+    packageName: 'svelte-heros-v2',
+    link: ['https://www.npmjs.com/package/svelte-heros-v2']
+  };
+
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
     import: 'default',
@@ -10,33 +41,10 @@
 <h1>Getting Started - Svelte Heros v2 v2</h1>
 
 <div class="my-8 flex gap-2">
-  <a href="https://github.com/sponsors/shinokada" target="_blank" aria-label="Sponsor @shinokada"
-    ><img
-      src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86"
-      alt="sponsor"
-    /></a
-  >
-  <a
-    href="https://www.npmjs.com/package/svelte-heros-v2"
-    rel="nofollow"
-    target="_blank"
-    aria-label="npm svelte-heros-v2"
-    ><img src="https://img.shields.io/npm/v/svelte-heros-v2/next" alt="npm" /></a
-  >
-  <a
-    href="https://opensource.org/licenses/MIT"
-    rel="nofollow"
-    target="_blank"
-    aria-label="MIT License"
-    ><img src="https://img.shields.io/github/license/shinokada/svelte-heros-v2" alt="License" /></a
-  >
-  <a
-    href="https://www.npmjs.com/package/svelte-heros-v2"
-    rel="nofollow"
-    target="_blank"
-    aria-label="npm svelte-heros-v2"
-    ><img src="https://img.shields.io/npm/dw/svelte-heros-v2.svg" alt="npm" /></a
-  >
+  <GitHubSponsor {...sponsor} />
+  <NpmVersion {...npmversion} />
+  <License {...license} />
+  <NpmDownload {...downloads} />
 </div>
 
 <H2>Requirements</H2>
