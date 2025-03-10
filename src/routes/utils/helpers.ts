@@ -30,4 +30,8 @@ const extra: ListType[] = [
     href: '/micro'
   }
 ];
-export const newSidebarList: ListType[] = [...sidebarList, ...extra];
+
+export const newSidebarList: ListType[] = [
+	...(Array.isArray(sidebarList) ? sidebarList : []),
+	...extra
+];

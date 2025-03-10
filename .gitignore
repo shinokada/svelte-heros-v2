@@ -1,19 +1,25 @@
-.DS_Store
+test-results
 node_modules
-/build
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
 /.svelte-kit
-/package
+/build
+/dist
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
 .env
 .env.*
 !.env.example
-<<<<<<< HEAD
+!.env.test
+
+# Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-src/routes/testdir
-test-results/
-=======
-.vercel
-src/routes/testdir
-/dist
-/test-results
->>>>>>> svelte-5-runes

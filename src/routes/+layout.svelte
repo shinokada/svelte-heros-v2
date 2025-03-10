@@ -1,8 +1,8 @@
 <script lang="ts">
-  import '../app.pcss';
+  import '../app.css';
   import { sineIn } from 'svelte/easing';
   import type { Component } from 'svelte';
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import { newSidebarList } from './utils/helpers';
   import {
     Footer,
@@ -36,9 +36,9 @@
   import { Runatics } from 'runatics';
   import DynamicCodeBlockStyle from './utils/DynamicCodeBlockStyle.svelte';
 
-  let activeUrl = $state($page.url.pathname);
+  let activeUrl = $state(page.url.pathname);
   $effect(() => {
-    activeUrl = $page.url.pathname;
+    activeUrl = page.url.pathname;
   });
 
   type LiType = {
@@ -50,8 +50,8 @@
   const analyticsId = data.ANALYTICS_ID_TWO;
   // metaTags
   let metaTags = $state(
-    $page.data.pageMetaTags
-      ? deepMerge($page.data.layoutMetaTags, $page.data.pageMetaTags)
+    page.data.pageMetaTags
+      ? deepMerge(page.data.layoutMetaTags, page.data.pageMetaTags)
       : data.layoutMetaTags
   );
   // sidebar
@@ -59,7 +59,7 @@
   let isOpen = $state(false);
   const closeSidebar = sidebarUi.close;
 
-  let currentUrl = $state($page.url.pathname);
+  let currentUrl = $state(page.url.pathname);
   const hasPath = (key: string) => currentUrl.includes(key);
 
   const lis = [
@@ -87,7 +87,7 @@
   let toggleNav = nav.toggle;
   let closeNav = nav.close;
   let headerCls =
-    'sticky top-0 z-40 mx-auto w-full flex-none border-b border-gray-200 bg-gray-100 dark:border-gray-600 dark:bg-sky-950';
+    'sticky top-0 z-40 mx-auto w-full flex-none border-b border-gray-200 bg-gray-100 dark:border-gray-600 dark_bg_theme';
   let navClass =
     'w-full divide-gray-200 border-gray-200 bg-gray-50 dark_bg_theme text-gray-500 dark:divide-gray-700 dark:border-gray-700 dark:transparent dark:text-gray-400 sm:px-4';
   let divClass = 'ml-auto w-full';
@@ -111,9 +111,9 @@
   $effect(() => {
     navStatus = nav.isOpen;
     dropdownStatus = dropdown.isOpen;
-    currentUrl = $page.url.pathname;
-    metaTags = $page.data.pageMetaTags
-      ? deepMerge($page.data.layoutMetaTags, $page.data.pageMetaTags)
+    currentUrl = page.url.pathname;
+    metaTags = page.data.pageMetaTags
+      ? deepMerge(page.data.layoutMetaTags, page.data.pageMetaTags)
       : data.layoutMetaTags;
     isOpen = sidebarUi.isOpen;
   });

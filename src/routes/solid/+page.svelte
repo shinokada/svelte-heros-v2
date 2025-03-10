@@ -9,4 +9,5 @@
   variation="solid"
   title="Solid Icons - Svelte Heros v2"
   tab1Class="sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
+  contentClass="rounded-lg dark_bg_theme mt-4"
 />
