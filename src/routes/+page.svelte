@@ -45,8 +45,7 @@
     runesMetaTagsVersion: __RUNES_METATAGS_VERSION__,
     svelteVersion: __SVELTE_VERSION__,
     svelteKitVersion: __SVELTEKIT_VERSION__,
-    flowbitesvelte: __FLOWBITE_SVELTE_VERSION__,
-    svelteRuneHighlight: __SVELTE_RUNE_HIGHLIGHT_VERSION__,
+    svelte5uilibVersion: __SVELTE_5_UI_LIB_VERSION__,    svelteRuneHighlight: __SVELTE_RUNE_HIGHLIGHT_VERSION__,
     viteVersion: __VITE_VERSION__,
     tailwindcssVersion: __TAILWINDCSS_VERSION__,
   };
