@@ -2,7 +2,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@source "../node_modules/svelte-5-ui-lib/dist";
+@source "../node_modules/flowbite-svelte/dist";
 @source "../node_modules/runes-webkit/dist";
 
 @theme {
@@ -76,7 +76,11 @@ code {
   @apply mx-auto my-4 w-full overflow-auto rounded-xl border border-gray-200 bg-gray-50 bg-gradient-to-r p-2 text-sm text-gray-600 sm:p-6 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-400;
 }
 
-.dark_bg_theme {
+.dark-bg-theme {
   @apply dark:bg-zinc-950;
+}
+
+.dark-bg-theme2 {
+  @apply dark:bg-zinc-900;
 }
 

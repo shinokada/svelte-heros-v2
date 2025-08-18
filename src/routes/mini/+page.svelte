@@ -12,5 +12,5 @@
   maxSize="30"
   defaultSize="20"
   tab1Class="sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
-  contentClass="rounded-lg dark_bg_theme mt-4"
+  contentClass="rounded-lg dark-bg-theme mt-4"
 />

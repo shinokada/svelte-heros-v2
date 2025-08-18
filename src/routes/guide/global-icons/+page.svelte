@@ -23,7 +23,7 @@
   follows:
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/setting-preferences.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./md/setting-preferences.md'] as string} clipboardClass="top-2" />
 
 <p>
   The <Code>size</Code>, <Code>color</Code>, <Code>role</Code>, and other properties are optional,
@@ -34,7 +34,7 @@
 
 <p>If you set <Code>size</Code>, icons can be customized with different color. For example:</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/prop-size.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./md/prop-size.md'] as string} clipboardClass="top-2" />
 
 <H2>Setting more than one props</H2>
 

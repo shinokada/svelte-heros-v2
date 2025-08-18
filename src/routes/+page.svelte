@@ -45,14 +45,14 @@
     runesMetaTagsVersion: __RUNES_METATAGS_VERSION__,
     svelteVersion: __SVELTE_VERSION__,
     svelteKitVersion: __SVELTEKIT_VERSION__,
-    svelte5uilibVersion: __SVELTE_5_UI_LIB_VERSION__,    svelteRuneHighlight: __SVELTE_RUNE_HIGHLIGHT_VERSION__,
+    svelteRuneHighlight: __SVELTE_RUNE_HIGHLIGHT_VERSION__,
     viteVersion: __VITE_VERSION__,
     tailwindcssVersion: __TAILWINDCSS_VERSION__,
   };
 </script>
 
 <div class="relative mx-auto mt-8 h-full max-w-7xl overflow-y-auto px-8 pb-20">
-  <SupportBanner>
+  <SupportBanner class="relative dark-bg-theme2">
     To Keep It Going, Please Show Your Love.<a
       href="https://ko-fi.com/Z8Z2CHALG"
       target="_blank"

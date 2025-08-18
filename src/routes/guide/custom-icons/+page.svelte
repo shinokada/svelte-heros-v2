@@ -17,9 +17,9 @@
 
 <p>Create a Svelte component named `src/lib/MyIcon.svelte`:</p>
 <H3>Svelte 4</H3>
-<HighlightCompo codeLang="ts" code={modules['./md/create-a-custom-component.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./md/create-a-custom-component.md'] as string} clipboardClass="top-2" />
 <H3>Svelte 5</H3>
-<HighlightCompo codeLang="ts" code={modules['./md/create-a-custom-component-2.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./md/create-a-custom-component-2.md'] as string} clipboardClass="top-2" />
 <p>
   This component, <Code>MyIcon.svelte</Code>, accepts an <Code>icon</Code> prop which you can use to
   pass in the specific icon component you want to display. The default configuration is also applied
@@ -30,9 +30,9 @@
 
 <p>To use your custom default icon in a Svelte page, do the following:</p>
 <H3>Svelte 4</H3>
-<HighlightCompo codeLang="ts" code={modules['./md/implementation.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./md/implementation.md'] as string} clipboardClass="top-2" />
 <H3>Svelte 5</H3>
-<HighlightCompo codeLang="ts" code={modules['./md/implementation-2.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./md/implementation-2.md'] as string} clipboardClass="top-2" />
 <p>
   Here, we import the <Code>MyIcon</Code> component and the <Code>AcademicCap</Code> icon. By passing
   the <Code>AcademicCap</Code> icon to the <Code>icon</Code> prop of MyIcon, you apply the default configuration
