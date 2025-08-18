@@ -1,1 +1,1 @@
-<AcademicCap withEvents on:click={handleClick}/> 
+<AcademicCap withEvents on:click={handleClick}/>

@@ -1,5 +1,11 @@
 # svelte-heros-v2
 
+## 2.0.2
+
+### Patch Changes
+
+- fix: change svelte-5-ui-lib with flowbite-svelte
+
 ## 2.0.1
 
 ### Patch Changes

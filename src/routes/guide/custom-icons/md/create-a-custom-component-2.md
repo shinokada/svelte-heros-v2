@@ -13,4 +13,5 @@
 
   let { Icon }: Props = $props();
 </script>
+
 <HeroIcon {...config} {Icon} />

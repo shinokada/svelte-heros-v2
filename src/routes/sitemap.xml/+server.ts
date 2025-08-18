@@ -1,72 +1,72 @@
 interface Page {
-  loc: string;
-  changefreq?: string;
-  priority?: string;
-  lastmod?: string;
+	loc: string;
+	changefreq?: string;
+	priority?: string;
+	lastmod?: string;
 }
 
 const site = 'https://svelte-heros-v2.codewithshin.com';
 const pages: Page[] = [
-  {
-    loc: '',
-    changefreq: 'weekly',
-    priority: '0.5',
-    lastmod: '2024-05-20'
-  },
-  {
-    loc: 'guide/custom-icons',
-    changefreq: 'weekly',
-    priority: '0.5'
-  },
-  {
-    loc: 'guide/global-icons',
-    changefreq: 'weekly',
-    priority: '0.5'
-  },
-  {
-    loc: 'guide/svelte-4/getting-started',
-    changefreq: 'weekly',
-    priority: '0.5'
-  },
-  {
-    loc: 'guide/svelte-4/props',
-    changefreq: 'weekly',
-    priority: '0.5'
-  },
-  {
-    loc: 'guide/svelte-5/getting-started',
-    changefreq: 'weekly',
-    priority: '0.5'
-  },
-  {
-    loc: 'micro',
-    changefreq: 'weekly',
-    priority: '0.5'
-  },
-  {
-    loc: 'mini',
-    changefreq: 'weekly',
-    priority: '0.5'
-  },
-  {
-    loc: 'outline',
-    changefreq: 'weekly',
-    priority: '0.5'
-  },
-  {
-    loc: 'solid',
-    changefreq: 'weekly',
-    priority: '0.5'
-  }
+	{
+		loc: '',
+		changefreq: 'weekly',
+		priority: '0.5',
+		lastmod: '2024-05-20'
+	},
+	{
+		loc: 'guide/custom-icons',
+		changefreq: 'weekly',
+		priority: '0.5'
+	},
+	{
+		loc: 'guide/global-icons',
+		changefreq: 'weekly',
+		priority: '0.5'
+	},
+	{
+		loc: 'guide/svelte-4/getting-started',
+		changefreq: 'weekly',
+		priority: '0.5'
+	},
+	{
+		loc: 'guide/svelte-4/props',
+		changefreq: 'weekly',
+		priority: '0.5'
+	},
+	{
+		loc: 'guide/svelte-5/getting-started',
+		changefreq: 'weekly',
+		priority: '0.5'
+	},
+	{
+		loc: 'micro',
+		changefreq: 'weekly',
+		priority: '0.5'
+	},
+	{
+		loc: 'mini',
+		changefreq: 'weekly',
+		priority: '0.5'
+	},
+	{
+		loc: 'outline',
+		changefreq: 'weekly',
+		priority: '0.5'
+	},
+	{
+		loc: 'solid',
+		changefreq: 'weekly',
+		priority: '0.5'
+	}
 ];
 
 /** @type {import('./$types').RequestHandler} */
 export async function GET() {
-  const body = sitemap(pages);
-  const response = new Response(body);
-  response.headers.set('Cache-Control', 'max-age=0, s-maxage=3600');
-  response.headers.set('Content-Type', 'application/xml');
-  return response;
+	const body = sitemap(pages);
+	const response = new Response(body);
+	response.headers.set('Cache-Control', 'max-age=0, s-maxage=3600');
+	response.headers.set('Content-Type', 'application/xml');
+	return response;
 }
 
 const sitemap = (pages: Page[]) => `<?xml version="1.0" encoding="UTF-8" ?>
@@ -79,8 +79,8 @@ const sitemap = (pages: Page[]) => `<?xml version="1.0" encoding="UTF-8" ?>
   xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
 >
   ${pages
-    .map(
-      ({ loc, changefreq, priority, lastmod }) => `
+		.map(
+			({ loc, changefreq, priority, lastmod }) => `
   <url>
     <loc>${site}/${loc}</loc>
     ${changefreq ? `<changefreq>${changefreq}</changefreq>` : ''}
@@ -88,6 +88,6 @@ const sitemap = (pages: Page[]) => `<?xml version="1.0" encoding="UTF-8" ?>
 		${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}
   </url>
   `
-    )
-    .join('')}
+		)
+		.join('')}
 </urlset>`;
