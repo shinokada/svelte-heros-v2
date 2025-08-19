@@ -12,7 +12,7 @@
 
 <H2>Prop</H2>
 
-<HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} clipboardClass="top-2" />
+<HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string}  />
 
 <H2>Variation</H2>
 
@@ -24,7 +24,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/variation.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <H2>Size</H2>
@@ -33,14 +33,14 @@
 	To change the size of an icon, use the <Code>size</Code> prop and specify the desired size. For example:
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/size.md'] as string} clipboardClass="top-2" />
+<HighlightCompo codeLang="ts" code={modules['./md/size.md'] as string}  />
 
 <p>
 	If you want to override the preconfigured size, you can add a custom size using Tailwind CSS by
 	including the desired classes in the <Code>class</Code> prop. For example:
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/size-2.md'] as string} clipboardClass="top-2" />
+<HighlightCompo codeLang="ts" code={modules['./md/size-2.md'] as string}  />
 
 <H2>CSS HEX Color</H2>
 
@@ -51,7 +51,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/css-hex-color.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <H2>Stroke width</H2>
@@ -60,7 +60,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/stroke-width.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <H2>CSS framework</H2>
@@ -75,7 +75,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/tailwind-css.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <H3>Bootstrap</H3>
@@ -83,7 +83,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/bootstrap.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <H2>A11y</H2>
@@ -97,14 +97,14 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/aria-label.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <p>
 	Use <Code>title</Code>, <Code>desc</Code>, and <Code>ariaLabel</Code> props to make your icons accessible.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/a11y-2.md'] as string} clipboardClass="top-2" />
+<HighlightCompo codeLang="ts" code={modules['./md/a11y-2.md'] as string}  />
 
 <H2>Dark mode</H2>
 
@@ -119,7 +119,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/dark-mode.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <H2>withEvents</H2>
@@ -132,7 +132,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/withevents.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <p>
@@ -143,14 +143,14 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/withevents-2.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <H2>Events</H2>
 
 <p>All icons have the following events:</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/events.md'] as string} clipboardClass="top-2" />
+<HighlightCompo codeLang="ts" code={modules['./md/events.md'] as string}  />
 
 <H2>Passing down other attributes</H2>
 
@@ -159,7 +159,7 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/passing-down-other-attributes.md'] as string}
-	clipboardClass="top-2"
+	
 />
 
 <H2>Dynamically change the variation</H2>
@@ -167,5 +167,5 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/dynamically-change-variation.md'] as string}
-	clipboardClass="top-2"
+	
 />

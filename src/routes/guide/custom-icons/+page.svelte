@@ -20,13 +20,13 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/create-a-custom-component.md'] as string}
-	clipboardClass="top-2"
+	
 />
 <H3>Svelte 5</H3>
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/create-a-custom-component-2.md'] as string}
-	clipboardClass="top-2"
+	
 />
 <p>
 	This component, <Code>MyIcon.svelte</Code>, accepts an <Code>icon</Code> prop which you can use to
@@ -41,13 +41,13 @@
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/implementation.md'] as string}
-	clipboardClass="top-2"
+	
 />
 <H3>Svelte 5</H3>
 <HighlightCompo
 	codeLang="ts"
 	code={modules['./md/implementation-2.md'] as string}
-	clipboardClass="top-2"
+	
 />
 <p>
 	Here, we import the <Code>MyIcon</Code> component and the <Code>AcademicCap</Code> icon. By passing
