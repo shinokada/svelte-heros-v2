@@ -1,6 +1,6 @@
 {
   "name": "svelte-heros-v2",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Hero icon v2 components for Svelte",
   "license": "Apache License 2.0",
   "homepage": "https://svelte-heros-v2.codewithshin.com/",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shinokada/svelte-heros-v2"
+    "url": "git+https://github.com/shinokada/svelte-heros-v2.git"
   },
   "bugs": "https://github.com/shinokada/svelte-heros-v2/issues",
   "keywords": [
@@ -26,7 +26,8 @@
   "contributors": [
     {
       "name": "tailwindlabs/heroicons",
-      "url": "https://github.com/tailwindlabs/heroicons"
+      "url": "https://github.com/tailwindlabs/heroicons",
+      "iconVersion": "2.2.0"
     }
   ],
   "scripts": {
@@ -115,6 +116,11 @@
     ".": {
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js",
+      "default": "./dist/types.js"
     },
     "./AcademicCap.svelte": {
       "types": "./dist/AcademicCap.svelte.d.ts",

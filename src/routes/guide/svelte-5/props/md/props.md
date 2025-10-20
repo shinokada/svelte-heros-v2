@@ -5,5 +5,6 @@
 - strokeWidth = ctx.strokeWidth || '1.5'
 - title
 - desc
-- ariaLabel = "<icon file name>"
-- ...restProps
+- focusable = 'false',
+- ariaLabel,
+- ...restProps 

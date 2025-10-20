@@ -1,5 +1,15 @@
 # svelte-heros-v2
 
+## 3.0.0
+
+### Major Changes
+
+- BREAKING: Removed default aria-label from all icons. Icons are now decorative by default. Add ariaLabel prop explicitly for standalone icons that need accessible labels.
+  - Added focusable prop (defaults to "false", accepts "true" | "false" | "auto")
+  - Added automatic aria-labelledby support when title prop is provided
+  - Fixed ariaDescribedby whitespace trimming
+  - Fixed accessibility precedence: title now correctly takes precedence over ariaLabel
+
 ## 2.0.2
 
 ### Patch Changes

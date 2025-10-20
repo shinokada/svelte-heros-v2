@@ -6,20 +6,20 @@ const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-heros-v2';
 const ogUrl = 'http://localhost:4173/icons';
 
 export const load = () => {
-	const pageMetaTags: MetaProps = {
-		title,
-		description,
-		og: {
-			title,
-			description,
-			image: imgUrl,
-			url: ogUrl
-		},
-		twitter: {
-			title,
-			description,
-			image: imgUrl
-		}
-	};
-	return { pageMetaTags };
+  const pageMetaTags: MetaProps = {
+    title,
+    description,
+    og: {
+      title,
+      description,
+      image: imgUrl,
+      url: ogUrl
+    },
+    twitter: {
+      title,
+      description,
+      image: imgUrl
+    }
+  };
+  return { pageMetaTags };
 };
