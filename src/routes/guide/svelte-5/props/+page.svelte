@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
+  import { CodeWrapper, Code, H2, H3 } from 'runes-webkit';
+  import { HighlightCompo } from 'svelte-rune-highlight';
   import { A, P } from 'flowbite-svelte';
   import { AcademicCap } from '$lib';
   const modules = import.meta.glob('./md/*.md', {
@@ -20,18 +21,18 @@
     >SVGAttributes from svelte/elements</A
   >.
 </P>
-<HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/props.md'] as string} />
 
 <H2>Types</H2>
 
-<HighlightCompo codeLang="ts" code={modules['./md/types.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/types.md'] as string} />
 
 <H2>Size</H2>
 
 <p>
   To change the size of an icon, use the <Code>size</Code> prop and specify the desired size. For example:
 </p>
-<HighlightCompo codeLang="ts" code={modules['./md/size.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/size.md'] as string} />
 
 <p>
   You can add a custom size using Tailwind CSS by including the desired classes in the <Code
@@ -39,13 +40,13 @@
   > prop. For example:
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/size-2.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/size-2.md'] as string} />
 
 <H2>CSS HEX Colors</H2>
 
 <p>Use the color attribute to change colors with HEX color code:</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/css-hex-color.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/css-hex-color.md'] as string} />
 
 <H2>CSS framework</H2>
 
@@ -56,11 +57,11 @@
 
 <H3>Tailwind CSS</H3>
 
-<HighlightCompo codeLang="ts" code={modules['./md/tailwind-css.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/tailwind-css.md'] as string} />
 
 <H3>Bootstrap</H3>
 
-<HighlightCompo codeLang="ts" code={modules['./md/bootstrap.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/bootstrap.md'] as string} />
 
 <H2>Dark mode</H2>
 
@@ -70,7 +71,7 @@
   > prop.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/dark-mode.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/dark-mode.md'] as string} />
 
 <H2>A11y</H2>
 
@@ -81,7 +82,7 @@
   to text or as decorative elements, they don't need labels as screen readers will ignore them.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/a11y-decorative.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/a11y-decorative.md'] as string} />
 
 <H3>Standalone Icons</H3>
 
@@ -90,7 +91,7 @@
   accessible label using the <Code>ariaLabel</Code> prop:
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/a11y.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/a11y.md'] as string} />
 
 <H3>Rich Descriptions</H3>
 
@@ -99,7 +100,7 @@
   The <Code>title</Code> provides a short label, while <Code>desc</Code> offers a longer description:
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/a11y-2.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/a11y-2.md'] as string} />
 
 <CodeWrapper>
   <AcademicCap
@@ -121,7 +122,7 @@
   change this behavior, use the <Code>focusable</Code> prop:
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/a11y-focusable.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/a11y-focusable.md'] as string} />
 
 <H2>Passing down other attributes</H2>
 <P>
@@ -141,7 +142,7 @@
   />
 </CodeWrapper>
 
-<HighlightCompo codeLang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} />
 
 <H2>Dynamically changing variation</H2>
 
@@ -156,4 +157,4 @@
   />
 </CodeWrapper>
 
-<HighlightCompo codeLang="ts" code={modules['./md/dynamically-changing-variation.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/dynamically-changing-variation.md'] as string} />

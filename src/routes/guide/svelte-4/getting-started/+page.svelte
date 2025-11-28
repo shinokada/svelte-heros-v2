@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { HighlightCompo, H2 } from 'runes-webkit';
+  import { H2 } from 'runes-webkit';
+  import { HighlightCompo } from 'svelte-rune-highlight';
   import {
     GitHubSponsor,
     type GitHubSponsorPropsType,
@@ -58,19 +59,19 @@
 <H2>Requirements</H2>
 
 <p>You need to use the following:</p>
-<HighlightCompo codeLang="ts" code={modules['./md/requirement.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/requirement.md'] as string} />
 
 <H2>Installation</H2>
 
 <p>Install Svelte and Svelte Heros v2:</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/installation.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/installation.md'] as string} />
 
 <H2>Basic Usage</H2>
 
 <p>In a svelte file:</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/basic-usage.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/basic-usage.md'] as string} />
 
 <H2>IDE support</H2>
 
@@ -87,23 +88,23 @@
   compilation.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/faster-compiling.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/faster-compiling.md'] as string} />
 
 <H2>Passing down other attributes</H2>
 
 <p>Since all icons have "...$$restProps", you can pass other attibutes as well.</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} />
 
 <H2>Using svelte:component</H2>
 
-<HighlightCompo codeLang="ts" code={modules['./md/using-svelte-component.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/using-svelte-component.md'] as string} />
 
 <H2>Using onMount</H2>
-<HighlightCompo codeLang="ts" code={modules['./md/using-onmount.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/using-onmount.md'] as string} />
 
 <H2>Import all</H2>
 
 <p>Use `import * as Icon from 'svelte-heros-v2`.</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/import-all.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/import-all.md'] as string} />

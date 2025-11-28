@@ -53,8 +53,12 @@
   let isOpen = $state(false);
   const closeSidebar = sidebarUi.close;
 
-  let currentUrl = $state(page.url.pathname);
-  const hasPath = (key: string) => currentUrl.includes(key);
+  // Check if the current URL matches any child href in a dropdown item
+  const isDropdownOpen = (children: Array<{ href?: string }> | undefined) => {
+    if (!children) return false;
+    // Uses the consistent activeUrl
+    return children.some((child) => child.href && activeUrl.startsWith(child.href));
+  };
 
   const lis: LiType[] = [
     { name: 'Guide', href: '/guide/svelte-5/getting-started' },
@@ -86,10 +90,9 @@
     });
   }
   let urlsToIncludeSwitcher = ['/guide', '/guide2', '/how-to-use', '/quick-start'];
-  let include = $derived(isIncluded(currentUrl, urlsToIncludeSwitcher));
+  let include = $derived(isIncluded(activeUrl, urlsToIncludeSwitcher));
 
   $effect(() => {
-    currentUrl = page.url.pathname;
     metaTags = page.data.pageMetaTags
       ? deepMerge(page.data.layoutMetaTags, page.data.pageMetaTags)
       : data.layoutMetaTags;
@@ -146,7 +149,7 @@
     class="order-2 xl:order-1"
     classes={{ active: activeClass, nonActive: nonActiveClass }}
   >
-    {#each lis as { name, href, Icon }}
+    {#each lis as { name, href, Icon } (href)}
       {#if Icon}
         <Icon class="mb-3 h-6 w-6 {random_tailwind_color()}"></Icon>
       {/if}
@@ -156,7 +159,7 @@
 </Navbar>
 
 <div class="mt-20 xl:flex">
-  {#if urlsToIncludeSwitcherAndSidebar.some((path) => currentUrl.startsWith(path))}
+  {#if urlsToIncludeSwitcherAndSidebar.some((path) => activeUrl.startsWith(path))}
     <SidebarButton
       onclick={sidebarUi.toggle}
       class="fixed top-3 left-0
@@ -177,18 +180,18 @@
       class="dark-bg-theme mt-16 h-screen border-r border-gray-100 bg-white xl:top-[74px] xl:mt-0 dark:border-gray-700"
     >
       <SidebarGroup>
-        {#each newSidebarList as { name, Icon, children, href }}
+        {#each newSidebarList as { name, Icon, children, href } (name)}
           {#if children}
             <SidebarDropdownWrapper
               label={name}
-              isOpen={hasPath('components')}
+              isOpen={isDropdownOpen(children)}
               svgClass="me-4"
               btnClass="p-1"
             >
               {#snippet icon()}
                 <Icon />
               {/snippet}
-              {#each children as { name, Icon, href }}
+              {#each children as { name, Icon, href } (href)}
                 <SidebarItem label={name} onclick={closeSidebar} {href} aClass="ml-4">
                   {#snippet icon()}
                     <Icon />
@@ -207,7 +210,7 @@
       </SidebarGroup>
     </Sidebar>
   {/if}
-  {#if urlsToIncludeSwitcherAndSidebar.some((path) => currentUrl.startsWith(path))}
+  {#if urlsToIncludeSwitcherAndSidebar.some((path) => activeUrl.startsWith(path))}
     <div class="relative">
       <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />
     </div>
