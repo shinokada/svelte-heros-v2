@@ -111,8 +111,8 @@
 </CodeWrapper>
 
 <p class="mt-4">
-  <strong>Note:</strong> When using <Code>title</Code>, you don't need <Code>ariaLabel</Code> as the
-  title will be used automatically via <Code>aria-labelledby</Code>.
+  <strong>Note:</strong> When using <Code>title</Code>, you don't need <Code>ariaLabel</Code> as the title
+  will be used automatically via <Code>aria-labelledby</Code>.
 </p>
 
 <H3>Focusable</H3>

@@ -20,30 +20,27 @@
   let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
 
-  let viewBox = $derived.by(() => {
-    if (variation === 'mini') return '0 0 20 20';
-    if (variation === 'micro') return '0 0 16 16';
-    return '0 0 24 24';
-  });
-  let variationSize = $derived.by(() => {
-    if (variation === 'mini') return '20';
-    if (variation === 'micro') return '16';
-    return '24';
-  });
+  const sizeConfig = $derived(
+    variation === 'mini'
+      ? { viewBox: '0 0 20 20', size: '20' }
+      : variation === 'micro'
+        ? { viewBox: '0 0 16 16', size: '16' }
+        : { viewBox: '0 0 24 24', size: '24' }
+  );
 </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   {...restProps}
   {role}
-  width={size || variationSize}
-  height={size || variationSize}
+  width={size || sizeConfig.size}
+  height={size || sizeConfig.size}
   fill="none"
   {focusable}
   aria-label={title?.id ? undefined : ariaLabel}
   aria-labelledby={title?.id || undefined}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  {viewBox}
+  viewBox={sizeConfig.viewBox}
   stroke-width={strokeWidth}
 >
   {#if title?.id && title.title}

@@ -18,8 +18,8 @@
 <H2>Variation</H2>
 
 <p>
-  The default variation value is outline. Use the <Code>variation</Code> prop to change it to solid,
-  mini or micro.
+  The default variation value is outline. Use the <Code>variation</Code> prop to change it to solid, mini
+  or micro.
 </p>
 
 <HighlightCompo lang="ts" code={modules['./md/variation.md'] as string} />
