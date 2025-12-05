@@ -17,7 +17,7 @@
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
+  const ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
 
   const sizeConfig = $derived(
@@ -92,19 +92,3 @@
     />
   {/if}
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-heros-v2.codewithshin.com/)
-## Props
-@prop size = ctx.size
-@prop role = ctx.role || 'img'
-@prop color = ctx.color || 'currentColor'
-@prop variation = ctx.variation || 'outline'
-@prop strokeWidth = ctx.strokeWidth || '1.5'
-@prop title
-@prop desc
-@prop focusable = 'false'
-@prop ariaLabel
-@prop ...restProps
--->
