@@ -37,7 +37,10 @@
   };
   const downloads: NpmDownloadPropsType = {
     packageName: 'svelte-heros-v2',
-    link: ['https://www.npmjs.com/package/svelte-heros-v2']
+    link: [
+      'https://www.npmjs.com/package/svelte-heros-v2',
+      'https://svelte-heros-v2.codewithshin.com/'
+    ]
   };
 
   const modules = import.meta.glob('./md/*.md', {
